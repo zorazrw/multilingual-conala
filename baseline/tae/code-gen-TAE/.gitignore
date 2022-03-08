@@ -1,0 +1,16 @@
+slurm*
+logs/
+data/
+data.tar.bz2
+*.pickle
+*.sh
+*.pth
+train_data.pickle
+test_data.pickle
+dev_data.pickle
+encoder.pth
+decoder.pth
+.idea/
+*.pyc
+__pycache__/*
+

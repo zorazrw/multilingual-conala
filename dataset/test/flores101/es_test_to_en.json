@@ -1,0 +1,2048 @@
+[
+    {
+        "intent": "How do I get the values of a dictionary that contains another dictionary in Python?",
+        "rewritten_intent": "How to get a dictionary `result` with the keys `keys` and the values `val` of a dic dictionary?",
+        "snippet": "result = defaultdict(list)\nfor d in dic.values():\n    for k,v in d.items():\n        result[k].append(v)",
+        "question_id": 54979
+    },
+    {
+        "intent": "How to group the items of a list per user and with the total times the user has made a record?",
+        "rewritten_intent": "How to group the items of a table in a database `data` per user and with the total times the user has made a record?",
+        "snippet": "def indexOn( data):\n    inx= defaultdict(list)\n    for t in data:\n            inx[t[0]].append(t)\n    return inx\n\nsortData = indexOn(data)\n\nfor key in sortData: \n    series.append({\n        'name': key,\n        'data': sortData[key].__len__()\n    })\n",
+        "question_id": 7699
+    },
+    {
+        "intent": "Find the maximum of one function in python",
+        "rewritten_intent": "How do you find the maximum of a 'y' function that depends on 'x'?",
+        "snippet": "x = symbols('x')\ny = -(x-0.4)**2+10\ndy = diff(y)\nprint(dy)\nsol = solve(dy)\nprint(sol)",
+        "question_id": 39675
+    },
+    {
+        "intent": "How to create a dictionary with functions in Python?",
+        "rewritten_intent": "How to create a dictionary with functions `fun1`, `fun2`, `fun3`?",
+        "snippet": "operaciones = { \n'1': fun1, \n'2': fun2, \n'3': fun3,\n}",
+        "question_id": 64006
+    },
+    {
+        "intent": "Django admin: how to add the sum of all records of a template?",
+        "rewritten_intent": "How to add the sum of all the elements of a template `transactions` in Django admin?",
+        "snippet": "class TransaccionesAdmin(admin.ModelAdmin):\n\n    def changelist_view(self, request, extra_context=None):\n        total = Transacciones.objects.aggregate(total=Sum('monto'))['total']\n        context = {\n            'total': total,\n        }\n        return super(TransaccionesAdmin, self).changelist_view(request, extra_context=context)\n\nadmin.site.register(Transacciones, TransaccionesAdmin)",
+        "question_id": 3285
+    },
+    {
+        "intent": "How do I edit a record that already exists in the database in Django and that I don’t add another?",
+        "rewritten_intent": "How to create a 'employed editor' view that edits the data of an instance of the 'employed' model?",
+        "snippet": "def editarempleado (request, id_empleado):\n  p = Empleados.objects.get(pk=id_empleado)\n  if request.method == \"POST\":\n     form = EmpleadoForm(request.POST,instance=p)\n     if form.is_valid():\n        p.nombre_empleado = request.POST['nuevo_nombre']\n        p.apellido_empleado = request.POST['nuevo_apellid'] \n        p.save()\n        return redirect ('empleados')\n     else : \n        form = EmpleadoForm(instance=p)\n        ctx = {'formulario' : form}\n        return render_to_response('empleados/editar.html', ctx, context_instance=RequestContext(request)) #esto lo pongo porque si el formulario no es valido tiene que devolver el error (estoy repitiendo mucho codigo arreglalo)\n else:\n    form = EmpleadoForm(instance=p) \n\n ctx = {'formulario' : form}\n\n return render_to_response('empleados/editar.html', ctx, context_instance=RequestContext(request))",
+        "question_id": 23831
+    },
+    {
+        "intent": "How to upload files in Python 3?",
+        "rewritten_intent": "How to upload files to a local folder located in `ruta` after opening it?",
+        "snippet": "\"def abrir(self):\n    with open(file, 'rb') as fsrc:\n        a = fsrc.read()\n    shutil.copyfile(file, ruta)",
+        "question_id": 19921
+    },
+    {
+        "intent": "How to concatenate variables in a Django template using tags",
+        "rewritten_intent": "How to connect two variables `a` and `b` in a Django template?",
+        "snippet": "{{ a|add:b }}",
+        "question_id": 2657
+    },
+    {
+        "intent": "How to capture parameters sent by the GET method?",
+        "rewritten_intent": "How to capture the parameter `par` sent by the GET method?",
+        "snippet": "request.GET.get(par)",
+        "question_id": 10366
+    },
+    {
+        "intent": "How to duplicate items from a list by excluding endpoints in python",
+        "rewritten_intent": "How to duplicate the items of a 'list' list by excluding the extrems?",
+        "snippet": "list(sum(zip(list, list[1:]), ()))",
+        "question_id": 25024
+    },
+    {
+        "intent": "Python: how to list all files and folders of a folder from a route?",
+        "rewritten_intent": "How to list all files and folders of a folder from a 'ruta' route?",
+        "snippet": "def ls(ruta):\n    listaarchivos = []\n    for (_, _, archivos) in walk(ruta):\n        listaarchivos.extend(archivos)\nreturn listaarchivos",
+        "question_id": 37821
+    },
+    {
+        "intent": "How to count the total calls to the method of a class?",
+        "rewritten_intent": "How to count the total calls to a class 'C' method?",
+        "snippet": "Class C:\n    def _incrementa_contador_renombres(cls):\n        cls.total_renombres += 1",
+        "question_id": 774
+    },
+    {
+        "intent": "How to count the total calls to the method of a class?",
+        "rewritten_intent": "How to count the total calls to a class 'C' method?",
+        "snippet": "class NaveEspacial:\n    llamadas_totales = 0",
+        "question_id": 774
+    },
+    {
+        "intent": "Python/Tkinter Is it possible to rotate .jpg or .png images and text on a canvas in Tkinter?",
+        "rewritten_intent": "How to rotate a 'img' image in a 'x' degree angle in Tkinter?",
+        "snippet": "im = Image.open(img)\nim.rotate(x).show()",
+        "question_id": 38658
+    },
+    {
+        "intent": "Get timeline from a Twitter user with tweepy",
+        "rewritten_intent": "How to get a user’s timeline on Twitter with tweepy?",
+        "snippet": "CONSUMER_SECRET = environ['CONSUMER_SECRET']\nACCESS_TOKEN = environ['ACCESS_TOKEN']\nACCESS_TOKEN_SECRET = environ['ACCESS_TOKEN_SECRET']\n\n\nauth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)\nauth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)\n\napi = tweepy.API(auth)\n\n\ndef get_stuff(nombre=user):\n    stuff = tweepy.Cursor(api.user_timeline, screen_name = user, include_rts = True)\n    return stuff\n\ndef get_tweets(stuff, n):\n    for status in stuff.items(n):\n        print(status.created_at, status.author.screen_name, status.text)\n\nn = int(input('Cuantos tweets desea obtener: '))\n        stuff = get_stuff()\n        get_tweets(stuff, n)",
+        "question_id": 38545
+    },
+    {
+        "intent": "Transforming dates into numerical dates",
+        "rewritten_intent": "How to transform a date in words to date in numbers?",
+        "snippet": "def mesANumero(date):\n    m = {\n        'enero': ‘01’,\n        'febrero': ‘02’,\n        'marzo': ‘03’,\n        'abril': ‘04’,\n        'mayo': ‘05’,\n        'junio': ‘06’,\n        'julio': ‘07’,\n        'agosto': ‘08’,\n        'septiembre': ‘09’,\n        'octubre': ‘10’,\n        'noviembre': ‘11’,\n        'diciembre': ‘12’\n        }\n\n    fecha = date.split(‘-‘)\n    dia =  fecha[0]\n    mes =  fecha[1]\n    anio = fecha[2]\n\n    try:\n        out = str(m[mes.lower()])\n        print dia + ‘-‘ +  out + ‘-‘ + anio\n    except:\n        raise ValueError('No es un mes')\n",
+        "question_id": 49642
+    },
+    {
+        "intent": "Open and close a plot within a while.",
+        "rewritten_intent": "How to open and close a plot within a while?",
+        "snippet": "while (True):\n    plt.figure()\n    plt.plot()\n    plt.show(block=False)\n    plt.close()\n    time.sleep(0.1) ",
+        "question_id": 8295
+    },
+    {
+        "intent": "Open and close a plot within a while.",
+        "rewritten_intent": "How to open and close a plot within a while?",
+        "snippet": "while True: \n    plt.figure()\n    plt.plot()\n    plt.show(block = False) \n    sleep().\n    plt.close()  \n    sleep() ",
+        "question_id": 8295
+    },
+    {
+        "intent": "How to create a subprocess in Python?",
+        "rewritten_intent": "How to create a ‘proc’ sub-process?",
+        "snippet": "subprocess.Popenproc')",
+        "question_id": 2611
+    },
+    {
+        "intent": "How to download a uploaded file using a form using FileField",
+        "rewritten_intent": "How to download a file uploaded by using a form?",
+        "snippet": "#models.py\nclass MyModel(models.Model):\n    file = models.FileField(upload_to='subcarpeta/')\n#settings.py\nMEDIA_ROOT = '<your_path>/media/'\nMEDIA_URL = '/media/'\n#urls.py\nif settings.DEBUG is True:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\n#template\n<a href=\"{{ my_model.file.url }}>download</a>",
+        "question_id": 9580
+    },
+    {
+        "intent": "Create a matrix in python",
+        "rewritten_intent": "How to create a 'array' matrice of 'n'x'm' matrices?",
+        "snippet": "array =[]\nfor count in range(n):\n   row=[]\n   for count in range(m):\n     m = matriz()     \n     row.append(m)\n   array.append(row)",
+        "question_id": 71600
+    },
+    {
+        "intent": "Adding items to a joint set, python",
+        "rewritten_intent": "How to create a set `dic` that relates the elements of two sets `a` and `b` in the order in which they were added?",
+        "snippet": "a = [input(\"Ingrese un numero: \") for _ in range(2)]\n\nb = [input(\"Ingrese un numero: \") for _ in range(2)]\n\nprint(list(zip(a, b)))",
+        "question_id": 36557
+    },
+    {
+        "intent": "kivy: change the color of a label",
+        "rewritten_intent": "How to change the color of a label 'label' in kivy?",
+        "snippet": "label:\n            id: label1\n            color: 1,0,1,1",
+        "question_id": 63508
+    },
+    {
+        "intent": "Backtracking algorithm with conditional Python",
+        "rewritten_intent": "How to generate permutations from a 'list' list allowing to repeat items and without repeating them?",
+        "snippet": "sin_repeticion = [x for x in combinations(list, 2)]\ncon_repeticion = [x for x in combinations_with_replacement(list, 2)]",
+        "question_id": 37964
+    },
+    {
+        "intent": "Backtracking algorithm with conditional Python",
+        "rewritten_intent": "How to generate permutations from a 'list' list allowing to repeat items and without repeating them?",
+        "snippet": "#Con repetición\nprint [ (x,y) for x in mi_lista for y in mi_lista ]\n#Sin repetición\nprint [ (x,y) for x in mi_lista for y in mi_lista if x!=y]",
+        "question_id": 37964
+    },
+    {
+        "intent": "How to create a list of coordinate values?",
+        "rewritten_intent": "How to create a list of tuples with the values 'Lon' and 'Lat' of a dictionary?",
+        "snippet": "list = [] \nfor id,mensaje in dic.items():\n    list.append([mensaje['Lon'],mensaje['Lat']])",
+        "question_id": 54164
+    },
+    {
+        "intent": "How to create a list of coordinate values?",
+        "rewritten_intent": "How to create a list of tuples with the values 'Lon' and 'Lat' of a dictionary?",
+        "snippet": "list = [[v['Lon'],v['Lat']] for k, v in dic.items()]",
+        "question_id": 54164
+    },
+    {
+        "intent": "In Tkinter/Python 2.x How to move an image inside a canvas with the mouse point?",
+        "rewritten_intent": "How to create a 'img' image that can be moved with the mouse point in Tkinter?",
+        "snippet": "posicion = {\"x\": 0, \"y\": 0, \"img\": None}\n\ndef imgPress(event):\n    posicion[\"item\"] = canvas.find_closest(event.x, event.y)[0]\n    posicion[\"x\"] = event.x\n    posicion[\"y\"] = event.y\n\ndef imgRelease(event):\n    posicion[\"item\"] = None\n    posicion[\"x\"] = 0\n    posicion[\"y\"] = 0\n\ndef imgMotion(event):\n    incremento_x = event.x - posicion[\"x\"]\n    incremento_y = event.y - posicion[\"y\"]\n    canvas.move(posicion[\"item\"], incremento_x, incremento_y)\n    posicion[\"x\"] = event.x\n    posicion[\"y\"] = event.y\n\nroot = tk.Tk()\ncanvas = tk.Canvas(width=400, height=400)\ncanvas.pack(fill=\"both\", expand=True)\n\ncanvas.tag_bind(\"img\", \"<ButtonPress-1>\", imgPress)\ncanvas.tag_bind(\"img\", \"<ButtonRelease-1>\", imgRelease)\ncanvas.tag_bind(\"img\", \"<B1-Motion>\", imgMotion)\n\npic = tkFileDialog.askopenfilename()\nimg = ImageTk.PhotoImage(file=pic)\ncanvas.create_image(200, 200, anchor=tk.CENTER, image=img, tags=\"img\")\n\nroot.mainloop()\n",
+        "question_id": 37285
+    },
+    {
+        "intent": "Python: Get a list from another and an index",
+        "rewritten_intent": "How to create a 'indextoentry' function that returns a list when you pass a 'list' list and a 'index' index?",
+        "snippet": "def indextoentry(lista,index):\n    return [lista[index]]",
+        "question_id": 36164
+    },
+    {
+        "intent": "Python: Get a list from another and an index",
+        "rewritten_intent": "How to create a 'indextoentry' function that returns a list when you pass a 'list' list and a 'index' index?",
+        "snippet": "def indextoentry(lista,index):\n    listresult = []\n    listresult.append(lista[index])\n    return(listresult)",
+        "question_id": 36164
+    },
+    {
+        "intent": "How to move files by dates to their respective folders in Python?",
+        "rewritten_intent": "How to create folders in the address `dir` to separate files whose names `name` are dates in julian days?",
+        "snippet": "def esFecha( nombre ):\n  if ( len(nombre)<7 ):\n    return False\n  if ( not nombre[0:7].isdigit() ):\n    return False\n  dia = int( nombre[4:7] )\n  return dia>=1 and dia<=366\n\ndef moverFichero( nombre, dirBase ):\n  directorio = nombre[0:7]\n  destino = join( dirBase, directorio)\n  if ( not exists(destino) ):\n    makedirs(destino)\n  origen = join( dirBase, nombre )\n  move ( origen, destino )\n\ndirBase = dir\nficheros = [ f for f in listdir(dirBase) if isfile(join(dirBase,f)) ]\nfor fich in ficheros:\n  if ( esFecha( fich ) ):\n    moverFichero( fich, dirBase )",
+        "question_id": 1736
+    },
+    {
+        "intent": "Do you read a multi-line chain inserted in a PYTHON console?",
+        "rewritten_intent": "How to read a multi-line chain inserted by console and store each line as an element of a list list?",
+        "snippet": "lista = []\nwhile True:\n    inputs = input()\n    if inputs:\n        lista.append(inputs)\n    else:\n        break\nprint(lista)",
+        "question_id": 59300
+    },
+    {
+        "intent": "How to remove certain files from multiple folders in Python?",
+        "rewritten_intent": "How to delete all .txt files within the subcarpetes located in the route `rut`?",
+        "snippet": "directory = rut\nos.chdir(directory)\nfor filename in glob.glob('**/*.txt', recursive=True):\n    os.unlink(filename)",
+        "question_id": 2056
+    },
+    {
+        "intent": "Listing a list in Django",
+        "rewritten_intent": "How to sum the 'price' field of all the elements of the 'Pre-buy' model in Django?",
+        "snippet": "totaldos =  Precompra.objects.aggregate(Sum(precio)).values()[0]",
+        "question_id": 62733
+    },
+    {
+        "intent": "Use Proxy in Python 3",
+        "rewritten_intent": "How to use a proxy address `proxy` with a url `url`?",
+        "snippet": "proxy = request.ProxyHandler(proxies)\nopener = request.build_opener(proxy)\nrequest.install_opener(opener)\nresponse=request.urlopen(url)",
+        "question_id": 59326
+    },
+    {
+        "intent": "Convert text from a model.CharField() into Django Python",
+        "rewritten_intent": "How to convert the text `text` entered in a Charfield in Django into major?",
+        "snippet": "class UpperField(forms.CharField):\n\n    def to_python(self, value):\n        return value.upper()\n\n\nclass TuModeloForm(forms.ModelForm):\n    text = UpperField()",
+        "question_id": 24649
+    },
+    {
+        "intent": "Convert text from a model.CharField() into Django Python",
+        "rewritten_intent": "How to convert the text `text` entered in a Charfield in Django into major?",
+        "snippet": "class TuModelo(models.Model):\n    text = models.CharField(max_length=9, null=True)\n    \n    def save(self, *args, **kwargs):\n        self.text = (self.text).uppercase()\n        return super(TuModelo, self).save(*args, **kwargs)",
+        "question_id": 24649
+    },
+    {
+        "intent": "How to implement a conf file using Python",
+        "rewritten_intent": "How to implement a conf file?",
+        "snippet": "config = ConfigParser.ConfigParser()\nconfig.read(conf)",
+        "question_id": 3995
+    },
+    {
+        "intent": "How to get the depth of color in bits of an image?",
+        "rewritten_intent": "How to get the color depth in bits of a 'filename' image?",
+        "snippet": "def get_tiff_depth(filename):\n    bits_per_sample=1\n    samples_per_pixel=1\n    photometric_interpretation = None\n    with open(filename, 'rb') as f:\n        byte_order = f.read(2)\n        if byte_order == 'II':\n            prefix = '<'\n        elif byte_order == 'MM':\n            prefix = '>'\n        else:\n            raise ValueError('El fichero no parece ser un TIFF')\n        (magic_number, offset) = struct.unpack(prefix + 'hI', f.read(6))\n        if magic_number != 42:\n            raise ValueError('El fichero no parece ser un TIFF')\n        f.seek(offset)\n        num_entries, = struct.unpack(prefix+'h', f.read(2))\n        for i in range(num_entries):\n            tag = f.read(12)\n            (id_tag, type_tag, num_values, value) = struct.unpack(prefix+'hhii', tag)\n            if id_tag == 258:\n                bits_per_sample = value\n            if id_tag == 262:\n                photometric_interpretation = value\n            elif id_tag == 277:\n                samples_per_pixel = value\n    if photometric_interpretation == 2: # rgb:\n        return 24\n    else:\n        return bits_per_sample * samples_per_pix\n",
+        "question_id": 515
+    },
+    {
+        "intent": "How to get the depth of color in bits of an image?",
+        "rewritten_intent": "How to get the color depth in bits of a 'filename' image?",
+        "snippet": "image = PythonMagick.Image(filename)\nprint image.depth()",
+        "question_id": 515
+    },
+    {
+        "intent": "Download Django API REST Framework",
+        "rewritten_intent": "How to replace 'n' depth-related table objects in the 'BrandSerializer' serializer in Django API REST Framework?",
+        "snippet": "class BrandSerializer(serializers.ModelSerializer):\n    class Meta:\n        depth = n",
+        "question_id": 11073
+    },
+    {
+        "intent": "How to find the time difference datetime.now()",
+        "rewritten_intent": "How to calculate the difference between an hour `entry` in UTC and this time?",
+        "snippet": "now = datetime.utcnow() \ndiferencia = now - ingreso",
+        "question_id": 19685
+    },
+    {
+        "intent": "How to find the time difference datetime.now()",
+        "rewritten_intent": "How to calculate the difference between an hour `entry` in UTC and this time?",
+        "snippet": "now = datetime.utcnow()\ndiferencia = now.replace(tzinfo=None) - ingreso.replace(tzinfo=None)",
+        "question_id": 19685
+    },
+    {
+        "intent": "How to find words of length smaller or larger than the arithmetic average of a chain?",
+        "rewritten_intent": "How to find words of length smaller or larger than the arithmetic average of a chain 'S'?",
+        "snippet": "media = stats.mean([len(palabra) for palabra in S.split()])\nmayores = [palabra for palabra in S.split() if len(palabra) >= media]\nmenores = [palabra for palabra in S.split() if len(palabra) < media]\nprint('las palabras menores a la media: ', menores)\nprint('las palabras mayores o iguales a la media: ', mayores)",
+        "question_id": 2256
+    },
+    {
+        "intent": "How to find words of length smaller or larger than the arithmetic average of a chain?",
+        "rewritten_intent": "How to find words of length smaller or larger than the arithmetic average of a chain 'S'?",
+        "snippet": "ls, ts = zip(*sorted([(len(x), x) for x in S.split()]))\n\navlen = sum(ls) / len(ls)  \n\nbpoint = bisect.bisect_right(ls, avlen)  \nprint('mayores:', *ts[bpoint:])\nprint('menores:', *ts[:bpoint])",
+        "question_id": 2256
+    },
+    {
+        "intent": "Distance between point and segment",
+        "rewritten_intent": "How to calculate the distance between a 'P' point and the segment covered by the 'A' and 'B' points?",
+        "snippet": "def distancia(A, B, P):\n    if all(A==P) or all(B==P):\n        return 0\n\n    elif np.arccos(np.dot((P-A)/norm(P-A), (B-A)/norm(B-A))) > np.pi/2:\n        return norm(P-A)\n\n    elif np.arccos(np.dot((P-B)/norm(P-B), (A-B)/norm(A-B))) > np.pi/2:\n        return norm(P-B)\n\n    return norm(np.cross(B-A, A-P))/norm(B-A)",
+        "question_id": 62209
+    },
+    {
+        "intent": "Find adjacent cells in a matrix",
+        "rewritten_intent": "How to find the cell adjacent cells in the row `f` and the column `c` in a matrix `life` full of #?",
+        "snippet": "def cant_adyacentes(life, f, c):\n    fs = life[f-1]\n    fi = life[(f+1)%len(life)]\n    i=(c+1)%len(life[0])\n    return (fs[c-1], fs[c], fs[i], life[f][c-1], life[f][i], fi[c-1], fi[c], fi[i]).count('#')\n\ndef pruebas_cant_adyacentes():\n    assert cant_adyacentes((['.']), 0, 0) == 0\n    assert cant_adyacentes((['..', '..']), 0, 0) == 0\n    assert cant_adyacentes((['..', '..']), 0, 1) == 0\n    assert cant_adyacentes((['##', '..']), 0, 0) == 2\n    assert cant_adyacentes((['##', '..']), 0, 1) == 2\n    assert cant_adyacentes((['#.', '.#']), 0, 0) == 4\n    assert cant_adyacentes((['##', '##']), 0, 0) == 8\n    assert cant_adyacentes((['.#.', '#.#', '.#.']), 1, 1) == 4\n    assert cant_adyacentes((['.#.', '..#', '.#.']), 1, 1) == 3\n\npruebas_cant_adyacentes()",
+        "question_id": 62798
+    },
+    {
+        "intent": "How can I connect to a PLC via Modbus using Python?",
+        "rewritten_intent": "How can I connect to a PLC via Modbus with the ip `ip`?",
+        "snippet": "client = ModbusTcpClient(ip)\nclient.write_coil(1, True)\nresult = client.read_coils(1,1)\nprint result.bits[0]\nclient.close()",
+        "question_id": 35679
+    },
+    {
+        "intent": "How do I connect with SQLALCHEMY to a based data?",
+        "rewritten_intent": "How to connect me with SQLALCHEMY to a baseddata `dbname` with user `user`, password `password`, host `host` and ?",
+        "snippet": "engine = create_engine('mysql://'+user+':'+password+'@+str(host)+'/'++dbname+'?charset=utf8&use_unicode=0', pool_recycle=port)\n\nconnection = engine.connect()",
+        "question_id": 34346
+    },
+    {
+        "intent": "How do I connect with SQLALCHEMY to a based data?",
+        "rewritten_intent": "How to connect me with SQLALCHEMY to a baseddata `dbname` with user `user`, password `password`, host `host` and ?",
+        "snippet": "conn = pymysql.connect(host=host, user=user, passwd=password, db=dbname, charset = 'utf8mb4')",
+        "question_id": 34346
+    },
+    {
+        "intent": "How do we print only the maximum value in a cycle for?",
+        "rewritten_intent": "How to calculate the maximum common divisor between two numbers `a` and `b`?",
+        "snippet": "if a>b:\n    for i in range(1,a+1):\n        if a % i == 0.:   \n            if b !=0:     \n                if b % i == 0.:  \n                    print 'Maximo comun divisor para ', a, ' y ', b, ' es:'\n                    print i\nif b == 0:  \n    print 'Maximo comun divisor para ', a, ' y ', b, ' es: ', a\n\nif b>a:\n    for i in range(1,b+1):\n        if b % i == 0.:\n            if a !=0:\n                if a % i == 0.:\n                    print 'Maximo comun divisor para ', b, ' y ', a, ' son:'\n                    print i\nif a == 0:\n    print 'Maximo comun divisor para ', b, ' y ', a, ' es: ', b",
+        "question_id": 26959
+    },
+    {
+        "intent": "How do we print only the maximum value in a cycle for?",
+        "rewritten_intent": "How to calculate the maximum common divisor between two numbers `a` and `b`?",
+        "snippet": "max_divisor = 1\n\nif a>b:\n    for i in range(1,a+1):\n        if a % i == 0.:   \n            if b !=0:     \n                if b % i == 0.:  \n                    if i > max_divisor:\n                        max_divisor = i\n\nif b == 0:  \n    print 'Maximo comun divisor para ', a, ' y ', b, ' es: ', a\n\nif b>a:\n    for i in range(1,b+1):\n        if b % i == 0.:\n            if a !=0:\n                if a % i == 0.:\n                    if i > max_divisor:\n                        max_divisor = i\n\nif a == 0:\n    print 'Maximo comun divisor para ', b, ' y ', a, ' es: ', b\n\nprint 'Maximo comun divisor para ', a, ' y ', b, ' es:'\nprint max_divisor",
+        "question_id": 26959
+    },
+    {
+        "intent": "How do we print only the maximum value in a cycle for?",
+        "rewritten_intent": "How to calculate the maximum common divisor between two numbers `a` and `b`?",
+        "snippet": "def mcd(a,b):\n    return next((i for i in range(min(a,b),0,-1) if a%i==0 and b%i==0), 0)",
+        "question_id": 26959
+    },
+    {
+        "intent": "How to capture Terminal Output with Python?",
+        "rewritten_intent": "How to capture the terminal exit after running a command?",
+        "snippet": "process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=None, shell=True)\n\noutput = process.communicate()\n\nprint(output[0])",
+        "question_id": 44385
+    },
+    {
+        "intent": "Change the index of bucle Python",
+        "rewritten_intent": "How to change the index in the middle of a cycle on the 'list' list?",
+        "snippet": "def getIndx(lista):\n    try:\n        index = int(input(‘Introduce el nuevo indice, entre 0 y {0} o otra si desea continuar el ciclo: ‘.format(len(lista)-1)))\n        if index in range(0, len(lista)):\n            return index\n    except:\n        return -1\n\nk = 0\nwhile k < len(lista):\n    v = lista[k]\n    print('Indice:', k, 'Valor:', lista[k])\n    k+=1\n\n    index = getIndx(lista)\n\n    if index >= 0:\n        k = index",
+        "question_id": 53595
+    },
+    {
+        "intent": "Modifying the value of a variable",
+        "rewritten_intent": "How to create a global variable 'points' within a 'function' function?",
+        "snippet": "def func():\n    global puntos",
+        "question_id": 30088
+    },
+    {
+        "intent": "Changing a string value to a whole",
+        "rewritten_intent": "How to convert a string 'S' to a whole?",
+        "snippet": "int(S)",
+        "question_id": 28562
+    },
+    {
+        "intent": "Changing a string value to a whole",
+        "rewritten_intent": "How to convert a string 'S' to a whole?",
+        "snippet": "int(S)",
+        "question_id": 28562
+    },
+    {
+        "intent": "Restoring python files",
+        "rewritten_intent": "How to change a file with the name ‘old’ to ‘new’?",
+        "snippet": "os.rename(old, new)",
+        "question_id": 17560
+    },
+    {
+        "intent": "Detecting coincidences in multiple files with Python",
+        "rewritten_intent": "How to search all files with extension `.ext` in the route `ruta` and find the coincidence between them?",
+        "snippet": "path = ruta\nextension = *.ext\n\ndef comparar_linea(file1, file2):\n    data1 = [line.strip() for line in file1.readlines()]\n    data2 = [line.strip() for line in file2.readlines()]\n    same = set(data1).intersection(data2)\n    return same\n\ndef buscarCoincidencias(path, extension):\n    with open('some_output_file.txt', 'w') as file_out:\n        os.chdir(path)\n        files = glob.glob(extension)\n        for i in range(len(files)):\n            for j in range(i+1, len(files)):\n                with open(files[i]) as file1:\n                    with open(files[j], 'r') as file2:\n                        same = comparar_linea(file1, file2)\n                        file_out.write(files[i] + \"-\"+ files[j] + \": \"+str(same)+\"\\n\")\n\n\nbuscarCoincidencias(path, extension)",
+        "question_id": 41536
+    },
+    {
+        "intent": "Detecting coincidences in multiple files with Python",
+        "rewritten_intent": "How to search all files with extension `.ext` in the route `ruta` and find the coincidence between them?",
+        "snippet": "os.chdir(ruta)\n\nopen_files = (open(file, 'r') for file in glob.glob(*.ext))\n\nsame = set.intersection(*map(set, open_files))\nsame.discard('\\n')\n\nfor f in open_files:\n    f.close()\n\nwith open('some_output_file.txt', 'w') as file_out:\nfor line in same:\n    file_out.write(line)",
+        "question_id": 41536
+    },
+    {
+        "intent": "Detecting coincidences in multiple files with Python",
+        "rewritten_intent": "How to search all files with extension `.ext` in the route `ruta` and find the coincidence between them?",
+        "snippet": "def filtrarCoincidencias(ruta,extension):\n    files=[ x for x in os.listdir(ruta) if x.endswith(extension)]\n    coincidencias=[]\n\n    for i,f1 in enumerate(files):\n        for j,f2 in enumerate(files):\n            if(j>i):\n                if(filecmp.cmp(ruta+f1,ruta+f2)):\n                    coincidencias.append((f1,f2))\n    return coincidencias\n\n\nfor tupla in filtrarCoincidencias(ruta,.ext):\n    print(tupla)",
+        "question_id": 41536
+    },
+    {
+        "intent": "Show alphabetically arranged objects in Django’s admin",
+        "rewritten_intent": "How to order alphabetically by the field `name` the instances of a class `Clase` in Django admin?",
+        "snippet": "class Clase(models.Model):\n    nombre = models.CharField()\n\n    def __unicode__(self): \n        return self.nombre\n\n    class Meta:\n        ordering = ['nombre']",
+        "question_id": 340
+    },
+    {
+        "intent": "How to generate a response from a POST with Django REST Framework Bulk?",
+        "rewritten_intent": "How to customize the response of a POST request to the 'ClassView' view in Django Rest Framework?",
+        "snippet": "class ClassView(generics.CreateAPIView):\n\n    queryset = class.objects.all()\n    serializer_class = classSerializer\n\n    def create(self, request, *args, **kwargs):\n        serializer = self.get_serializer(data=request.data)\n\n        self.perform_create(serializer)\n        response = {}\n        response['success'] = True\n        response['message'] = \"Registro guardado exitosamente\"\n        response['status'] = status.HTTP_201_CREATED\n        request.data.get('name')}, status=status.HTTP_201_CREATED)\n        return Response(response)",
+        "question_id": 56670
+    },
+    {
+        "intent": "How to generate a response from a POST with Django REST Framework Bulk?",
+        "rewritten_intent": "How to customize the response of a POST request to the 'ClassView' view in Django Rest Framework?",
+        "snippet": "@api_view(['GET', 'POST'])\ndef ClassView(request):\n    if request.method == 'POST' and request.status == status.HTTP_201_CREATED:\n        return Response({\"mensaje\": \"Empleado creado con éxito\", \"data\": request.data})\n    return Response({\"message\": \"Algún mensaje en GET\"})",
+        "question_id": 56670
+    },
+    {
+        "intent": "How to generate a response from a POST with Django REST Framework Bulk?",
+        "rewritten_intent": "How to customize the response of a POST request to the 'ClassView' view in Django Rest Framework?",
+        "snippet": "class ClassView(ListBulkCreateAPIView):\n    queryset = class.objects.all()\n    serializer_class = classSerializer\n\n    def create(self, request):\n        result = super(createEmployee, self).create(request)\n        return Result({'success': True, 'message': 'Creado correctamente'})",
+        "question_id": 56670
+    },
+    {
+        "intent": "Python - Convert float into string",
+        "rewritten_intent": "How to replace the values of a 'x' column in a 'table' matrix?",
+        "snippet": "a=tabla.tolist()\nfor x in a[:]:\n        x[0]=nombres[a.index(x)]",
+        "question_id": 62022
+    },
+    {
+        "intent": "How to get a specific chain in a string using regular Python expressions",
+        "rewritten_intent": "How to get the word after `word` in a chain `S` using regular expressions?",
+        "snippet": "match = re.search(r'.*?word-(\\w+).*', S)\n\nif match:\n    print match.group(1)",
+        "question_id": 16458
+    },
+    {
+        "intent": "Program matrix and vector function with numpy (spyder)",
+        "rewritten_intent": "How to add the values of the vector `x` to all the columns of the 'M' matrix?",
+        "snippet": "def suma_a_cada_columna(M, x):\n    return (M.transpose() + x).transpose()",
+        "question_id": 40594
+    },
+    {
+        "intent": "Python/Tkinter How to capture mouse clicks correctly in the contextual menu?",
+        "rewritten_intent": "How to capture the item with the tag `CURRENT` in Tkinter?",
+        "snippet": "def popup(event):\n    global current_item\n    try:\n        current_item = canvas.find_withtag(CURRENT)[0]\n        menu.post(event.x_root, event.y_root)\n    except IndexError:\n        current_item = None",
+        "question_id": 40452
+    },
+    {
+        "intent": "Power using only multiplication in Python",
+        "rewritten_intent": "How to raise a number x to power and using multiplication?",
+        "snippet": "def potenciaRecursiva(x, y):\n    if y == 0:\n        return 1\n\n    elif y >= 1:\n        return x * potenciaRecursiva(x, y - 1)",
+        "question_id": 53694
+    },
+    {
+        "intent": "Power using only multiplication in Python",
+        "rewritten_intent": "How to raise a number x to power and using multiplication?",
+        "snippet": "def potencia(x, y):\n    result = 1\n    while y > 0:\n        if y % 2 == 1:\n            result = (result * x) % MOD\n        y = y / 2\n        x = (x * x) % MOD\n    return result",
+        "question_id": 53694
+    },
+    {
+        "intent": "Get values in a given date range",
+        "rewritten_intent": "How to filter a Queryset `listuser` by the field `day` in a date range `date_initial` and `date_final`?",
+        "snippet": "listuser.filter(\n    day__range=(fecha_inicial, fecha_final))",
+        "question_id": 11038
+    },
+    {
+        "intent": "How to make the text effect that is written word-to-word in Python?",
+        "rewritten_intent": "How to print the elements of a chain `S` with a waiting time `t` between them?",
+        "snippet": "def mecanografiar(S):\n\n lista = S.split()\n\n for palabra in lista:\n    sys.stdout.write(palabra + \" \")\n    sys.stdout.flush()\n    time.sleep(t)",
+        "question_id": 48514
+    },
+    {
+        "intent": "How to make the text effect that is written word-to-word in Python?",
+        "rewritten_intent": "How to print the elements of a chain `S` with a waiting time `t` between them?",
+        "snippet": "def mecanografiar(S):\n    for palabras in S.split():\n        sleep(t)\n        print(palabras, end=' ', flush=True)",
+        "question_id": 48514
+    },
+    {
+        "intent": "How often does a text have a specific word?",
+        "rewritten_intent": "How to calculate how often a text 'S' has a specific word 'word'?",
+        "snippet": "def awesome_count (S):\n    wordcount = dict((x,0) for x in S)\n    for w in re.findall(r\"\\w+\", s):\n        if word in wordcount:\n            wordcount[word] += 1\n    return wordcount[word]",
+        "question_id": 67987
+    },
+    {
+        "intent": "How to create a program that multiplies matrices?",
+        "rewritten_intent": "How to multiply the ‘A’ and the ‘B’ matrix?",
+        "snippet": "def multiplicarMatriz(A, B):\n    return [[sum(x * B[i][col] for i,x in enumerate(fila)) for col in range(len(B[0]))] for fila in A]",
+        "question_id": 61810
+    },
+    {
+        "intent": "Google Automatic Login Apps",
+        "rewritten_intent": "How do I access a session from my Google account?",
+        "snippet": "class SesionGoogle():\n    def __init__(self, email, contraseña):\n        self.sesion = requests.session()\n\n        url_login = \"https://accounts.google.com/ServiceLogin\"\n        url_aut = \"https://accounts.google.com/ServiceLoginAuth\"\n\n        login_html = self.sesion.get(url_login)\n        soup_login = BeautifulSoup(login_html.content, 'html.parser').find('form').find_all('input')\n        datos = {u['name']:u['value'] for u in soup_login if u.has_attr('value')}\n        datos['Email'] = email\n        datos['Passwd'] = contraseña\n        self.sesion.post(url_aut, data = datos)\n\n    def get(self, URL):\n        return self.sesion.get(URL).text",
+        "question_id": 37098
+    },
+    {
+        "intent": "Getting and Graphing Sierpinski Triangle",
+        "rewritten_intent": "How to grave a Sierpinski triangle of 'n' steps?",
+        "snippet": "def get_triangle(P):\n    m = P * 0.5\n    n = P * 0.5 + np.array([0.5, 0])\n    k = P * 0.5 + np.array([0.25, np.sqrt(3)/4])\n    return np.array([m,n,k])\n\n# triangulo unitario inicial\ntriangle = np.array([[0, 0],\n              [1, 0],\n              [0.5, np.sqrt(3)/2]])\n\netapa = 5\nfor e in range(etapa):\n    triangle = get_triangle(triangle)\n\nfig1 = plt.figure()\nax1 = fig1.add_subplot(111, aspect='equal')\nfor t in triangle.reshape(3**etapa,3,2):\n    ax1.add_patch(mpatches.Polygon(t, fc=\"y\"))\n\nplt.show()",
+        "question_id": 4649
+    },
+    {
+        "intent": "Use input() within a cycle for (Python)",
+        "rewritten_intent": "How to create a matrix `matrix` in which the user sets the number of files `fil`, columns `colum` and their values from terminal?",
+        "snippet": "colum=int(input('Cantidad de columnas: '))\nfil=int(input('Cantidad de filas: '))\nmatriz=[[str(input('[{},{}]-esimo termino: '.format(i, j))) for i in range(colum)] for j in range(fil)]",
+        "question_id": 59136
+    },
+    {
+        "intent": "Copying a worksheet from one Excel file to another",
+        "rewritten_intent": "How to copy the information from a sheet `hoja1` from a file `wP` to a sheet `hoja2` in a archive `wB` and save it in a file `file`?",
+        "snippet": "wPs = wP.get_sheet_by_name(hoja1)\nwBs = wB.get_sheet_by_name(hoja2)\n\nfor rrow in wPs.iter_rows():\n    for cell in rrow:\n        wBs[cell.coordinate] = cell.value\n\nwB.save(file)",
+        "question_id": 51974
+    },
+    {
+        "intent": "How can I specify the separator that has a csv file in python?",
+        "rewritten_intent": "How to specify the separator `,` as of a csv file `file` when you open it?",
+        "snippet": "csv.reader(file, delimiter=',')",
+        "question_id": 9776
+    },
+    {
+        "intent": "Python 2.7. How to remove square parentheses in numpy.ndarray type .txt file",
+        "rewritten_intent": "How to remove corchets from a numpy.ndarray 'file' file and save the result in a new archvi 'file2'?",
+        "snippet": "inn = ''\nwith open(file, 'r') as file:\n    inn = file.read()\n\nwith open(file2, 'w') as file:\n    file.write(re.sub(r'[\\[\\]]', '', inn))",
+        "question_id": 13251
+    },
+    {
+        "intent": "How to remove a string from a numpy arrangement in python?",
+        "rewritten_intent": "How to remove a string from a numpy order `data_base`?",
+        "snippet": "average_db = data_base.mean()\nstd_db = data_base.std()\nupper = average_db + std_db*.5\nlower = average_db - std_db*.5\nfor i in range(len(data_base)):\n    if data_base[i,1]>=upper or data_base[i,1]<=lower:\n        data_base = np.delete(data_base, i)",
+        "question_id": 23323
+    },
+    {
+        "intent": "How to store imported data into Python in a memory cache",
+        "rewritten_intent": "How to give persistence to imported data from a database in a DataFrame `df` so that you don’t have to read them again from the database?",
+        "snippet": "with pd.HDFStore('store.h5') as store:\n    store['df'] = df",
+        "question_id": 44905
+    },
+    {
+        "intent": "How to Export PDF to Django?",
+        "rewritten_intent": "How to export a PDF with head and body as a response to a 'PdfView' view?",
+        "snippet": "class PdfView(View):\n\n    def cabecera(self, pdf):\n\t# Definir cabecera\n\n    def cuerpo(self, pdf, y):\n        # Definir cuerpo\n\n    def get(self, request, *args, **kwargs):\n    \n        response=HttpResponse(content_type='application/pdf')\n  buffer=BytesIO()\n    \n  pdf=canvas.Canvas(buffer)\n  self.cabecera(pdf)\n  y=600\n  self.cuerpo(pdf, y)\n  pdf.showPage()\n  pdf.save()\n  pdf=buffer.getvalue()\n  buffer.close()\n  response.write(pdf)\n        return response\n",
+        "question_id": 67477
+    },
+    {
+        "intent": "Create an application that runs up to a specified time in python",
+        "rewritten_intent": "How to make a 'function' function run from the 'time_start' time to 'time_finalisation' time?",
+        "snippet": "while True:\n    actual = datetime.now()\n    actual = time(actual.hour, actual.minute,actual.second)  # este objeto se puede comparar sin tener en cuenta la fecha\n    if actual > hora_inicio and actual < hora_finalizacion:\n        func()\n    else:\n        break",
+        "question_id": 41041
+    },
+    {
+        "intent": "Create an application that runs up to a specified time in python",
+        "rewritten_intent": "How to make a 'function' function run from the 'time_start' time to 'time_finalisation' time?",
+        "snippet": "while datetime.time.now() > hora_inicio and datetime.time.now() < hora_finalizacion:\n    func()",
+        "question_id": 41041
+    },
+    {
+        "intent": "How to convert a string type to Float or Int?",
+        "rewritten_intent": "How to convert a ‘String’ type to ‘Float’ or ‘Int’?",
+        "snippet": "float(String) int(String)",
+        "question_id": 49194
+    },
+    {
+        "intent": "Positioning a data in a list (Python)",
+        "rewritten_intent": "How to get the position of a 'x' data in a 'list' list?",
+        "snippet": "list.index(x)",
+        "question_id": 63234
+    },
+    {
+        "intent": "How to connect INT and STR with Python?",
+        "rewritten_intent": "How to combine a ‘INT’ and a ‘STR’?",
+        "snippet": "INT+repr(STR)",
+        "question_id": 57263
+    },
+    {
+        "intent": "How to connect INT and STR with Python?",
+        "rewritten_intent": "How to combine a ‘INT’ and a ‘STR’?",
+        "snippet": "STR + str(INT)",
+        "question_id": 57263
+    },
+    {
+        "intent": "How to connect INT and STR with Python?",
+        "rewritten_intent": "How to combine a ‘INT’ and a ‘STR’?",
+        "snippet": "print ('{} {}'.format(STR,str(INT)))",
+        "question_id": 57263
+    },
+    {
+        "intent": "How to list all files in a folder using Python?",
+        "rewritten_intent": "How to list all files in a folder located in the directory `ruta`?",
+        "snippet": "def ls(ruta = Path.cwd()):\n    return [arch.name for arch in Path(ruta).iterdir() if arch.is_file()]",
+        "question_id": 24278
+    },
+    {
+        "intent": "How to list all files in a folder using Python?",
+        "rewritten_intent": "How to list all files in a folder located in the directory `ruta`?",
+        "snippet": "import os\ndef encontrar_arq(arq_buscado, ruta):\n    encontrado = False\n    for i in ruta:\n        if ruta == arq_buscando:\n            econtrado = True\n    return encontrado",
+        "question_id": 24278
+    },
+    {
+        "intent": "Remove duplicate items from a list",
+        "rewritten_intent": "How to remove duplicates in a 'L' list?",
+        "snippet": "list(set(L))",
+        "question_id": 87813
+    },
+    {
+        "intent": "Remove duplicate items from a list",
+        "rewritten_intent": "How to remove duplicates in a 'L' list?",
+        "snippet": "sorted(set(L))",
+        "question_id": 87813
+    },
+    {
+        "intent": "Remove duplicate items from a list",
+        "rewritten_intent": "How to remove duplicates in a 'L' list?",
+        "snippet": "(k for (k,_) in groupby(L))",
+        "question_id": 87813
+    },
+    {
+        "intent": "Is there something like typeof in Python?",
+        "rewritten_intent": "How to get the type of a variable `x`?",
+        "snippet": "type(x)",
+        "question_id": 15622
+    },
+    {
+        "intent": "Is there something like typeof in Python?",
+        "rewritten_intent": "How to get the type of a variable `x`?",
+        "snippet": "isinstance(x, tipo_de_variable)",
+        "question_id": 15622
+    },
+    {
+        "intent": "How can I turn a list in reverse order?",
+        "rewritten_intent": "How can I turn a ‘list’ in reverse order?",
+        "snippet": "for item in reversed(lista):",
+        "question_id": 146070
+    },
+    {
+        "intent": "How can I turn a list in reverse order?",
+        "rewritten_intent": "How can I turn a ‘list’ in reverse order?",
+        "snippet": "for item in lista[::-1]:",
+        "question_id": 146070
+    },
+    {
+        "intent": "How can I turn a list in reverse order?",
+        "rewritten_intent": "How can I turn a ‘list’ in reverse order?",
+        "snippet": "for item in xrange(len(lista)):\n    print lista[-item-1]",
+        "question_id": 146070
+    },
+    {
+        "intent": "Suming the value of the items in the list",
+        "rewritten_intent": "How to add all the elements of a ‘list’?",
+        "snippet": "sum(lista)",
+        "question_id": 201210
+    },
+    {
+        "intent": "Suming the value of the items in the list",
+        "rewritten_intent": "How to add all the elements of a ‘list’?",
+        "snippet": "sum(lista)",
+        "question_id": 201210
+    },
+    {
+        "intent": "Suming the value of the items in the list",
+        "rewritten_intent": "How to add all the elements of a ‘list’?",
+        "snippet": "nume = 0\nfor m in lista:\n       nume += m",
+        "question_id": 201210
+    },
+    {
+        "intent": "Create a list of random numbers in python",
+        "rewritten_intent": "How to create a list of random numbers with random numbers?",
+        "snippet": "def listaAleatorios(n):\n      L = [0]  * n\n      for i in range(n):\n          L[i] = random.randint(0, 1000)\n      return L",
+        "question_id": 124063
+    },
+    {
+        "intent": "Create a list of random numbers in python",
+        "rewritten_intent": "How to create a list of random numbers with random numbers?",
+        "snippet": "def listaAleatorios(n):\n    L = []\n    for i in range(n):\n        L.insert(i, random.randrange(0, 1000, 2))\n    return L",
+        "question_id": 124063
+    },
+    {
+        "intent": "Create a list of random numbers in python",
+        "rewritten_intent": "How to create a list of random numbers with random numbers?",
+        "snippet": " = [] \ncontador_rondas = 0 .\n\nnumero_random = randint(1,30) \n\nwhile contador_rondas < n:\n    numero_random = randint(1,30) \n    if numero_random in L: \n        pass\n    else:\n        L.append(numero_random) \n        contador_rondas = contador_rondas + 1",
+        "question_id": 124063
+    },
+    {
+        "intent": "How do I connect to a MySQL database with Python?",
+        "rewritten_intent": "How do I connect to a MySQL database?",
+        "snippet": "db = MySQLdb.connect(host=,    \n                     user=,         \n                     passwd=,  \n                     db=)",
+        "question_id": 568
+    },
+    {
+        "intent": "How do I connect to a MySQL database with Python?",
+        "rewritten_intent": "How do I connect to a MySQL database?",
+        "snippet": "db = MySQLdb.connect(passwd=,db=)",
+        "question_id": 568
+    },
+    {
+        "intent": "How do you check that a file exists in Python?",
+        "rewritten_intent": "How do you check that a file ‘f’ exists?",
+        "snippet": "os.path.isfile(f)",
+        "question_id": 512
+    },
+    {
+        "intent": "How do you check that a file exists in Python?",
+        "rewritten_intent": "How do you check that a file ‘f’ exists?",
+        "snippet": "if (os.path.exists(f)):",
+        "question_id": 512
+    },
+    {
+        "intent": "How do you check that a file exists in Python?",
+        "rewritten_intent": "How do you check that a file ‘f’ exists?",
+        "snippet": "f = Path(f)\nf.exists()",
+        "question_id": 512
+    },
+    {
+        "intent": "Decimal rounding up in Python",
+        "rewritten_intent": "How to round decimals up from a number 'num'?",
+        "snippet": "math.ceil(num)",
+        "question_id": 8510
+    },
+    {
+        "intent": "Decimal rounding up in Python",
+        "rewritten_intent": "How to round decimals up from a number 'num'?",
+        "snippet": "round(num)",
+        "question_id": 8510
+    },
+    {
+        "intent": "Substitute values of a data frame with others (Python)",
+        "rewritten_intent": "How to replace the value of the column `col` in a data frame `df` with a data hole `clave`:`value`?",
+        "snippet": "df.col = df.col.replace({clave: valor})",
+        "question_id": 231231
+    },
+    {
+        "intent": "Substitute values of a data frame with others (Python)",
+        "rewritten_intent": "How to replace the value of the column `col` in a data frame `df` with a data hole `clave`:`value`?",
+        "snippet": "df.loc[df[col] == clave, col] = valor",
+        "question_id": 231231
+    },
+    {
+        "intent": "How to import .py modules from subcarpetes to folders",
+        "rewritten_intent": "How to import a 'archive' file from a top folder?",
+        "snippet": "from carpeta import archivo",
+        "question_id": 1087
+    },
+    {
+        "intent": "How to import .py modules from subcarpetes to folders",
+        "rewritten_intent": "How to import a 'archive' file from a top folder?",
+        "snippet": "import ..archivo",
+        "question_id": 1087
+    },
+    {
+        "intent": "Program to count the voices of a chain",
+        "rewritten_intent": "How to count the voices in a ‘s’ chain?",
+        "snippet": "def contar_vocales(s):\n    voc = 0\n    for c in s:\n        if c in 'aeiouAEIOU':\n            voc = voc + 1\n    return voc",
+        "question_id": 114782
+    },
+    {
+        "intent": "Program to count the voices of a chain",
+        "rewritten_intent": "How to count the voices in a ‘s’ chain?",
+        "snippet": "def contar_vocales(s):\n    return sum(map(s.lower().count, 'aeiouáéíóúü'))",
+        "question_id": 114782
+    },
+    {
+        "intent": "Program to count the voices of a chain",
+        "rewritten_intent": "How to count the voices in a ‘s’ chain?",
+        "snippet": "def contar_vocales(s):\n    voc=0\n    for i in range(0,len(s)):\n        if s[i]=='a' or s[i]=='e'or s[i]=='i' or s[i]=='o' or \\\n        s[i]=='u' or s[i]=='A'or s[i]=='E' or s[i]=='I' or \\\n        s[i]=='O'or s[i]=='U':\n            voc=voc+1\n    return voc",
+        "question_id": 114782
+    },
+    {
+        "intent": "How to Emulate Do-while Cycle in Python?",
+        "rewritten_intent": "How to Emulate a Do-while Cycle?",
+        "snippet": "i = 1\nwhile True:\n    i = i + 1\n    if(condicion):\n        break",
+        "question_id": 139701
+    },
+    {
+        "intent": "How to Emulate Do-while Cycle in Python?",
+        "rewritten_intent": "How to Emulate a Do-while Cycle?",
+        "snippet": "i = 1\nrepetir_bucle = True\nwhile repetir_bucle:\n    i = i + 1\n    if condicion:\n       repetir_bucle = False",
+        "question_id": 139701
+    },
+    {
+        "intent": "Limiting numbers in a periodical number in Python",
+        "rewritten_intent": "How to limit a periodical number ‘p’ to ‘n’ numbers?",
+        "snippet": "'{:.nf}'.format(p)",
+        "question_id": 236945
+    },
+    {
+        "intent": "Limiting numbers in a periodical number in Python",
+        "rewritten_intent": "How to limit a periodical number ‘p’ to ‘n’ numbers?",
+        "snippet": "'{0:.nf}'.format(p)",
+        "question_id": 236945
+    },
+    {
+        "intent": "Limiting numbers in a periodical number in Python",
+        "rewritten_intent": "How to limit a periodical number ‘p’ to ‘n’ numbers?",
+        "snippet": "'{0:.nf}'.format(p)",
+        "question_id": 236945
+    },
+    {
+        "intent": "Creating a computer within a function in Python 3.6",
+        "rewritten_intent": "How to create a 'number' accountant within a function?",
+        "snippet": "def contador():\n  numero = 0\n  while True:\n    numero += 1\n    yield numero",
+        "question_id": 171626
+    },
+    {
+        "intent": "Creating a computer within a function in Python 3.6",
+        "rewritten_intent": "How to create a 'number' accountant within a function?",
+        "snippet": "numero = 0\n\ndef contador():\n    global numero\n    numero=numero+1",
+        "question_id": 171626
+    },
+    {
+        "intent": "How to get the highest number of a list?",
+        "rewritten_intent": "How to get the largest number in a list of 'L' from 'Strings'?",
+        "snippet": "max(L, key=int)",
+        "question_id": 201835
+    },
+    {
+        "intent": "How to get the highest number of a list?",
+        "rewritten_intent": "How to get the largest number in a list of 'L' from 'Strings'?",
+        "snippet": "listadosNumero = [int(num) for num in L]\nprint (max(listadosNumero))",
+        "question_id": 201835
+    },
+    {
+        "intent": "How to search for a character in Python string?",
+        "rewritten_intent": "How to find all the positions of a letter in a 'String'?",
+        "snippet": "for i, l in enumerate(String):\n    if l.lower() == letra.lower():\n       print(l)",
+        "question_id": 272517
+    },
+    {
+        "intent": "How to search for a character in Python string?",
+        "rewritten_intent": "How to find all the positions of a letter in a 'String'?",
+        "snippet": "[idx for idx, letra in enumerate(String) if x==letra]",
+        "question_id": 272517
+    },
+    {
+        "intent": "Matrix MxN, filling vector with matrix values.",
+        "rewritten_intent": "How to create a 'matrix' matrix with 'n' files and 'm' columns?",
+        "snippet": "matriz = []\n\nfor i in range(n):\n    matriz.append([])\n    for j in range(m):\n        matriz[i].append(random.randint(0, 100))",
+        "question_id": 159996
+    },
+    {
+        "intent": "Matrix MxN, filling vector with matrix values.",
+        "rewritten_intent": "How to create a 'matrix' matrix with 'n' files and 'm' columns?",
+        "snippet": "matriz = np.random.randint(0, 100, size=(n, m))",
+        "question_id": 159996
+    },
+    {
+        "intent": "Matrix MxN, filling vector with matrix values.",
+        "rewritten_intent": "How to create a 'matrix' matrix with 'n' files and 'm' columns?",
+        "snippet": "a=[]\nfor i in range(n):\n    a.append([])\n    for j in range(m):\n        a[i].append(random.randrange(100))\n",
+        "question_id": 159996
+    },
+    {
+        "intent": "How to draw up a list with for?",
+        "rewritten_intent": "How to turn a list from the `p` position to the `n` position using a for loop?",
+        "snippet": "for i in lista[p:n]:",
+        "question_id": 119507
+    },
+    {
+        "intent": "How to draw up a list with for?",
+        "rewritten_intent": "How to turn a list from the `p` position to the `n` position using a for loop?",
+        "snippet": "for i in lista[p:n]:",
+        "question_id": 119507
+    },
+    {
+        "intent": "How can I insert delay in Python?",
+        "rewritten_intent": "How to insert a delay of 'n' seconds?",
+        "snippet": "time.sleep(n)",
+        "question_id": 109040
+    },
+    {
+        "intent": "How to extract and print content from lists in Python?",
+        "rewritten_intent": "How to print content from two lists `list1` and `list2` one below the other?",
+        "snippet": "for i in range(len(lista1)):\n    print(lista1[i], lista2[i])",
+        "question_id": 96884
+    },
+    {
+        "intent": "Add a new item to a Python dictionary",
+        "rewritten_intent": "How to add a new item from a list `L` to a dictionary in a cycle for?",
+        "snippet": "for j in range(len(L)): \n         diccionario[j] = L[j]",
+        "question_id": 86605
+    },
+    {
+        "intent": "Extrakting an object accidentally from a list",
+        "rewritten_intent": "How to select a random item from a 'l' list?",
+        "snippet": "shuffle(l)\nsel = l[0]",
+        "question_id": 14454
+    },
+    {
+        "intent": "Extrakting an object accidentally from a list",
+        "rewritten_intent": "How to select a random item from a 'l' list?",
+        "snippet": "sel = random.sample(l, 1)",
+        "question_id": 14454
+    },
+    {
+        "intent": "Extrakting an object accidentally from a list",
+        "rewritten_intent": "How to select a random item from a 'l' list?",
+        "snippet": "random.sample(l, k = 1)",
+        "question_id": 14454
+    },
+    {
+        "intent": "How to calculate the MCM in Python?",
+        "rewritten_intent": "How to calculate the minimum common multiple of two numbers `num1` and `num2`?",
+        "snippet": "num1 =int(input())\nnum2 =int(input())\n\nA = max(num1, num2)\nB = min(num1, num2)\n\nwhile B:\n    mcd = B\n    B = A % B\n    A = mcd\nmcm =  (num1 * num2) // mcd",
+        "question_id": 38558
+    },
+    {
+        "intent": "How to search a string of characters in python, to check if the previous character is equal to the following?",
+        "rewritten_intent": "How to check if a character 'c' is equal to the following in a string 'S'?",
+        "snippet": "for i, c in enumerate(S):\n  if i == 0:\n    pass\n  else:\n    if S[i-1] == S[i]:\n      print \"Caracter '%s' repetido en posiciones (%i,%i)\" % (c, i-1, i)",
+        "question_id": 138207
+    },
+    {
+        "intent": "How to search a string of characters in python, to check if the previous character is equal to the following?",
+        "rewritten_intent": "How to check if a character 'c' is equal to the following in a string 'S'?",
+        "snippet": "def letra_duplicada(S):\n    for c1, c2 in zip(S, S[1:]):\n        if c1 == c2:\n          return True\n    return False",
+        "question_id": 138207
+    },
+    {
+        "intent": "How to group data from a DataFrame into several columns at the same time?",
+        "rewritten_intent": "How to group data from a DataFrame by the columns `columna1`, `columna2` and `columna3` at the same time?",
+        "snippet": "df.groupby((columna1, columna2,columna3))",
+        "question_id": 111977
+    },
+    {
+        "intent": "How to call a method of one class from another class in Python?",
+        "rewritten_intent": "How to call a 'Example()' method of one class from another class in Python?",
+        "snippet": "instancia = Ejemplo()\ninstancia.metodo()",
+        "question_id": 258690
+    },
+    {
+        "intent": "How to call a method of one class from another class in Python?",
+        "rewritten_intent": "How to call a 'Example()' method of one class from another class in Python?",
+        "snippet": "newClass = Ejemplo()\nval = Ejemplo.getVal()",
+        "question_id": 258690
+    },
+    {
+        "intent": "How to call a method of one class from another class in Python?",
+        "rewritten_intent": "How to call a 'Example()' method of one class from another class in Python?",
+        "snippet": "class Ejemplo:\n    def ejemplo1():\n        print ('ejem1')\n\nclass Ejemplo2:\n\n    def ejemplo21():\n        return Ejemplo.ejem2()\n\n\nprint(Ejemplo2.ejemplow1())",
+        "question_id": 258690
+    },
+    {
+        "intent": "Can a function be declared within another function in python?",
+        "rewritten_intent": "\"How to declare a 'bar' function within another 'foo' function?\"",
+        "snippet": "def foo():\n    def bar():\n        print('Hola soy bar.')",
+        "question_id": 79755
+    },
+    {
+        "intent": "How to add an image to a Notebook in Jupyter",
+        "rewritten_intent": "How to add an image `imagen.png` to a Notebook in Jupyter?",
+        "snippet": "<img src='imagen.png'>",
+        "question_id": 77634
+    },
+    {
+        "intent": "How to add an image to a Notebook in Jupyter",
+        "rewritten_intent": "How to add an image `imagen.png` to a Notebook in Jupyter?",
+        "snippet": "![Modelo_Proceso.png](attachment:imagen.png)",
+        "question_id": 77634
+    },
+    {
+        "intent": "What is the best way to find the largest item within a list list?",
+        "rewritten_intent": "How to find the largest item in the position `n` a list of lists `l`?",
+        "snippet": "max(l, key=itemgetter(n))[n]",
+        "question_id": 46558
+    },
+    {
+        "intent": "What is the best way to find the largest item within a list list?",
+        "rewritten_intent": "How to find the largest item in the position `n` a list of lists `l`?",
+        "snippet": "matriz = np.array(l)\nprint matriz[n::].max()",
+        "question_id": 46558
+    },
+    {
+        "intent": "Is there a simple way to convert a str-type list to an int-type list?",
+        "rewritten_intent": "\"How to convert a list of 'str' to a list of 'int'\"",
+        "snippet": "for i in range(len(list)):\n    list[i] = int(list[i])",
+        "question_id": 213125
+    },
+    {
+        "intent": "How do you find the most repeated number of a list?",
+        "rewritten_intent": "How do you find the most repeated number of a list?",
+        "snippet": "Counter(lista).most_common()[0][0])",
+        "question_id": 151572
+    },
+    {
+        "intent": "How do you find the most repeated number of a list?",
+        "rewritten_intent": "How do you find the most repeated number of a list?",
+        "snippet": "c = Counter(lista)\nprint(max(c, key=c.get))",
+        "question_id": 151572
+    },
+    {
+        "intent": "How do you find the most repeated number of a list?",
+        "rewritten_intent": "How do you find the most repeated number of a list?",
+        "snippet": "moda, count = stats.mode(np.array(a))",
+        "question_id": 151572
+    },
+    {
+        "intent": "How to get a column from a matrix?",
+        "rewritten_intent": "How to get a whole 'c' column from a 'm' matrix?",
+        "snippet": "inputs = np.array(m)\nprint(inputs[:,c])",
+        "question_id": 115010
+    },
+    {
+        "intent": "How to get a column from a matrix?",
+        "rewritten_intent": "How to get a whole 'c' column from a 'm' matrix?",
+        "snippet": "inputs_inv = list(zip(*m))\nprint(inputs_inv[c])",
+        "question_id": 115010
+    },
+    {
+        "intent": "How to call an external application through a command in Python?",
+        "rewritten_intent": "How to call an external Windows application through a command?",
+        "snippet": "call([aplicación])",
+        "question_id": 2434
+    },
+    {
+        "intent": "How to call an external application through a command in Python?",
+        "rewritten_intent": "How to call an external Windows application through a command?",
+        "snippet": "os.system('aplicación')",
+        "question_id": 2434
+    },
+    {
+        "intent": "Increase Graphic Size with Matplotlib",
+        "rewritten_intent": "How to increase the size of the matplotlib output chart?",
+        "snippet": "plt.figure(figsize=(10,6))",
+        "question_id": 240398
+    },
+    {
+        "intent": "Save full graphics using matplotlib in Python",
+        "rewritten_intent": "How to save a full chart using matplotlib?",
+        "snippet": "matplotlib.rcParams.update({'font.size': 21})\nax = plt.gca()\n\nax2 = ax.twinx()\nfor i in range(10):\n    ax.bar(i, np.random.randint(1000))\n\nplt.ylabel('Datos')\nplt.savefig(\"Ejemplo1.jpg\")",
+        "question_id": 151744
+    },
+    {
+        "intent": "Remove item from a list in python",
+        "rewritten_intent": "How to create a function to remove a 'n' item from a 'L' list?",
+        "snippet": "def eliminarEnLista(L):\n    n=int(raw_input(\"Ingrese el numero que desea eliminar de la lista: \"))\n    try:\n        L.remove(n)\n        print(L)\n    except ValueError:\n        print('{} no se encuentra en la lista'.format(n))",
+        "question_id": 206450
+    },
+    {
+        "intent": "Remove item from a list in python",
+        "rewritten_intent": "How to create a function to remove a 'n' item from a 'L' list?",
+        "snippet": "def eliminarEnLista(L):\n    posicion = input(\"¿Qué posición que desea eliminar de la lista: \" + \",\".join(una_lista) + \" ? \")\n    if(str(n).isdigit() and int(n) <= len(L)):\n        L.pop(int(n))\n        return \",\".join(L)\n    else:\n        return \"Algo anda mal\"\n",
+        "question_id": 206450
+    },
+    {
+        "intent": "Summing the items of two lists with lists",
+        "rewritten_intent": "How to sum elements from two lists `list1` and `list2` with different lengths?",
+        "snippet": "mayor, menor = (lista1, lista2) if len(lista1) > len(lista2) else (lista2, lista1)\nlista3 = []\nfor i, _ in enumerate(mayor):\n    if i + 1 > len(menor):\n      lista3.append(mayor[i])\n    else:\n      lista3.append(mayor[i] + menor[i])",
+        "question_id": 102988
+    },
+    {
+        "intent": "Summing the items of two lists with lists",
+        "rewritten_intent": "How to sum elements from two lists `list1` and `list2` with different lengths?",
+        "snippet": "lista3 = []\n\n    for i in range(len(lista1)):\n      lista3.append(lista1[i])\n\n    for i in range(len(lista2)):\n      lista3[i] = lista3[i] + lista2[i]",
+        "question_id": 102988
+    },
+    {
+        "intent": "How to print items from a list that are inside a tupla. Python",
+        "rewritten_intent": "How to print in a single line the items of a list that is within a tupla `tupla`?",
+        "snippet": "c='' \nfor x in tupla[1] : \n  c = c+''.join(x) \nprint c",
+        "question_id": 21230
+    },
+    {
+        "intent": "How to print items from a list that are inside a tupla. Python",
+        "rewritten_intent": "How to print in a single line the items of a list that is within a tupla `tupla`?",
+        "snippet": "salida = ''\nfor sub1 in tupla[1]:\n      for sub2 in sub1:\n            salida += sub2\nprint salida",
+        "question_id": 21230
+    },
+    {
+        "intent": "How to print items from a list that are inside a tupla. Python",
+        "rewritten_intent": "How to print in a single line the items of a list that is within a tupla `tupla`?",
+        "snippet": "salida = ''.join(''.join(letra) for letra in tupla[1])",
+        "question_id": 21230
+    },
+    {
+        "intent": "How to make a sumatory without using cycles (while, for)",
+        "rewritten_intent": "How to make a sumatory of a 'L' list without using cycles?",
+        "snippet": "resultado = sum(L)",
+        "question_id": 148791
+    },
+    {
+        "intent": "How to generate a matrix with a list that contains data?",
+        "rewritten_intent": "How to generate a 'M'x'N' matrix with a 'L' list?",
+        "snippet": "np.array(L).reshape(M,N)",
+        "question_id": 8239
+    },
+    {
+        "intent": "How to generate a matrix with a list that contains data?",
+        "rewritten_intent": "How to generate a 'M'x'N' matrix with a 'L' list?",
+        "snippet": "args = [iter(L)]*M\nmatriz = list(zip_longest(*args))",
+        "question_id": 8239
+    },
+    {
+        "intent": "Showing the position of repetitive items from a Python list",
+        "rewritten_intent": "How to show the position of the repetitive items in a list 'L'?",
+        "snippet": "ux = defaultdict(list)\nfor index, item in enumerate(L):\n    aux[item].append(index)\nresult = {item: indexs for item, indexs in aux.items() if len(indexs) > 1}\nprint(result",
+        "question_id": 83439
+    },
+    {
+        "intent": "Showing the position of repetitive items from a Python list",
+        "rewritten_intent": "How to show the position of the repetitive items in a list 'L'?",
+        "snippet": "counts_por_elem = Counter(L)\n\nindices_por_elem = defaultdict(list)\nindices = []   \n\nfor indice, elem in enumerate(L):\n  if counts_por_elem[elem] > 1:\n    indices.append(indice)  \n    indices_por_elem[elem].append(indice)\n",
+        "question_id": 83439
+    },
+    {
+        "intent": "Calculation of characters within a chain in Python",
+        "rewritten_intent": "How to count how many times a character is repeated in a 'S' chain?",
+        "snippet": "Counter(S)",
+        "question_id": 188925
+    },
+    {
+        "intent": "How can I capture the first letter of each word in a chain?",
+        "rewritten_intent": "How to create a chain with the first letter of each word in a chain `S`?",
+        "snippet": "words = S.split(' ') \ncharacter = ''\n\nfor word in words:\n   character += word[0]",
+        "question_id": 160722
+    },
+    {
+        "intent": "How can I capture the first letter of each word in a chain?",
+        "rewritten_intent": "How to create a chain with the first letter of each word in a chain `S`?",
+        "snippet": "palabras = S.split()\nnueva_cadena = \"\"\nfor p in palabras:\n    nueva_cadena += p[0]",
+        "question_id": 160722
+    },
+    {
+        "intent": "Changing directory in python",
+        "rewritten_intent": "How do I change my current execution directory to a new directory located on the route `ruta_absoluta`?",
+        "snippet": "os.chdir('ruta_absoluta')",
+        "question_id": 133561
+    },
+    {
+        "intent": "Dividing list into list",
+        "rewritten_intent": "How to divide a 'L' list into a list of lists each 'n' data?",
+        "snippet": "lista_nueva = []\nfor i in range(0, len(L), n):\n    lista_nueva.append(L[i:i+n])\nprint(lista_nueva)",
+        "question_id": 134908
+    },
+    {
+        "intent": "Dividing list into list",
+        "rewritten_intent": "How to divide a 'L' list into a list of lists each 'n' data?",
+        "snippet": "nueva_lista = [L[i:i+n] for i in range(0, len(L), n)]",
+        "question_id": 134908
+    },
+    {
+        "intent": "a command to compare between a string and a integer in Python (as condition)",
+        "rewritten_intent": "How to compare if the user input a `int` or a `str`?",
+        "snippet": "n=raw_input('ingrese numero jugadores: ') if str==str(int): \nprint('escribe un numero, no una letra')",
+        "question_id": 63139
+    },
+    {
+        "intent": "a command to compare between a string and a integer in Python (as condition)",
+        "rewritten_intent": "How to compare if the user input a `int` or a `str`?",
+        "snippet": "while True:\nn=raw_input('ingrese numero jugadores: ') \n   try: \n     n=int(n)\n     return n\n\n   except ValueError:\n\n      print 'Escribe un numero, no una letra.'",
+        "question_id": 63139
+    },
+    {
+        "intent": "a command to compare between a string and a integer in Python (as condition)",
+        "rewritten_intent": "How to compare if the user input a `int` or a `str`?",
+        "snippet": "while True:\nn=raw_input(‘ingrese numero jugadores: ‘) \nif type(n) !=int:\n    raise TypeError, ‘Escriba un numero’",
+        "question_id": 63139
+    },
+    {
+        "intent": "How do you know how many majuscules, minuscules and numbers a string has?",
+        "rewritten_intent": "How do you know how many majuscules `M`, how many minuscules `m` and how many numbers `n` has a string `S`?",
+        "snippet": "M = len([c for c in S if c.isupper()])\nm = len([c for c in S if c.islower()])\nn = len([c for c in S if c.isdigit()])",
+        "question_id": 52839
+    },
+    {
+        "intent": "How do you know how many majuscules, minuscules and numbers a string has?",
+        "rewritten_intent": "How do you know how many majuscules `M`, how many minuscules `m` and how many numbers `n` has a string `S`?",
+        "snippet": "textoSoloMayusculas = re.sub('[^A-Z]', '', S)\n\ntextoSoloMinusculas = re.sub('[^a-z]', '', S)\n\ntextoSoloNumeros = re.sub('[^\\d]', '', S)\n\nM = len(textoSoloMayusculas)\n\nm = len(textoSoloMinusculas)\n\nn = len(textoSoloNumeros)",
+        "question_id": 52839
+    },
+    {
+        "intent": "Convert from binary to whole into python (SyntaxError: invalid token)",
+        "rewritten_intent": "How to convert a binary number ‘n’ to a whole?",
+        "snippet": "print(int(n))",
+        "question_id": 50423
+    },
+    {
+        "intent": "Transfer data from a list to a sheet, using two cell of the sheet - Python",
+        "rewritten_intent": "How to pass the data `key`, `val` from a dictionary `key` to a calculation sheet in the file `file`?",
+        "snippet": "wb = Workbook()\nruta = file\n\nhoja = wb.active\nhoja.title = 'Fecha-Valor'\n\nfila = 1 #Fila donde empezamos\ncol_fecha = 1 #Columna donde guardamos las fechas\ncol_dato = 2 #Columna donde guardamos el dato asociados a cada fecha\n\nfor key, val in dic.items():\n    hoja.cell(column=col_fecha, row=fila, value=key)\n    hoja.cell(column=col_dato, row=fila, value=val)\nfila+=1\n\nwb.save(filename = ruta)",
+        "question_id": 36060
+    },
+    {
+        "intent": "Random without repetition",
+        "rewritten_intent": "How to select four random values `L1`, `L2`, `L3`, `L4` from a string `S` without repetition?",
+        "snippet": "L1, L2, L3, L4 = random.sample(S, 4)",
+        "question_id": 39861
+    },
+    {
+        "intent": "How to create a dictionary with multiple values within another dictionary in python?",
+        "rewritten_intent": "How to create a dictionary with `num_node` number of values within another dictionary `grafo`?",
+        "snippet": "def generarGrafo(num_nodos):   \n    grafo = {}\n\n    for i in range(num_nodos):\n        nodo = raw_input(' ID Nodo %d:' %(i+1))       \n        num_nodos_asociados = input('  Numero de nodos asociados a nodo  '%s':' %(nodo))\n        grafo[nodo] = {}\n\n        for j in range(int(num_nodos_asociados)):\n            nodo_asociado = raw_input('   ID nodo %d asociado:' %(j+1)) \n            peso_asociado = input(' Peso asociado (Arista(%s,%s) ): ' %(nodo, nodo_asociado) )\n            grafo[nodo][nodo_asociado] = peso_asociado\n    return grafo",
+        "question_id": 26549
+    },
+    {
+        "intent": "Re-execute part of the code until it is completed",
+        "rewritten_intent": "How to run a part of a code until a condition `cond` is fulfilled?",
+        "snippet": "while True:\n    if cond:\n        break",
+        "question_id": 67977
+    },
+    {
+        "intent": "Two forms in a single view Django - CreateView",
+        "rewritten_intent": "How to move two forms `form1` and `form2` to a view `View` in Django?",
+        "snippet": "class View(MultiFormsView):\n    form_class = {\n        'dragon': UserProfileForm,\n        'unicornio': UserForm\n    }",
+        "question_id": 22420
+    },
+    {
+        "intent": "Run a code fragment at a given time/time in a script in execution",
+        "rewritten_intent": "How to run a 'function' code fragment every day at one hour 'time' with a given 'day' delay in a script in running?",
+        "snippet": "class Temporizador(Thread):\n    def __init__(self, hora, funcion):\n        super(Temporizador, self).__init__()\n        self._estado = True\n        self.hora = hora\n        self.delay = delay\n        self.funcion = funcion\n\n    def stop(self):\n        self._estado = False\n\n    def run(self):\n        aux = datetime.strptime(self.hora, '%H:%M:%S')\n        hora = datetime.now()\n        hora = hora.replace(hour = aux.hour, minute=aux.minute, second=aux.second, microsecond = 0)\n        if hora <= datetime.now():\n            hora += timedelta(days=1)\n\n        while self._estado:\n            if hora <= datetime.now():\n                self.funcion()\n                hora += timedelta(days=1)\n            sleep(self.delay)",
+        "question_id": 38195
+    },
+    {
+        "intent": "Clean the console after each main while run.",
+        "rewritten_intent": "How to clean the console after each while cycle run?",
+        "snippet": "While True:\n\tos.system('cls')",
+        "question_id": 71551
+    },
+    {
+        "intent": "How to read a text file from a list or array with Python",
+        "rewritten_intent": "How to read a text file 'file' and generate a list 'arr' with each of its lines?",
+        "snippet": "with open(file, 'r') as ins:\n    cont = ins.read()  \n    arr = eval(cont)",
+        "question_id": 17679
+    },
+    {
+        "intent": "Extract data from XML using Python",
+        "rewritten_intent": "How to extract `commentinfo` data from a url `url` that are in XML format?",
+        "snippet": "url = url\nuh = urllib.urlopen(url)\ndata = uh.read()\ncommentinfo = ET.fromstring(data)",
+        "question_id": 3122
+    },
+    {
+        "intent": "Extract data from XML using Python",
+        "rewritten_intent": "How to extract `commentinfo` data from a url `url` that are in XML format?",
+        "snippet": "url = url\nparsed_data = untangle.parse(url)\ncommentinfo = parsed_data.commentinfo.comments.comment",
+        "question_id": 3122
+    },
+    {
+        "intent": "How do I order a list created by the user?",
+        "rewritten_intent": "How to order a list of numbers given by the user in the console?",
+        "snippet": "list = []\ntext = input('Ingrese Numero ')\nlist = [int(i) for i in text.split(' ')]\nlist.sort()",
+        "question_id": 30292
+    },
+    {
+        "intent": "How do I order a list created by the user?",
+        "rewritten_intent": "How to order a list of numbers given by the user in the console?",
+        "snippet": "list = []  \nprint('Ingresa 3 Numeros')\nfor x in range(3):\n    ingresado = input('Ingrese:')  \n    list.append(ingresado)  \n\nlist.sort() ",
+        "question_id": 30292
+    },
+    {
+        "intent": "How do I order a list created by the user?",
+        "rewritten_intent": "How to order a list of numbers given by the user in the console?",
+        "snippet": "print('Ingresa numeros, 0 para terminar')\nlist = []\nnum = input()\nwhile num != 0:\n    list.append(num)\n    num = input()\n\nprint(\"%d numeros fueron escritos\") % len(list)\nprint(sorted(list))",
+        "question_id": 30292
+    },
+    {
+        "intent": "Add lists on a list - Python 2.7",
+        "rewritten_intent": "How to add lists `list` with values `val1` and `val2` entered by the user in another list `list2`?",
+        "snippet": "lista2 = []\nrespuesta = ''\nwhile respuesta.lower() != 'no':\n    lista = []\n    val1 = lista.append(raw_input('ingrese val1: '))\n    val2 = lista.append(raw_input('ingrese val2: ))\n    lista2.append(lista)\n    respuesta = raw_input('si desea ingresar datos de otro alumno ingrese Si, de lo contrario, ingrese No ')",
+        "question_id": 43558
+    },
+    {
+        "intent": "How to capture a keyboard or a combination of keys in python3?",
+        "rewritten_intent": "How to capture the value of a key when the user presses it?",
+        "snippet": "ch = screen.getch()",
+        "question_id": 71086
+    },
+    {
+        "intent": "How to capture a keyboard or a combination of keys in python3?",
+        "rewritten_intent": "How to capture the value of a key when the user presses it?",
+        "snippet": "def teclaPulsada(key): \n    print(\"Pulsada: \", key) \n    with Listener(on_press=teclaPulsada) as listener: \n        listener.join() ",
+        "question_id": 71086
+    },
+    {
+        "intent": "How can I run asynchronous tasks in Python?",
+        "rewritten_intent": "How to execute a function asynchronously?",
+        "snippet": "with ThreadPoolExecutor() as e:\n        fs = {e.submit(fun)}\n        wait(fs)",
+        "question_id": 68420
+    },
+    {
+        "intent": "How to set the Frame Widget in Tkinter?",
+        "rewritten_intent": "How to create a mainframe frame in Tkinter?",
+        "snippet": "root=tk.Tk()\n\nmainframe = ttk.Frame(root)\nmainframe.grid()\nmainframe['padding'] = 5, 10",
+        "question_id": 62981
+    },
+    {
+        "intent": "Get the highest number in python",
+        "rewritten_intent": "How do you find the highest value of `n` values entered by console?",
+        "snippet": "n_mayor = 0\nk = 1\nn = input(\"Escriba la cantidad de numeros que desea comparar: \")\nwhile k<=n:\n    n = float(input('Digitar numero: '))\n    if n>n_mayor:\n        n_mayor = n\n    else:\n        n_mayor = n_mayor\n    k = k+1\nprint 'El mayor numero es: ',n_mayor",
+        "question_id": 5382
+    },
+    {
+        "intent": "Graphics with Python, Pandas",
+        "rewritten_intent": "How to create a bar chart with data from a Data Frame `df` grouped by the column `col`?",
+        "snippet": "grp=df.groupby(col)\ngrp.size().plot(kind='bar')",
+        "question_id": 21371
+    },
+    {
+        "intent": "How to get items from a list by pair in python",
+        "rewritten_intent": "How to create a two-value top list from a 'list' list?",
+        "snippet": "def troceo(lista):\n    return list(zip(*[iter(lista)]*2))",
+        "question_id": 22582
+    },
+    {
+        "intent": "How to get items from a list by pair in python",
+        "rewritten_intent": "How to create a two-value top list from a 'list' list?",
+        "snippet": "zipped = zip(lista[0::n], lista[1::2]) ",
+        "question_id": 22582
+    },
+    {
+        "intent": "Find the first row of in a matrix that contains all the positive elements and the sum of these elements",
+        "rewritten_intent": "How to find the first row in a 'matrix' matrix that contains only positive numbers and replace each row of the list with the sum of these numbers?",
+        "snippet": "def suma_nasver(matriz):\n    resultado = []\n    suma = 0\n    for arreglo in matriz:\n \n        elementos_negativos = list(filter(lambda elem: elem < 0, arreglo))\n        if not elementos_negativos:\n            \n            suma = sum(arreglo)\n            break\n\n    if suma:\n  \n        [resultado.append([suma]) for _ in range(len(matriz))]\n    return resultado",
+        "question_id": 2320
+    },
+    {
+        "intent": "Find the first row of in a matrix that contains all the positive elements and the sum of these elements",
+        "rewritten_intent": "How to find the first row in a 'matrix' matrix that contains only positive numbers and replace each row of the list with the sum of these numbers?",
+        "snippet": "suma_positivos = 0\n\nfor fila in matriz:\n    \n    if all([numero > 0 for numero in fila]):\n            suma_positivos =  sum(fila)\n                   \n            break\n\nif suma_positivos:\n    matriz = [[suma_positivos for value in matriz] for row in matriz]",
+        "question_id": 2320
+    },
+    {
+        "intent": "Find the first row of in a matrix that contains all the positive elements and the sum of these elements",
+        "rewritten_intent": "How to find the first row in a 'matrix' matrix that contains only positive numbers and replace each row of the list with the sum of these numbers?",
+        "snippet": "sumallpos = sum(next((x for x in matriz if min(x) > 0), [0]))\nif sumallpos:\n    matriz = [[sumallpos for x in y] for y in matriz]\nelse:\n    print('No hay filas con todos elementos positivos.')",
+        "question_id": 2320
+    },
+    {
+        "intent": "CSV data archive as a array in Python",
+        "rewritten_intent": "How to convert a 'file' csv file into a 'list' array?",
+        "snippet": "reader = csv.reader(open(file, 'rb'))\nfor row in (reader):\n    row.split(',')\n    file = [row[0],row[1],row[2],row[3]]",
+        "question_id": 45217
+    },
+    {
+        "intent": "How can I get the digital root of a positive number using Python?",
+        "rewritten_intent": "How to get the digital root of a number number?",
+        "snippet": "def raiz_digital(num):\n    suma = sum(int(digito) for digito in str(num))\n    if suma < 10:\n        return suma\n    else:\n        return raiz_digital(suma)",
+        "question_id": 1651
+    },
+    {
+        "intent": "How can I get the digital root of a positive number using Python?",
+        "rewritten_intent": "How to get the digital root of a number number?",
+        "snippet": "def getDigitalRoot(num):\n    return num if num == 0 else num % 9 or 9",
+        "question_id": 1651
+    },
+    {
+        "intent": "How can I get the digital root of a positive number using Python?",
+        "rewritten_intent": "How to get the digital root of a number number?",
+        "snippet": "def digital_root(num):\n    n = str(num)\n    while(len(n) > 1):\n        n = str(reduce(lambda x, y: x + y, map(int, n)))\n    return int(n)",
+        "question_id": 1651
+    },
+    {
+        "intent": "How to get the day of the year from a datetime?",
+        "rewritten_intent": "How to get the last two digits of the year followed by the day of the year from a datetime `date`?",
+        "snippet": "print (date.strftime('%y%j'))",
+        "question_id": 1139
+    },
+    {
+        "intent": "Converting minor to major does not work well with upper",
+        "rewritten_intent": "How to convert a string 'S' from a minor to a major?",
+        "snippet": "S.upper()",
+        "question_id": 15727
+    },
+    {
+        "intent": "Divisions with decimals in Python 2",
+        "rewritten_intent": "How to divide a whole number by a decimal number?",
+        "snippet": "resultado = numero / número1",
+        "question_id": 47500
+    },
+    {
+        "intent": "What module can I use to detect and connect to the Wi-Fi networks around, using Python ? preferably an OSX solution",
+        "rewritten_intent": "How to connect to a ‘red’ wifi network with ‘pass’ password?",
+        "snippet": "\"wireless = Wireless()\nwireless.interface()\nwireless.connect(ssid=red, password=pass)",
+        "question_id": 956
+    },
+    {
+        "intent": "Create objects with similar names with a python for cycle",
+        "rewritten_intent": "How to create n objects 'obj' identical?",
+        "snippet": "for i in range(1,n):\n    exec(obj.format(i))",
+        "question_id": 60867
+    },
+    {
+        "intent": "Create objects with similar names with a python for cycle",
+        "rewritten_intent": "How to create n objects 'obj' identical?",
+        "snippet": "[obj] * n ",
+        "question_id": 60867
+    },
+    {
+        "intent": "How do I keep a dictionary in order not to lose its content?",
+        "rewritten_intent": "How to create a program to save values `key`, `val` in a dic dic dic' dictionary in a file `file`?",
+        "snippet": "def agregar(dic):\n    key = input(‘Palabra en español: ‘)\n    val = input(‘Palabra en ingles: ‘)\n    dic[key] = val\n\ndef cargar_datos():\n    try:\n        with open(file, ‘rb’) as f:\n            return pickle.load(f)\n    except (OSError, IOError) as e:\n        return dict()\n\ndef guardar_datos(dic):\n    with open(‘traducciones.dat’, ‘wb’) as f:\n        pickle.dump(dic, f)\n\n\ndef main():\n    dic = cargar_datos()\n    menu ='''\n    2. Añadir palabra.\n    3. Guardar y salir.\n    '''\n\n    while True:\n        print(menu)\n        decision = input(‘¿Que quieres hacer?: ‘)\n        elif decision == ‘1’:\n            agregar(dic)\n        elif decision == ‘2’:\n            guardar_datos(dic)\n            break\n        else:\n            print('Opción inválida, intentelo de nuevo.')\n\nif __name__ == '__main__':\n    main()",
+        "question_id": 68734
+    },
+    {
+        "intent": "How to use the command (cd ..) in python",
+        "rewritten_intent": "How to use the CD command in a script?",
+        "snippet": "os.chdir('..')",
+        "question_id": 18276
+    },
+    {
+        "intent": "How to use the command (cd ..) in python",
+        "rewritten_intent": "How to use the CD command in a script?",
+        "snippet": "os.system('cd ..') ",
+        "question_id": 18276
+    },
+    {
+        "intent": "\"While\": how can I \"print\" the while values in horizontal separated by a \",\"?",
+        "rewritten_intent": "How to print `n` numbers `num` entered by console on the same line?",
+        "snippet": "num=int(input(\"Ingrese un numero:\"))\na=0\nwhile(a<n):\n    print(num, end=',')\n    a+=1\"",
+        "question_id": 66226
+    },
+    {
+        "intent": "\"While\": how can I \"print\" the while values in horizontal separated by a \",\"?",
+        "rewritten_intent": "How to print `n` numbers `num` entered by console on the same line?",
+        "snippet": "num=int(input(‘Ingrese un numero:’))\na=0\nnumeros = ‘’ #String que contendra los numeros\nwhile(a<n):\n    numeros = numeros + str(num) + \",\" #agregamos al string el numeros y una coma\n    a+=1\n\nnumeros = numeros[:-1] \nprint numeros \n",
+        "question_id": 66226
+    },
+    {
+        "intent": "Transfer a list, but not copy line by line",
+        "rewritten_intent": "How to transfer a ‘aux’ list?",
+        "snippet": "aux = [[fila[i] for fila in aux ] for i in range(len(aux[0]))]",
+        "question_id": 56480
+    },
+    {
+        "intent": "Transfer a list, but not copy line by line",
+        "rewritten_intent": "How to transfer a ‘aux’ list?",
+        "snippet": "aux = np.transpose(aux)",
+        "question_id": 56480
+    },
+    {
+        "intent": "Transfer a list, but not copy line by line",
+        "rewritten_intent": "How to transfer a ‘aux’ list?",
+        "snippet": "aux = [list(i) for i in zip(*aux)]",
+        "question_id": 56480
+    },
+    {
+        "intent": "Numbering first numbers, order ascending and descending in python",
+        "rewritten_intent": "How to calculate the number of first numbers in a 'list' list and order it up and down?",
+        "snippet": "def is_prime(n):\n    return n > 1 and all(n % i for i in range(2, n))\n\nprint(\"Cantidad de primos   : {0}\".format(sum(1 for n in lista if is_prime(n))))\nprint(\"Lista ordenada (asc) : {0}\".format(sorted(lista)))\nprint(\"Lista ordenada (desc): {0}\".format(sorted(lista,reverse=True)))",
+        "question_id": 54616
+    },
+    {
+        "intent": "How to create a start date interval to a end date with python-dateutil?",
+        "rewritten_intent": "How to create a start date range from `from` to a final date `to`?",
+        "snippet": "def rango_fechas(desde, hasta):\n    rango = []\n    dias_totales = (hasta - desde).days\n    for days in range(dias_totales + 1): \n        fecha = desde + relativedelta(days=days)\n        rango.append(fecha)\n    return rango",
+        "question_id": 7601
+    },
+    {
+        "intent": "Search for words inside another",
+        "rewritten_intent": "How to identify if the text `addr` introduced by the console is a domain or an ip?",
+        "snippet": "addr = raw_input('Introduce la ip o el nombre de dominio: ')\ndominios = ['gmail','hotmail']\nbandera = \n\nfor proveedor in dominios :\n    if (cadena.find(proveedor,0,len(cadena)) > 0):\n       bandera = True\n\nif(bandera):\n    print 'es un proveedor'\nelse:\n    print 'es un dominio'",
+        "question_id": 51617
+    },
+    {
+        "intent": "Search for words inside another",
+        "rewritten_intent": "How to identify if the text `addr` introduced by the console is a domain or an ip?",
+        "snippet": "addr = raw_input('Introduce la ip o el nombre de dominio: ')\naddrs= ['.com', '.es']\nencontrado = False\n\nfor valor in addrs :\n    if addr.find(valor) > -1 :\n        encontrado = True\n\n\nif encontrado :\n    print 'es un dominio'\nelse:\n    print 'es una ip'",
+        "question_id": 51617
+    },
+    {
+        "intent": "Search for words inside another",
+        "rewritten_intent": "How to identify if the text `addr` introduced by the console is a domain or an ip?",
+        "snippet": "addr=input ('Introduce la ip o el nombre de dominio: ')\n\ntry:\n    aux=int(addr)\n    print (addr, ': es una ip')\n\nexcept:\n   print (addr, ' es un dominio')",
+        "question_id": 51617
+    },
+    {
+        "intent": "Non-obligatory fields using Django Form",
+        "rewritten_intent": "How to specify that a field of a Form in Django is not obligatory?",
+        "snippet": "def __init__(self, *args, **kwargs):\n    super(self.__class__, self).__init__(*args, **kwargs)\n    \n    self.fields[field].required = False  \n",
+        "question_id": 30470
+    },
+    {
+        "intent": "Creating and grabbing pending arrangements between points",
+        "rewritten_intent": "How to calculate the pending between each of the points in the `x`, `y` rods and chart them?",
+        "snippet": "pendiente = np.diff(y) / np.diff(x)\nplt.plot(pendiente, '-m')\nplt.show()\n",
+        "question_id": 3070
+    },
+    {
+        "intent": "Edit form fields in Django to modify the input object",
+        "rewritten_intent": "How to make a field `field` from a `Form` required form in Django?",
+        "snippet": "class Form(forms.ModelForm):\n    def __init__(self, *args, **kwargs):\n        super(Form, self).__init__(*args, **kwargs)\n        self.fields[field].widget.attrs = {\n            'required': True\n        }",
+        "question_id": 4201
+    },
+    {
+        "intent": "How to remove data from a strings list and only leave data that are numbers?",
+        "rewritten_intent": "How to remove all non-numerical damage from a list of `list`?",
+        "snippet": "l2 = []\nfor elem in list:\n    try:\n        l2.append(float(elem))\n    except ValueError:\n        pass",
+        "question_id": 8218
+    },
+    {
+        "intent": "How to remove data from a strings list and only leave data that are numbers?",
+        "rewritten_intent": "How to remove all non-numerical damage from a list of `list`?",
+        "snippet": "with localcontext(ExtendedContext):\n    l2 = [ x for x in (Decimal(s) for s in list)\n                 if x.is_finite() ]",
+        "question_id": 8218
+    },
+    {
+        "intent": "How do you combine the print results with others in Python?",
+        "rewritten_intent": "How to sum the multiple of 'n' from 1 to 'm'?",
+        "snippet": "def multiplo():\n    numero = n\n    total = 0 \n\n    while numero <= m:\n        total = total + numero\n        numero = numero + n\n    print(total)",
+        "question_id": 56815
+    },
+    {
+        "intent": "How do you combine the print results with others in Python?",
+        "rewritten_intent": "How to sum the multiple of 'n' from 1 to 'm'?",
+        "snippet": "numero = 1\nwhile numero <= m:\n\n        total = n * numero\n        numero = numero + 1\n\n   print(total)",
+        "question_id": 56815
+    },
+    {
+        "intent": "How do you combine the print results with others in Python?",
+        "rewritten_intent": "How to sum the multiple of 'n' from 1 to 'm'?",
+        "snippet": "def multiplos_de_n():\n    total = 0\n    for i in range(1, m+1):\n        if (i % n) == 0:\n            print '%d es multiplo de n' % (i)\n            total += i\n\n    print 'El total de sumar los multiplos de n entre 1 y m es: %d' % (total)",
+        "question_id": 56815
+    },
+    {
+        "intent": "How to save the result of an external command run in Python?",
+        "rewritten_intent": "How to save the result of an external 'command' command?",
+        "snippet": "resultado =subprocess.check_output(command, shell=True)",
+        "question_id": 65586
+    },
+    {
+        "intent": "How to read a list of 1000 items from a python txt file to order it with Quicksort",
+        "rewritten_intent": "How to read items from a 'file' text file and add them to a 'list' list?",
+        "snippet": "list = []\narch = open(file, 'r')\n\nfor linea in arch:\n    list.append(int(linea))\n\narch.close()",
+        "question_id": 67166
+    },
+    {
+        "intent": "How to read a list of 1000 items from a python txt file to order it with Quicksort",
+        "rewritten_intent": "How to read items from a 'file' text file and add them to a 'list' list?",
+        "snippet": "list=[]\n\narch = open(file, 'r')\n\nfor linea in arch:\n    list.append(linea.strip())\n\narch.close() ",
+        "question_id": 67166
+    },
+    {
+        "intent": "How to read a list of 1000 items from a python txt file to order it with Quicksort",
+        "rewritten_intent": "How to read items from a 'file' text file and add them to a 'list' list?",
+        "snippet": "list = []\nwith open(file) as procfile:\n    for line in procfile:\n        list.append(line.strip())\nreturn list",
+        "question_id": 67166
+    },
+    {
+        "intent": "If a text and a letter indicate how many words appear that contain that letter.",
+        "rewritten_intent": "How to calculate the number of words `num` that contain the letter `ch` in a text `S`?",
+        "snippet": "num = 0\nfor palabra in S.split():\n    if ch in palabra:\n        num  += 1\nprint num",
+        "question_id": 49118
+    },
+    {
+        "intent": "If a text and a letter indicate how many words appear that contain that letter.",
+        "rewritten_intent": "How to calculate the number of words `num` that contain the letter `ch` in a text `S`?",
+        "snippet": "num=0\ntextoLista=S.split()\n\nfor palabra in textoLista:\n    for caracter in palabra:\n        if ch == caracter:\n            contador=contador+1\n            break\nprint contador",
+        "question_id": 49118
+    },
+    {
+        "intent": "How to add elements from a list of characters to a nxm matrix",
+        "rewritten_intent": "How to add elements of a 'S' chain to a 'n'x'm' matrix?",
+        "snippet": "matrix = []\npos = 0\n\nfor i in range(n):\n    matrix.append([])\n    for j in range(m):\n        matrix[i].append(S[pos] if pos < len(S) else None)\n        pos += 1\n\nprint matrix",
+        "question_id": 21173
+    },
+    {
+        "intent": "How to add elements from a list of characters to a nxm matrix",
+        "rewritten_intent": "How to add elements of a 'S' chain to a 'n'x'm' matrix?",
+        "snippet": "matrix = []\naux=0\nfor i in range(n):\n    for j in range(n):\n        if aux<len(S):\n            matrix[i][j] = S[aux]  \n            aux+=1",
+        "question_id": 21173
+    },
+    {
+        "intent": "How can I multiply two lists?",
+        "rewritten_intent": "How can I multiply two lists of `INT` `L1` and `L2`?",
+        "snippet": "L1 = [3,4,2,6]\nL2 = [98, 80,86,78]\n\nlista_multi = list(map(operator.mul, L1, L2))\"",
+        "question_id": 96261
+    },
+    {
+        "intent": "How can I multiply two lists?",
+        "rewritten_intent": "How can I multiply two lists of `INT` `L1` and `L2`?",
+        "snippet": "np.multiply(L1,L2)",
+        "question_id": 96261
+    },
+    {
+        "intent": "How can I multiply two lists?",
+        "rewritten_intent": "How can I multiply two lists of `INT` `L1` and `L2`?",
+        "snippet": "lista_multi = []\ni = 0 \nfor x in lista_creditos:\n        cr = L1[i]\n        ca = L2[i]\n        print cr, ca, cr * ca\n        lista_multi.append(cr*ca)\n        i = i + 1",
+        "question_id": 96261
+    },
+    {
+        "intent": "Get the positions of the array where you find a value with numpy.where",
+        "rewritten_intent": "How do I get the positions of the array `L` where I find a value `x`?",
+        "snippet": "array = np.array(L)\nnp.where(array == x)",
+        "question_id": 24577
+    },
+    {
+        "intent": "Filtering data by charging CSV using Pandas",
+        "rewritten_intent": "How to filter data that contain the value `val`in the column `col` by charging a CSV in a dataframe `df1` using Pandas?",
+        "snippet": "df[df[col] == val]\"",
+        "question_id": 96541
+    },
+    {
+        "intent": "How do I automatically log in to a web and automate a download with Python?",
+        "rewritten_intent": "How to log in on a web page `x` using the user `user` and the password `pass` and download a file located in the access link `link`?",
+        "snippet": "browser = mechanize.Browser() \nbrowser.set_handle_robots(False)   \nbrowser.open(x)\n\nbrowser.select_form(name=\"login_form\") \nbrowser[\"username\"] = user browser[\"password\"] = pass\nresponse = browser.submit()\n\n\nbrowser.retrieve(link)[0]\"",
+        "question_id": 3778
+    },
+    {
+        "intent": "Create a DataFrame from another by filtering columns that only contain data of one type",
+        "rewritten_intent": "How to create a dataframe `df1` from another dataframe `df` by filtering columns that contain only 'type' data?",
+        "snippet": "df1 = df.select_dtypes(include=[np.type])",
+        "question_id": 148266
+    },
+    {
+        "intent": "Create a DataFrame from another by filtering columns that only contain data of one type",
+        "rewritten_intent": "How to create a dataframe `df1` from another dataframe `df` by filtering columns that contain only 'type' data?",
+        "snippet": "df1 = []\nfor col in df.columns:\n  if df[col].dtype == type:\n    df1.append(df[col])\"",
+        "question_id": 148266
+    },
+    {
+        "intent": "How do I change a line of a file in Python?",
+        "rewritten_intent": "How to open a ‘fichero.txt’ file in reading and writing mode?",
+        "snippet": "with open(fichero, 'r') as archivo:\n    pass   \n\nwith open(fichero, 'w') as archivo:\n    pass",
+        "question_id": 35491
+    },
+    {
+        "intent": "How do I change a line of a file in Python?",
+        "rewritten_intent": "How to open a ‘fichero.txt’ file in reading and writing mode?",
+        "snippet": "with open(fichero, 'r+') as archivo:",
+        "question_id": 35491
+    },
+    {
+        "intent": "Changing the name of a file with Python",
+        "rewritten_intent": "How to change the name of a file located in the address `dir` to `file`?",
+        "snippet": "os.rename(dir, file)",
+        "question_id": 68258
+    },
+    {
+        "intent": "Changing the name of a file with Python",
+        "rewritten_intent": "How to change the name of a file located in the address `dir` to `file`?",
+        "snippet": "os.rename(dir, file)",
+        "question_id": 68258
+    },
+    {
+        "intent": "How to convert individual words from a string with python?",
+        "rewritten_intent": "How to turn the individual words from a string 'S'?",
+        "snippet": "def invert(m):\n    return m.group(0)[::-1]\n\nresultado = pat.sub(invert, S)",
+        "question_id": 194809
+    },
+    {
+        "intent": "How to convert individual words from a string with python?",
+        "rewritten_intent": "How to turn the individual words from a string 'S'?",
+        "snippet": "[x[::-1] for x inS).split(' ')]",
+        "question_id": 194809
+    },
+    {
+        "intent": "How to convert individual words from a string with python?",
+        "rewritten_intent": "How to turn the individual words from a string 'S'?",
+        "snippet": "def reverse(S):\n    return ' '.join(list(map(lambda x: x[::-1], S.split())))",
+        "question_id": 194809
+    },
+    {
+        "intent": "Remove a file with all its content in Python",
+        "rewritten_intent": "How to remove a folder `dir` with several files inside?",
+        "snippet": "shutil.rmtree(dir)",
+        "question_id": 103768
+    },
+    {
+        "intent": "How to perform a 'Press a key to continue...' in Python 3.X?",
+        "rewritten_intent": "How to generate in the terminal a 'Presione 'ESC' to continue...'?",
+        "snippet": "print('Presione 'Esc' para continuar...')\nkey = None\nwhile key != '\\x1b':\n    key = msvcrt.getch()",
+        "question_id": 129724
+    },
+    {
+        "intent": "How can I replace values from one column to another in a DataFrame?",
+        "rewritten_intent": "How can I replace values `falta` if the value is 0 and `sobra` if the value is 1 '' in a dataframe `df`?",
+        "snippet": "new_df = df.astype('str')\nnew_df[new_df == \"1\"] = 'Presente'\nnew_df[new_df == \"0\"] = 'Falta'",
+        "question_id": 104440
+    },
+    {
+        "intent": "How can I replace values from one column to another in a DataFrame?",
+        "rewritten_intent": "How can I replace values `falta` if the value is 0 and `sobra` if the value is 1 '' in a dataframe `df`?",
+        "snippet": "df.replace({1: 'presente', 0: 'falta'},  inplace = True)",
+        "question_id": 104440
+    },
+    {
+        "intent": "How to create a frequency distribution table with python?",
+        "rewritten_intent": "How to make a frequency distribution table of the data of the file 'file'?",
+        "snippet": "filename = file\ndata = np.loadtxt(filename)\nhist, bin_edges = np.histogram(data, 10)\nplt.hist(data, bins=bin_edges)\nplt.show()",
+        "question_id": 40830
+    },
+    {
+        "intent": "How to create a frequency distribution table with python?",
+        "rewritten_intent": "How to make a frequency distribution table of the data of the file 'file'?",
+        "snippet": "lista_variables = file.values.tolist()\n# Ordenación de los datos.\nlista_ordenada_variables = np.sort(lista_variables, axis=None)\nfrecuencias = pd.Series(lista_ordenada_variables).value_counts()\nprint (\"\\nVariable (X) - Frecuencias absolutas (f)\\n\" ,dicc(frecuencias))",
+        "question_id": 40830
+    },
+    {
+        "intent": "How to use relative routes in python with a variable base route?",
+        "rewritten_intent": "How to create relative 'rut' routes with a 'base' base route?",
+        "snippet": "Rutasol = os.path.join(rut, base)\nRutasol = os.path.abspath(Rutasol)",
+        "question_id": 55025
+    },
+    {
+        "intent": "How to use relative routes in python with a variable base route?",
+        "rewritten_intent": "How to create relative 'rut' routes with a 'base' base route?",
+        "snippet": "rutabase = Path(base)\n\nrutarel = Path(rut)\n\nrutasol = rutabase + rutarel",
+        "question_id": 55025
+    },
+    {
+        "intent": "Listing dictionary, run Python values",
+        "rewritten_intent": "How to recruit the values of a dictionary of lists?",
+        "snippet": "for key in dic:\n   dic[key]",
+        "question_id": 110548
+    },
+    {
+        "intent": "How to determine whether all the numbers of a whole number are equal",
+        "rewritten_intent": "How do you determine whether all the numbers of a whole number are equal?",
+        "snippet": "def digitos_iguales(num):\n    return num == 0 or num % ((10**int(log10(abs(num))+1) - 1) // 9) == 0",
+        "question_id": 33325
+    },
+    {
+        "intent": "How to determine whether all the numbers of a whole number are equal",
+        "rewritten_intent": "How do you determine whether all the numbers of a whole number are equal?",
+        "snippet": "def digitos_iguales(num):\n    m, c = divmod(num, 10)\n    d = c\n\n    while m>0 and d == c:\n        m, d = divmod(m, 10)\n\n    return (d==c)",
+        "question_id": 33325
+    },
+    {
+        "intent": "How to determine whether all the numbers of a whole number are equal",
+        "rewritten_intent": "How do you determine whether all the numbers of a whole number are equal?",
+        "snippet": "ultimoDigito = num % 10\ntodosIguales = True\nwhile (n != 0) & (todosIguales):\n    digito = n % 10\n    n = n // 10\n    todosIguales = digito == ultimoDigito",
+        "question_id": 33325
+    },
+    {
+        "intent": "How to add the numbers of 1 number, and continue to sum if this sum still has more than 1 number?",
+        "rewritten_intent": "How to add the numbers of a number number, and continue to sum if this sum still has more than 1 number?",
+        "snippet": "def suma_de_digitos_iterativa(num): \n    while num > 9:\n        num = sum(int(d) for d in str(num))\n    return num",
+        "question_id": 144004
+    },
+    {
+        "intent": "How to manage the window shutdown event in tkinter?",
+        "rewritten_intent": "How to create a confirmation window when you try to close a window in tkinter?",
+        "snippet": "class MyDialog:\n    def __init__(self, parent):\n        self.top = tk.Toplevel(parent)\n        self.parent = parent\n        self.top.title(\"Salir\")\n\n        tk.Label(self.top, text=\"¿Está seguro?\").grid(row=0, column=0, columnspan=2)\n\n        self.button1 = tk.Button(self.top, text=\"Si, salir de la app.\", command=self.salir)\n        self.button2 = tk.Button(self.top, text=\"No, solo minimizar.\", command=self.minimizar)\n        self.button1.grid(row=1, column=0, padx=5, pady=5)\n        self.button2.grid(row=1, column=1, padx=5, pady=5)\n\n    def salir(self):\n        self.top.destroy()\n        self.parent.destroy()\n\n    def minimizar(self):\n        self.top.destroy()\n        self.parent.iconify()\n\n\nclass MyApp:\n    def __init__(self, parent):\n        self.parent = parent\n        self.parent.protocol(\"WM_DELETE_WINDOW\", self.on_closing)\n\n    def on_closing(self):\n        d = MyDialog(root)\n        self.parent.wait_window(d.top)\n\nif __name__ == \"__main__\":\n    root = tk.Tk()\n    app = MyApp(root)\n    root.mainloop()",
+        "question_id": 104691
+    },
+    {
+        "intent": "How to convert each line of a text file into a list using python?",
+        "rewritten_intent": "How to convert each line of a text file ‘file’ into a list?",
+        "snippet": "salida = []\nwith open(file, 'r') as f:\n    lineas = [linea.split() for linea in f]",
+        "question_id": 69610
+    },
+    {
+        "intent": "Compare two vectors of element to element",
+        "rewritten_intent": "How do you compare if each value of a vector is smaller than that of a vector?",
+        "snippet": "def elementos_a_menor_que_elementos_b(a, b):\n    if len(a) != len(b):\n        print('Las listas no tiene el mismo tamaño')\n        return False\n\n    for item_a, item_b in zip(a, b):\n        if item_a > item_b:\n            return False\n\n    return True",
+        "question_id": 90333
+    },
+    {
+        "intent": "Compare two vectors of element to element",
+        "rewritten_intent": "How do you compare if each value of a vector is smaller than that of a vector?",
+        "snippet": "c = np.all(np.array(a) < np.array(b))",
+        "question_id": 90333
+    },
+    {
+        "intent": "Compare two vectors of element to element",
+        "rewritten_intent": "How do you compare if each value of a vector is smaller than that of a vector?",
+        "snippet": "np.all(np.less(a,b))",
+        "question_id": 90333
+    },
+    {
+        "intent": "How to generate a CSV file from a list?",
+        "rewritten_intent": "How to generate a CSV file from a list?",
+        "snippet": "datos = np.asarray(list)\nnp.savetxt('output.csv',   \n           datos.T,        \n           fmt='%d',       \n           delimiter=',')",
+        "question_id": 11698
+    },
+    {
+        "intent": "How to generate a CSV file from a list?",
+        "rewritten_intent": "How to generate a CSV file from a list?",
+        "snippet": "with open('output.csv', 'wb') as f:\n  writer = csv.writer(f)\n  writer.writerows(zip(*list))",
+        "question_id": 11698
+    },
+    {
+        "intent": "How do you count vectors represented by tuplas in Python?",
+        "rewritten_intent": "How do you sum two vectors `a` and `b` represented by tuples?",
+        "snippet": "tuple(sum(x) for x in zip(a, b))",
+        "question_id": 314
+    },
+    {
+        "intent": "How do you count vectors represented by tuplas in Python?",
+        "rewritten_intent": "How do you sum two vectors `a` and `b` represented by tuples?",
+        "snippet": "lambda a,b: tuple(starmap(add, izip(a, b)))",
+        "question_id": 314
+    },
+    {
+        "intent": "How to call the function of a script from another script in python?",
+        "rewritten_intent": "How to call the function `get` of a script `model_get` from another script?",
+        "snippet": "from .model_get import get",
+        "question_id": 183228
+    },
+    {
+        "intent": "How to show a number with zero on the left?",
+        "rewritten_intent": "How do you show a number with ‘n’ zero on the left?",
+        "snippet": "num.zfill(n)",
+        "question_id": 60617
+    },
+    {
+        "intent": "How do I make my asteriscus pyramide work in python?",
+        "rewritten_intent": "How to create a pyramide of asteriscus with number of lines?",
+        "snippet": "def Piramide(lineas):    \n    for numero_linea in range(lineas): \n        espacios = lineas - numero_linea - 1 \n        asteriscos = 1 + numero_linea * 2\n        print \" \" * espacios + \"*\" * asteriscos\n    return ",
+        "question_id": 4799
+    },
+    {
+        "intent": "Transfer the value of a variable from one function to another function in Python",
+        "rewritten_intent": "How to pass the value of a variable `SoldBruto` from the class `Workers` from a function `calcular_sold` to the function `imprimir_sold`?",
+        "snippet": "class Trabajador: \n    \n    SueldoBruto = 0\n    \n\ndef calcular_sueldo():\n        Trabajadores.SueldoBruto = 10000\n\ndef imprimir_sueldo():\n        print(Trabajador.SueldoBruto)",
+        "question_id": 84618
+    },
+    {
+        "intent": "Extraction of Excel data to create a Python list",
+        "rewritten_intent": "How to extract data from the 'sheet' sheet in an excel 'file' file and create a 'dic' list dictionary?",
+        "snippet": "wb = openpyxl.load_workbook(file)\nws = wb.get_sheet_by_name(sheet)\n\ndic = collections.defaultdict(list)\nfor row in ws.iter_rows():\n    dic[row[0].value].append(row[1].value)",
+        "question_id": 113620
+    },
+    {
+        "intent": "Extraction of Excel data to create a Python list",
+        "rewritten_intent": "How to extract data from the 'sheet' sheet in an excel 'file' file and create a 'dic' list dictionary?",
+        "snippet": "wb2 = xlrd.open_workbook(file)\nsheet = wb2.sheet_by_index(sheet)\n\ndir_cantidad = len(sheet.col_values(0)) - 1\n\nLista = {}\n\nfor i in range(0,dir_cantidad):\n    \n    connection = sheet.cell(i, 0).value\n    \n\n    if connection in Lista:\n        conn = Lista.get(connection)\n        conn.append(sheet.cell(i, 1).value)\n        \n        Lista[connection] = conn\n    else:\n        Lista[connection] = [sheet.cell(i, 1).value]\n",
+        "question_id": 113620
+    },
+    {
+        "intent": "Summing items contained in a Python dictionary",
+        "rewritten_intent": "How to create a dictionary `dic2` with the sum of the values of each of the keys in a dictionary `dic`?",
+        "snippet": "dic2 = {key: [sum(value)] for key, value in dic.items()}",
+        "question_id": 87732
+    },
+    {
+        "intent": "Summing items contained in a Python dictionary",
+        "rewritten_intent": "How to create a dictionary `dic2` with the sum of the values of each of the keys in a dictionary `dic`?",
+        "snippet": " def suma_valores_dic(dic):\n        dic2 = {}\n        for key, value in dic.items():\n            suma = 0\n            for v in value:\n                suma += v\n            dic2[key] = suma\n        return dic2",
+        "question_id": 87732
+    },
+    {
+        "intent": "How to insert a string in a numpy matrix?",
+        "rewritten_intent": "How to insert `n` files in a numpy 'M' matrix?",
+        "snippet": "for i in range(n) : \n\tM = numpy.insert(M, i, [i + 1, 0, 0])",
+        "question_id": 39070
+    },
+    {
+        "intent": "How do I extract the larger and smaller number that the user introduces in the list?",
+        "rewritten_intent": "How to extrate the larger and smaller number that the user introduces by command to a list list?",
+        "snippet": "num = int(input('¿Cuántos números vas a introducir?: '))\nlist = []\nfor _ in range(num):\n    numero = int(input('Dime un número: '))\n    listaNumeros.append(numero)\n\nprint('El número mayor es el {}'.format(max(list)))\nprint('El número menor es el {}'.format(min(list)))",
+        "question_id": 107415
+    },
+    {
+        "intent": "How do I extract the larger and smaller number that the user introduces in the list?",
+        "rewritten_intent": "How to extrate the larger and smaller number that the user introduces by command to a list list?",
+        "snippet": "num = int(input('¿Cuántos números vas a introducir?: '))\ncont=0\nmayor=0\nmenor=999999\nlist = []\nwhile num>0:\n    num=num-1\n    numeros=int(input('Dime un número: '))\n    listaNumeros.append(numeros)\n    if mayor<numeros:\n         mayor=numeros\n    if menor>numeros:\n         menor=numeros\n    if numeros<0:\n        cont=cont+1\n\nprint('El número mayor es el ' % mayor)\nprint('El número menor es el ' % menor)",
+        "question_id": 107415
+    },
+    {
+        "intent": "Remove lines and columns of a matrix, taking into account its elements.",
+        "rewritten_intent": "How to remove files and columns from a 'matrix' matrix if all of its values are 0?",
+        "snippet": "good_cols = numpy.any(matriz_v.T != 0,  axis = 1)\nmatriz_v = matriz_v[:, good_cols][good_cols, :]",
+        "question_id": 71462
+    },
+    {
+        "intent": "How to filter columns and add in pandas?",
+        "rewritten_intent": "How to sum the values of the column `a` by grouping the values of the columns `b` and `c` in a dataframe df?",
+        "snippet": "g = df.groupby(['b', 'c'])['a'].sum()",
+        "question_id": 122879
+    },
+    {
+        "intent": "Graphing data from an Excel sheet with Python",
+        "rewritten_intent": "How to grave the data of a sheet `sheet` of an excel document `file`?",
+        "snippet": "wb = load_workbook(file, data_only=True)\nsheet1 = wb.get_sheet_by_name(sheet)\n\nmatriz = np.zeros((sheet1.max_row, sheet1.max_column))\n\nfor i in range(0,sheet1.max_row):\n    for j in range(0,sheet1.max_column):\n        matriz[i,j]=sheet1.cell(row=i+1, column=j+1).value\n\ncolors = cycle([\"aqua\", \"black\", \"blue\", \"fuchsia\", \"gray\", \"green\", \"lime\", \"maroon\", \"navy\", \"olive\", \"purple\", \"red\", \"silver\", \"teal\", \"yellow\"])\nplt.xlabel('tiempo')\nplt.ylabel('intensidad')\nfor y in range(1, sheet1.max_column):\n    plt.plot(matriz[:,0],matriz[:,y], label=\"Data \" + str(y),       color=next(colors))\nplt.legend(loc='upper left', fontsize='small')\nplt.grid(True)\nplt.xlim(0,70)\nplt.ylim(0,70)\nplt.title('Grafica tiempo/intensidad')\nplt.show()",
+        "question_id": 26373
+    },
+    {
+        "intent": "Store in a list of data generated in a cycle for",
+        "rewritten_intent": "How to store in a 'list' list the data generated in a 'list2' list?",
+        "snippet": "list = [(i+1) for i in list2]",
+        "question_id": 117775
+    },
+    {
+        "intent": "How can I extract only certain columns from a csv and create a DataFrame with them?",
+        "rewritten_intent": "How to extract the column `col` from a DataFrame `df_old` and create a DataFrame `df` with them?",
+        "snippet": "df = pandas.DataFrame()\n df[col] = df_viejo[col]",
+        "question_id": 132982
+    },
+    {
+        "intent": "How can I form matrices in Python?",
+        "rewritten_intent": "How to form `M` matrices of `m x 2` data entered by the user?",
+        "snippet": "m = int(input(\"Teclea el número de filas:\"))\nM = np.array(\n    np.zeros((m)), \n    dtype = [\n        ('p', int),\n        ('q', int)\n    ]\n) \nfor i in range(m):\n    p_ = input(\"p: \")\n    M['p'][i] = int(p_)\n    q_ = input(\"q: \")\n    M['q'][i] = int(q_)\n\nprint(mi_arr)",
+        "question_id": 13245
+    },
+    {
+        "intent": "Data Launch Simulator in Python",
+        "rewritten_intent": "How to simulate the launch of a given 'n' times?",
+        "snippet": "def dice():\n  dado = []\n  for i in range(n):\n      dado.append(random.choice(range(1,7)))\n  return dado",
+        "question_id": 99638
+    },
+    {
+        "intent": "Data Launch Simulator in Python",
+        "rewritten_intent": "How to simulate the launch of a given 'n' times?",
+        "snippet": "def dado(n):\n    result=[]\n    for i in xrange(0,n):\n        result.append(random.randint(1, 6))\n    return result",
+        "question_id": 99638
+    },
+    {
+        "intent": "How to push a Python script for a few seconds?",
+        "rewritten_intent": "How to pause a script for 'n' seconds?",
+        "snippet": "time.sleep(n)",
+        "question_id": 36394
+    },
+    {
+        "intent": "Summary of an array in Python",
+        "rewritten_intent": "How to sum all the enter in a 'M' matrix?",
+        "snippet": "sum(itertools.chain.from_iterable(M))",
+        "question_id": 167201
+    },
+    {
+        "intent": "Summary of an array in Python",
+        "rewritten_intent": "How to sum all the enter in a 'M' matrix?",
+        "snippet": "suma = sum(sum(x) for x in M)",
+        "question_id": 167201
+    },
+    {
+        "intent": "How to save an image from any format in Python?",
+        "rewritten_intent": "How to save an image located in the directory `dir` in a new directory `dir2`?",
+        "snippet": "mg = Image.open(dir)\nimg.save(dir2)",
+        "question_id": 93379
+    },
+    {
+        "intent": "Run Python file chain",
+        "rewritten_intent": "How to run the files `file1`, `file2` and `file3` in sequence?",
+        "snippet": "process1 = subprocess.Popen(['python', file1])\nprocess2 = subprocess.Popen(['python', file2])\nprocess3 = subprocess.Popen(['python', file3])",
+        "question_id": 107612
+    },
+    {
+        "intent": "Get common items from two lists without repetitions",
+        "rewritten_intent": "How to get the common elements of two lists `a` and `b`?",
+        "snippet": "def listas(a, b):\n    lista_final = []\n    for i in a:\n        if (i not in lista_final) and (i in b):\n            lista_final.append(i)\n    return lista_final",
+        "question_id": 129553
+    },
+    {
+        "intent": "Get common items from two lists without repetitions",
+        "rewritten_intent": "How to get the common elements of two lists `a` and `b`?",
+        "snippet": "def intersection(a,b):\n    c = []\n    for i in a:\n        for j in b:\n           if i == j:\n               c.append(i)\n    c = list(tuple(c))\n    return c            ",
+        "question_id": 129553
+    },
+    {
+        "intent": "Get the position and value of the second largest item in a list",
+        "rewritten_intent": "How to get the position and value of the second largest item of a list?",
+        "snippet": "list_sort = sorted(enumerate(list), key=itemgetter(1),  reverse=True)\nindex, value = list_sort[1]",
+        "question_id": 98725
+    },
+    {
+        "intent": "How can I order a string downward according to its length?",
+        "rewritten_intent": "How to order a 'S' chain from the longest word to the shortest?",
+        "snippet": "sorted(S.split(), key=lambda palabra: len(palabra), reverse=True)",
+        "question_id": 1732
+    },
+    {
+        "intent": "How can I order a string downward according to its length?",
+        "rewritten_intent": "How to order a 'S' chain from the longest word to the shortest?",
+        "snippet": "for i in reversed(sorted(S.split(), key=lambda item: len(item))):\n    print i",
+        "question_id": 1732
+    },
+    {
+        "intent": "Tagged with python",
+        "rewritten_intent": "How to carry out an irrigated iteration of the value of a list `list` and after the following values until the end?",
+        "snippet": "for i, item in enumerate(list):\n    for item2 in list[i:]:\"\n  ",
+        "question_id": 9367
+    },
+    {
+        "intent": "Tagged with python",
+        "rewritten_intent": "How to carry out an irrigated iteration of the value of a list `list` and after the following values until the end?",
+        "snippet": "for i in range(len(list)):\n    for j in range((i+1), len(list)):  \n        print(list[j])",
+        "question_id": 9367
+    },
+    {
+        "intent": "Tagged with python",
+        "rewritten_intent": "How to carry out an irrigated iteration of the value of a list `list` and after the following values until the end?",
+        "snippet": "for i in list\n    for j in list[i+1:len(j)]",
+        "question_id": 9367
+    },
+    {
+        "intent": "How to cut a string in Python from right to left, including the whole string?",
+        "rewritten_intent": "How to turn a 'S' chain from right to left?",
+        "snippet": "S[::-1]",
+        "question_id": 138290
+    },
+    {
+        "intent": "How to convert an int to string data into python?",
+        "rewritten_intent": "How to convert a ‘a’ data from ‘string’ to ‘int’?",
+        "snippet": "numero= int(a)",
+        "question_id": 364966
+    },
+    {
+        "intent": "Basic decimal, binary, hexadecimal, octal in Python",
+        "rewritten_intent": "How to return two values ‘val1’ and ‘val2’ in a function?",
+        "snippet": "return var1, var2",
+        "question_id": 51410
+    },
+    {
+        "intent": "How do I check if a file has content or is empty in Python?",
+        "rewritten_intent": "How do I check if a 'file' file has content or is empty?",
+        "snippet": "if os.stat(file).st_size == 0:\n     print('Vacío')",
+        "question_id": 30666
+    },
+    {
+        "intent": "How do I check if a file has content or is empty in Python?",
+        "rewritten_intent": "How do I check if a 'file' file has content or is empty?",
+        "snippet": "os.stat(file).st_size == 0",
+        "question_id": 30666
+    },
+    {
+        "intent": "How do I check if a file has content or is empty in Python?",
+        "rewritten_intent": "How do I check if a 'file' file has content or is empty?",
+        "snippet": "archivo = open(file, 'r')\n\nvacio = True\nfor linea in archivo:\n    if len(linea) > 0:\n        vacio = False\n\narchivo.close()\n\nif vacio:\n    print('El archivo está vacio')\nelse:\n    print('El archivo contiene algo')",
+        "question_id": 30666
+    },
+    {
+        "intent": "Draw a list and keep it in a file.",
+        "rewritten_intent": "How to iterate a list and save its values in a file?",
+        "snippet": "mi_path = file\nf = open(mi_path, 'a+')\n\nfor i in list:\n    f.write(i)\n\nf.close()",
+        "question_id": 86430
+    },
+    {
+        "intent": "Draw a list and keep it in a file.",
+        "rewritten_intent": "How to iterate a list and save its values in a file?",
+        "snippet": "f = open(file, \"a\")\n\nfor i in list:\n    f.write(i)\n\nf.close()",
+        "question_id": 86430
+    },
+    {
+        "intent": "Substitute comas by points in a dataframe (coma as decimal separator)",
+        "rewritten_intent": "How to replace the decimal comas separator by points in the column `col` of a DataFrame `df`?",
+        "snippet": "df['col_1'] = df[col].str.replace(',', '.').astype(float)",
+        "question_id": 183061
+    },
+    {
+        "intent": "Substitute comas by points in a dataframe (coma as decimal separator)",
+        "rewritten_intent": "How to replace the decimal comas separator by points in the column `col` of a DataFrame `df`?",
+        "snippet": "comas_por_puntos = [float(x.replace(',','.')) for x in df[col]]",
+        "question_id": 183061
+    },
+    {
+        "intent": "Save a matrix as a .csv file in Python",
+        "rewritten_intent": "How to save a 'M' matrix in a 'file.csv' file?",
+        "snippet": "with open(file.csv, 'w', newline='', encoding='utf-8') as csvfile:\n    writer = csv.writer(csvfile)\n    writer.writerows(M)",
+        "question_id": 61046
+    },
+    {
+        "intent": "How to determine the longest and shortest word of a string? without using methods or functions",
+        "rewritten_intent": "How to determine the longest word `big` and the shortest word `minor` of a String `S`?",
+        "snippet": "mayor=''\nmenor=''\npalabra=''\n\nfor c in oracion:\n  if c == ' ':\n    if palabra != '':\n      mayor = palabra if len(mayor)<len(palabra) or mayor == '' else mayor\n      menor = palabra if len(menor)>len(palabra) or menor == '' else menor\n\n    palabra = ''\n\n  palabra = palabra + c\n\nprint(mayor)\nprint(menor)",
+        "question_id": 109768
+    },
+    {
+        "intent": "How to determine the longest and shortest word of a string? without using methods or functions",
+        "rewritten_intent": "How to determine the longest word `big` and the shortest word `minor` of a String `S`?",
+        "snippet": "z,n=0,0\nmayor=''\nmenor=p\nwhile z<len(S):\n    for letra in S[z:len(S)] :\n        z+=1\n        n+=1\n        if letra==' ':\n            break\n    if S[z-n:z-1]!='':\n        if len(S[z-n:z-1])>=len(mayor):\n            mayor=S[z-n:z-1]\n        if len(S[z-n:z-1])<=len(menor):\n            menor=S[z-n:z-1]\n    n=0\nprint mayor\nprint menor",
+        "question_id": 109768
+    },
+    {
+        "intent": "Run script in python every second",
+        "rewritten_intent": "How to run a script every second?",
+        "snippet": "def ejecutaScript(script):\n    Script\n    print 'Ejecutando Script...'\n    time.sleep(1)\n\nwhile True:\n    ejecutaScript(script)",
+        "question_id": 6786
+    },
+    {
+        "intent": "Standard deviation in Python with Pandas",
+        "rewritten_intent": "How to calculate the standard deviation of the column `col` in a DataFrame `df`?",
+        "snippet": "std = df[col].std()",
+        "question_id": 191740
+    },
+    {
+        "intent": "Determining all multiple of a number in Python",
+        "rewritten_intent": "How do you determine if the numbers of a number 'Num' are multiple of the other numbers of the same number?",
+        "snippet": "Num=abs(int(input('Digite un número entero de tres dígitos')))\nif Num==0 or Num==1:\n    print('El número ingresado no tiene tres dígitos \\a')\nelse:\n    Num_Dig=ceil(log10(Num))\n    if Num_Dig!=3:  \n        print('El número ingresado no tiene tres dígitos \\a')\n    else:\n        Dig_1=Num%10\n        Dig_2=(Num%100)//10\n        Dig_3=(Num//100)\n        ninguno = True\n        if Dig_1%Dig_2==0:\n            print('El dígito {Dig_1} es multiplo de {Dig_2}')\n            ninguno = False\n        if Dig_1%Dig_3==0:\n            print('El dígito {Dig_1} es multiplo de {Dig_3}')\n            ninguno = False\n        if Dig_2%Dig_1==0:\n            print('El dígito {Dig_2} es multiplo de {Dig_1}')\n            ninguno = False\n        if Dig_2%Dig_3==0:\n            print('El dígito {Dig_2} es multiplo de {Dig_3}')\n            ninguno = False\n        if Dig_3%Dig_1==0:\n            print('El dígito {Dig_3} es multiplo de {Dig_1}')\n            ninguno = False\n        if ninguno:\n            print('Ningún dígito en el número {Num} es multiplo de otro')",
+        "question_id": 195388
+    },
+    {
+        "intent": "Scoring files in python",
+        "rewritten_intent": "How to list all files and subcarpetes in a `dir` folder?",
+        "snippet": "rootDir = dir\nfor dirName, subdirList, fileList in os.walk(rootDir):\n    print('Directorio encontrado: %s' % dirName)\n    for fname in fileList:\n        print('\\t%s' % fname)",
+        "question_id": 4292
+    }
+]

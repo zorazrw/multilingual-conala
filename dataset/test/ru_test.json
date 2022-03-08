@@ -1,0 +1,2072 @@
+[
+    {
+        "intent": "Вывести дробную часть положительного числа на Питоне",
+        "rewritten_intent": "Выделить дробную часть числа `num`",
+        "snippet": "math.modf(num)[0]",
+        "question_id": 757454
+    },
+    {
+        "intent": "Вывести дробную часть положительного числа на Питоне",
+        "rewritten_intent": "Выделить дробную часть числа `num`",
+        "snippet": "num % 1",
+        "question_id": 757454
+    },
+    {
+        "intent": "Python. функция работы с процентами",
+        "rewritten_intent": "Вычислить сколько процентов составляет число `part` от числа `whole`",
+        "snippet": "100 / whole * part",
+        "question_id": 247377
+    },
+    {
+        "intent": "Сделать первую букву каждого слова большой (заглавной)",
+        "rewritten_intent": "Сделать заглавной первую букву каждого слова в строке `s`",
+        "snippet": "s.title()",
+        "question_id": 712792
+    },
+    {
+        "intent": "Как можно засечь время выполнения каждой из функций и суммарное время выполнения программы",
+        "rewritten_intent": "Измерить время выполнения `time_work` функции `func`",
+        "snippet": "t = time.time()\\n\nfunc()\\n\ntime_work = time.time()-t",
+        "question_id": 775089
+    },
+    {
+        "intent": "Как найти число в строке python?",
+        "rewritten_intent": "Найти числа в строке `s`",
+        "snippet": "re.findall('(\\d+)', s)",
+        "question_id": 157675
+    },
+    {
+        "intent": "EOF во время ввода: SyntaxError: unexpected EOF while parsing",
+        "rewritten_intent": "Ввести кортеж чисел `my_tupels` с клавиатуры в качестве разделителя использовать `sep`",
+        "snippet": "my_tupels = tuple(map(int, input().split(sep)))\n",
+        "question_id": 567383
+    },
+    {
+        "intent": "Как записать в файл значения переменных типа integer",
+        "rewritten_intent": "Записать число `nums` в файл `file_path`",
+        "snippet": "file_1 = open(file_path, \"w\")\\n\nfile_1.write(str(num))\nfile_1.close()",
+        "question_id": 210870
+    },
+    {
+        "intent": "Как записать в файл значения переменных типа integer",
+        "rewritten_intent": "Записать число `nums` в файл `file_path`",
+        "snippet": "with open(file_path, 'w') as f:\\n\n\\tprint(str(num))\\n",
+        "question_id": 210870
+    },
+    {
+        "intent": "Json post запрос python",
+        "rewritten_intent": "Отправить POST-запрос `res` c JSON данными `data` на `url`",
+        "snippet": "res = requests.post(url, json=data)",
+        "question_id": 681594
+    },
+    {
+        "intent": "Русская кодировка JSON объекта",
+        "rewritten_intent": "Преобразовать русскоязычный словарь `my_dict` в JSON ",
+        "snippet": "json.dumps(my_dict, ensure_ascii=False)",
+        "question_id": 584129
+    },
+    {
+        "intent": "Как сравнить два списка?",
+        "rewritten_intent": "Найти общие элементы `common_items` списка `my_list1` и списка `my_list2` ",
+        "snippet": "count_values_l1 = Counter(my_list1)\\n\ncount_values_l2 = Counter(my_list2)\\n\nkeys1 = count_values_l1.keys()\\n\nkeys2 = count_values_l2.keys()\\n\ncommon_items = []\\n\nfor key in keys1:\\n\n\\tif key in keys2:\\n\n\\t\\tcommon_items += [key] * min(count_values_l1[key], count_values_l2[key])\n",
+        "question_id": 37137
+    },
+    {
+        "intent": "Как сравнить два списка?",
+        "rewritten_intent": "Найти общие элементы `common_items` списка `my_list1` и списка `my_list2` ",
+        "snippet": "list(set(my_list1) & set(my_list2))",
+        "question_id": 37137
+    },
+    {
+        "intent": "Разложить число на простые множители",
+        "rewritten_intent": "Разложить число `n` на простые множители `factors`",
+        "snippet": "factors = []\\n\nwhile n % 2 == 0:\\n\n\\tfactors.append(n)\\n\n\\tn = n / 2\\n\\n\n    \nfor i in range(3,int(math.sqrt(n))+1,2):\\n\n\\twhile (n % i == 0):\\n\n\\t\\tfactors.append(i)\\n\n\\t\\tn = n / i\\n\\n\n    \nif n > 2:\\n\n\\tfactors.append(n)",
+        "question_id": 645227
+    },
+    {
+        "intent": "Как создать список из случайных целых чисел используя списковое включение?",
+        "rewritten_intent": "Сгенерировать спискок `my_list` длинной `N` случайных значений в диапазоне от `val1` до `val2`",
+        "snippet": "my_list = [random.randint(val1, val2) for i in range(N)]",
+        "question_id": 565846
+    },
+    {
+        "intent": "Экранировать символы \"\\\" в python",
+        "rewritten_intent": "Получить абсолютный путь для файла `file_path`",
+        "snippet": "os.path.join(os.path.abspath(os.curdir), file_path)",
+        "question_id": 801094
+    },
+    {
+        "intent": "Как менять местами элементы списка?",
+        "rewritten_intent": "Поменять местами элементы списка `my_list` с индексами `i` и `j`",
+        "snippet": "my_list[i], my_list[j] = my_list[j], my_list[i]",
+        "question_id": 925879
+    },
+    {
+        "intent": "Авторизация VK API и приложение на Python",
+        "rewritten_intent": "Авторизоваться в VK приложении с id `APP_ID` с логином `LOGIN` и паролем `PASS`",
+        "snippet": "def auth_vk_password():\\n\n\\tsession = vk.AuthSession(app_id=APP_ID, user_login=LOGIN, user_password=PASS)\n\\tfile = open(\"auth_vk.ini\", 'w')\n\\tfile.writelines(session.access_token)\n\\treturn session\n\ntry:\\n\n\\tfile = open(\"auth_vk.ini\", 'r')\\n\nexcept IOError as e:\\n\n\\taccess_token = auth_vk_password().access_token\\n\nelse:\\n\n\\taccess_token = file.readline()\\n\n\nsession = vk.Session(access_token=access_token)\\n\nif session:\\n\n\\tprint('Авторизация прошла успешно!')\\n\nelse:\\n\n\\tprint('Авторизация не удалась!')\\n",
+        "question_id": 140252
+    },
+    {
+        "intent": "Ввести список через пробел",
+        "rewritten_intent": "Ввести с клавиатуры через пробел список строк `my_list`",
+        "snippet": "my_list = input().split()",
+        "question_id": 649828
+    },
+    {
+        "intent": "Как проверить наличие ключа в словаре?",
+        "rewritten_intent": "Проверить наличие ключа `my_key` в словаре `my_dict`",
+        "snippet": "my_key in my_dict",
+        "question_id": 752179
+    },
+    {
+        "intent": "Как проверить наличие ключа в словаре?",
+        "rewritten_intent": "Проверить наличие ключа `my_key` в словаре `my_dict`",
+        "snippet": "if my_key in my_dict:\\n\n\\tprint('Ключ {my_key} если в словаре')\\n\nelse:\\n\n\\tprint('Ключа {my_key} нет в словаре')\\n",
+        "question_id": 752179
+    },
+    {
+        "intent": "Определение расширения файла в python",
+        "rewritten_intent": "Получить расширение `file_extension` файла `file_path`",
+        "snippet": "filename, file_extension = os.path.splitext(file_path)",
+        "question_id": 540082
+    },
+    {
+        "intent": "Определение расширения файла в python",
+        "rewritten_intent": "Получить расширение `file_extension` файла `file_path`",
+        "snippet": "file_extension= file_path.split('.')[-1]",
+        "question_id": 540082
+    },
+    {
+        "intent": "Удалить все символы после запятой .replace(\",*\", \"\")",
+        "rewritten_intent": "Удалить все символы в строке `s` после символа `symbol`",
+        "snippet": "s = s[:s.find(symbol)]",
+        "question_id": 502573
+    },
+    {
+        "intent": "Удалить все символы после запятой .replace(\",*\", \"\")",
+        "rewritten_intent": "Удалить все символы в строке `s` после символа `symbol`",
+        "snippet": "s = s.split(symbol)[0]",
+        "question_id": 502573
+    },
+    {
+        "intent": "Параллельное выполнение функций в разных классах",
+        "rewritten_intent": "Выполнить параллельно метод `method1` класса `A` и метод `method2` класса B",
+        "snippet": "class A_heir(A):\\n\n\\tdef __init__(self):\\n\n\\t\\tsuper().__init__()\\n\n        \n\\tdef __call__(self, func_name=\"\", args=[], kwargs={}):\\n\n\\t\\treturn getattr(self, func_name)(*args, **kwargs)\\n\n\nclass B_heir(B):\\n\n\\tdef __init__(self):\\n\n\\t\\tsuper().__init__()\\n\n        \n\\tdef __call__(self, func_name=\"\", args=[], kwargs={}):\\n\n\\t\\treturn getattr(self, func_name)(*args, **kwargs)\\n\n            \na = A_heir()\\n\nb = B_heir()\\n\n\np1 = Process(target=a, kwargs={'func_name': method1})\\n\np2 = Process(target=b, kwargs={'func_name': method2})\\n\np1.start()\\n\np2.start()\\n\n\np1.join()\\n\np2.join()\\n",
+        "question_id": 452762
+    },
+    {
+        "intent": "Разница списков в Python",
+        "rewritten_intent": "Найти разницу `diff_list` списков `my_list1` и `my_list2`",
+        "snippet": "count_values1 = Counter(my_list1)\\n\ncount_values2 = Counter(my_list2)\\n\n\nkeys1 = list(count_values1.keys())\\n\nkeys2 = list(count_values2.keys())\\n\n\ndiff_list = []\\n\nfor key in set(keys1 + keys2):\\n\n\\tif key in keys1 and key in keys2:\\n\n\\t\\tdiff_list += [key] * abs(count_values1[key] - count_values2[key])\\n\n\\telif key in keys1:\\n\n\\t\\tdiff_list += [key] * count_values1[key]\\n\n\\telif key in keys2:\\n\n\\t\\tdiff_list += [key] * count_values2[key]\\n",
+        "question_id": 21825
+    },
+    {
+        "intent": "Разница списков в Python",
+        "rewritten_intent": "Найти разницу `diff_list` списков `my_list1` и `my_list2`",
+        "snippet": "diff_list = list(set(my_list1)-set(my_list2)) + list(set(my_list2)-set(my_list1))",
+        "question_id": 21825
+    },
+    {
+        "intent": "Цикл while  «Сумма последовательности чисел»",
+        "rewritten_intent": "Найти сумму чисел `total`, вводимых с клавиатуры, признак конца ввода `end_sign`",
+        "snippet": "total = 0\\n\nwhile True:\\n\n\\tn = int(input())\\n\n\\tif n == end_sign:\\n\n\\t\\tbreak\\n\n\\ttotal += n\\n",
+        "question_id": 384437
+    },
+    {
+        "intent": "Python | Как найти индекс символа в строке?",
+        "rewritten_intent": "Найти позицию символа `my_char` в строке `s`",
+        "snippet": " s.index(my_char)",
+        "question_id": 513149
+    },
+    {
+        "intent": "Python | Как найти индекс символа в строке?",
+        "rewritten_intent": "Найти позицию символа `my_char` в строке `s`",
+        "snippet": " s.find(my_char)",
+        "question_id": 513149
+    },
+    {
+        "intent": "Ввод n элементов в одну строку",
+        "rewritten_intent": "Ввести с клавиатуры числа через пробел в список `my_list`",
+        "snippet": "my_list = list(map(int, input().split()))",
+        "question_id": 934453
+    },
+    {
+        "intent": "Ввод n элементов в одну строку",
+        "rewritten_intent": "Ввести с клавиатуры числа через пробел в список `my_list`",
+        "snippet": "my_list = [int(a) for a in input().split()]",
+        "question_id": 934453
+    },
+    {
+        "intent": "Python: Создание Word документов по шаблону",
+        "rewritten_intent": "Сгненировать word документ `output_file_path` по шаблону из word файла `template_path` с JSON данными data",
+        "snippet": "#python-docx-template\\n\ndoc = DocxTemplate(template_path)\\n\ndata = { 'var_name' : \"HELLO WORLD!\" }\\n\ndoc.render(data)\\n\ndoc.save(output_file_path)",
+        "question_id": 515513
+    },
+    {
+        "intent": "Пустой список в Python",
+        "rewritten_intent": "Проверить пустой ли список `my_list`",
+        "snippet": "if not my_list:\\n\n\\tprint(\"Список пуст\")\\n\nelse:\\n\n\\tprint(\"Список пуст\")\\n",
+        "question_id": 524081
+    },
+    {
+        "intent": "Пустой список в Python",
+        "rewritten_intent": "Проверить пустой ли список `my_list`",
+        "snippet": "if length(my_list) == 0:\\n\n\\tprint(\"Список пуст\")\\n\nelse:\\n\n\\tprint(\"Список пуст\")\\n",
+        "question_id": 524081
+    },
+    {
+        "intent": "Таблица умножения в python",
+        "rewritten_intent": "Сгенерировать таблицу умножения до числа `num`",
+        "snippet": "for i in range(1, num):\\n\n\\tprint(*range(i, i*num+1, i), sep='\\t')\\n",
+        "question_id": 766573
+    },
+    {
+        "intent": "Python+requests: POST передача multipart/form-data в форму",
+        "rewritten_intent": "Отправить POST-запрос с JSON данными `data` и файлом `file_path` на `url`",
+        "snippet": "files = {\\n\n    'file': open(file_path, 'rb')\n}\n\nr = requests.post(url, data=data, files=files)",
+        "question_id": 724582
+    },
+    {
+        "intent": "Как посчитать сколько раз символ встречается в строке?",
+        "rewritten_intent": "Посчитать символы в строке `s`",
+        "snippet": "Counter(s)",
+        "question_id": 735924
+    },
+    {
+        "intent": "Как посчитать сколько раз символ встречается в строке?",
+        "rewritten_intent": "Посчитать символы в строке `s`",
+        "snippet": "{c:s.count(c) for c in set(s)}",
+        "question_id": 735924
+    },
+    {
+        "intent": "Быстрый поиск элемента в списке python",
+        "rewritten_intent": "Получить значение словаря `my_dict` по ключу `my_key`",
+        "snippet": "my_dict[my_key]",
+        "question_id": 504426
+    },
+    {
+        "intent": "Python 3 и русские символы: print('Всем привет!') ведёт к UnicodeEncodeError: 'ascii' codec can't encode... ошибке",
+        "rewritten_intent": "Установить кодировку utf-8 для файла",
+        "snippet": "## -*- coding: utf-8 -*-",
+        "question_id": 387249
+    },
+    {
+        "intent": "Вывод через пробел Python",
+        "rewritten_intent": "Преобразовать список `my_list` в строку `s` c разделителем `sep` ",
+        "snippet": "s = sep.join(my_list)",
+        "question_id": 66490
+    },
+    {
+        "intent": "Вывод через пробел Python",
+        "rewritten_intent": "Преобразовать список `my_list` в строку `s` c разделителем `sep` ",
+        "snippet": "s = sep.join(map(str, my_list))",
+        "question_id": 66490
+    },
+    {
+        "intent": "Удалить все цифры из строки",
+        "rewritten_intent": "Удалить все цифры из строки `s`",
+        "snippet": "re.sub(r'[^\\w\\s]+|[\\d]+', r'',s)",
+        "question_id": 363427
+    },
+    {
+        "intent": "Представление строки как числа",
+        "rewritten_intent": "Получить коды символов строки `s`",
+        "snippet": "for c in s:\\n\n\\tprint(ord(c))",
+        "question_id": 224298
+    },
+    {
+        "intent": "как получить код html-страницы средствами Python?",
+        "rewritten_intent": "Спарсить HTML-код страницы `code` по ссылке `url`",
+        "snippet": "with urllib.request.urlopen(url) as res:\n    code = res.read()",
+        "question_id": 182910
+    },
+    {
+        "intent": "Python - как прервать выполнение функции из другой функции?",
+        "rewritten_intent": "Прерварать выполнение функции `parent_func` из функции `child_func`",
+        "snippet": "def child_func():\\n\n\\tif something_went_wrong:\\n\n\\t\\traise Exception(\"Something went wrong\")\\n\n    \ndef parent_func():\\n\n\\t# ...\\n\n\\ttry:\\n\n\\t\\tchild_func()\\n\n\\texcept Exception as e:\\n\n\\t\\tprint(\"Error:\", e)\\n\n\\t\\treturn",
+        "question_id": 715809
+    },
+    {
+        "intent": "TypeError: Object of type is not JSON serializable",
+        "rewritten_intent": "Сериализовать объект `my_obj` класса `My_class`",
+        "snippet": "class ClassEncoder(json.JSONEncoder):\\n\n\\tdef default(self, obj):\\n\n\\tif isinstance(obj, My_class):\\n\n\\t\\treturn obj.__dict__\\n\n\\treturn json.JSONEncoder.default(self, obj)\\n\n        \njson.dumps(my_obj, cls=ClassEncoder)\\n",
+        "question_id": 850118
+    },
+    {
+        "intent": "Разделить строку на слова и вывести их на печать по одному",
+        "rewritten_intent": "Разделить строку `s` на слова `words`",
+        "snippet": "words = s.split()",
+        "question_id": 673692
+    },
+    {
+        "intent": "Как проверить переменную на тип str в Python 3?",
+        "rewritten_intent": "Проверить является ли `s` строкой",
+        "snippet": "isinstance(s, str)",
+        "question_id": 843929
+    },
+    {
+        "intent": "как преобразовать список в множество и наоборот",
+        "rewritten_intent": "Преобразовать список `my_list` в множество `my_set`",
+        "snippet": "my_set = set(my_list)",
+        "question_id": 705331
+    },
+    {
+        "intent": "python 3 как отследить нажатие на кнопки",
+        "rewritten_intent": "При нажатии клавиши `my_key` запускать функцию `my_func`",
+        "snippet": "keyboard.add_hotkey(my_key, my_func)",
+        "question_id": 841014
+    },
+    {
+        "intent": "pyTelegramBotAPI(telebot) обработка и прием запросов",
+        "rewritten_intent": "Обработать команду `cmd` телеграм бота с токеном `TOKEN` и отправить в ответ сообщение `mess`",
+        "snippet": "bot = telebot.TeleBot(TOKEN)\\n\n\n@bot.message_handler(commands=[cmd])\\n\ndef add(message):\\n\n\\tbot.send_message(message.chat.id, mess)",
+        "question_id": 589590
+    },
+    {
+        "intent": "Разбить число на список цифр",
+        "rewritten_intent": "Разбить число `num` на разряды",
+        "snippet": "list(str(num))",
+        "question_id": 262786
+    },
+    {
+        "intent": "Разбить число на список цифр",
+        "rewritten_intent": "Разбить число `num` на разряды",
+        "snippet": "[int(i) for i in str(num)]",
+        "question_id": 262786
+    },
+    {
+        "intent": "Таймер в Python'e: протоколировать события, время которых должно сохраняться",
+        "rewritten_intent": "Измерить время выполнения `time_work` функции `func`",
+        "snippet": "t = time.time()\\n\nfunc()\\n\ntime_work = time.time()-t",
+        "question_id": 313184
+    },
+    {
+        "intent": "Проверка строк на наличие в них цифр",
+        "rewritten_intent": "Проверить есть ли числа в строке `s`",
+        "snippet": "any(map(str.isdigit, s))",
+        "question_id": 678639
+    },
+    {
+        "intent": "Проверка строк на наличие в них цифр",
+        "rewritten_intent": "Проверить есть ли числа в строке `s`",
+        "snippet": "re.search('\\d+', s)",
+        "question_id": 678639
+    },
+    {
+        "intent": "Ошибка \"not all arguments converted during string formatting\"",
+        "rewritten_intent": "Считать с клавиатуры число в переменную `num`",
+        "snippet": "num = int(input().strip())",
+        "question_id": 830473
+    },
+    {
+        "intent": "Задача: сколько на лугу пасется коров?",
+        "rewritten_intent": "Выбрать склонение слова `word` в зависимости от числа `n` по шаблону",
+        "snippet": "form = { # пример шаблона для слова \"корова\"\\n\n    \"11-14\": \"коров\",\\n\n    \"0,5-9\": \"коров\",\\n\n    \"1\": \"корова\",\\n\n    \"2-4\": \"коровы\",\\n\n}\\n\n\nif n >= 11 and n <= 14:\\n\n\\tprint(n, form[\"11-14\"])\\n\nelse:\\n\n\\ttemp = n % 10\\n\n\\tif temp == 0 or (temp >= 5 and temp <= 9):\\n\n\\t\\tprint(n, form[\"0,5-9\"])\\n\n\\tif temp == 1:\\n\n\\t\\tprint(n, form[\"1\"])\\n\n\\tif temp >=2 and temp <=4:\\n\n\\t\\tprint(n, form[\"2-4\"])\\n",
+        "question_id": 307354
+    },
+    {
+        "intent": "Заполнение массива рандомными значениями",
+        "rewritten_intent": "Сгенерировать спискок `my_list` случайных значений в диапазоне от `val1` до `val2` длинной `N`",
+        "snippet": "my_list = [random.randint(val1, val2) for i in range(N)]",
+        "question_id": 773920
+    },
+    {
+        "intent": "Python: разбить список на список списков, по элементу-разделителю",
+        "rewritten_intent": "Разбить список `my_list` на список списков `splitted` по разделителю `sep`",
+        "snippet": "splitted = [[]]\\n\nfor item in my_list:\\n\n\\tif item == sep:\\n\n\\t\\tsplitted.append([])\\n\n\\telse:\\n\n\\t\\tsplitted[-1].append(item)",
+        "question_id": 115592
+    },
+    {
+        "intent": "Многомерные массивы python",
+        "rewritten_intent": "Сгенерировать список `my_list` размера `M`x`N` заполненный значением `val`",
+        "snippet": "my_list = [[val for _ in range(N)] for _ in range(M)]",
+        "question_id": 158145
+    },
+    {
+        "intent": "Счетчик и циклы for и while (Python) нужно написать счетчик",
+        "rewritten_intent": "Посчитать сумму `n` членов арифметической прогрессии с членом заданным функцией `f(x)`",
+        "snippet": "s = 0\\n\nfor x in range(1, n+ 1):\\n\n\\ts += f(x)\\n",
+        "question_id": 592250
+    },
+    {
+        "intent": "Счетчик и циклы for и while (Python) нужно написать счетчик",
+        "rewritten_intent": "Посчитать сумму `n` членов арифметической прогрессии с членом заданным функцией `f(x)`",
+        "snippet": "s = 0\\n\nx = 0\\n\nwhile True:\\n\n\\tx+= 1\\n\n\\ts += f(x)\\n\n\\tif x == n:\\n\n\\t\\tbreak\\n",
+        "question_id": 592250
+    },
+    {
+        "intent": "Преобразование даты между строковыми представлениями",
+        "rewritten_intent": "Преобразовать строковое предствление даты `old_date` в строковое представление `new_date` формата `date_format` с использованием библиотеки datetime ",
+        "snippet": "new_date = datetime.strptime(old_date, date_format)",
+        "question_id": 419321
+    },
+    {
+        "intent": "Преобразование даты между строковыми представлениями",
+        "rewritten_intent": "Преобразовать строковое предствление даты `old_date` в строковое представление `new_date` формата `date_format` с использованием библиотеки datetime ",
+        "snippet": "locale.setlocale(locale.LC_TIME, 'ru_RU.UTF-8')\\n\nnew_date = datetime.strptime(old_date, date_format).date()",
+        "question_id": 419321
+    },
+    {
+        "intent": "Python Вывод ошибки и stacktrace в консоль",
+        "rewritten_intent": "Вывести название ошибки в try-catch",
+        "snippet": "try:\\n\n\\tpassexcept Exception as e:\\n\n\\tprint('Ошибка:\\n', traceback.format_exc())\\n",
+        "question_id": 505510
+    },
+    {
+        "intent": "Python Вывод ошибки и stacktrace в консоль",
+        "rewritten_intent": "Вывести название ошибки в try-catch",
+        "snippet": "try:\\n\n\\tpassexcept Exception as e:\\n\n\\tprint('Ошибка:\\n', e)\\n",
+        "question_id": 505510
+    },
+    {
+        "intent": "Как заменить строчку в .txt файле через python 3?",
+        "rewritten_intent": "Заменить строку `old_s` на строку `new_s` в файле `file_path`",
+        "snippet": "with open (file_path, 'r') as f:\\n\n\\told_data = f.read()\\n\n\nnew_data = old_data.replace(old_s, new_s)\\n\n\nwith open (file_path, 'w') as f:\\n\n\\tf.write(new_data)\\n",
+        "question_id": 654183
+    },
+    {
+        "intent": "Подсчёт вхождений перекрывающейся подстроки в строку",
+        "rewritten_intent": "Найти количество перекрывающих вхождений `count` подстроки `sub` в строку `s`",
+        "snippet": "count = 0\\n\ni = -1\\n\nwhile True:\\n\n\\ti = s.find(sub, i+1)\\n\n\\tif i == -1:\\n\n\\t\\tbreak\\n\n\\tcount += 1",
+        "question_id": 404985
+    },
+    {
+        "intent": "Как отправлять email на python",
+        "rewritten_intent": "Отправить письмо с текстом `message` на адрес `receiver_email` с использованием gmail-аккаунта с логином `sender_email` и паролем `password`",
+        "snippet": "# Дайте разрешение https://myaccount.google.com/lesssecureapps\nport = 465  # For SSL\\n\nsmtp_server = \"smtp.gmail.com\"\\n\ncontext = ssl.create_default_context()\\n\nwith smtplib.SMTP_SSL(smtp_server, port, context=context) as server:\\n\n\\tserver.login(sender_email, password)\\n\n\\tserver.sendmail(sender_email, receiver_email, message)\\n",
+        "question_id": 193764
+    },
+    {
+        "intent": "Могу ли я сделать вывод программы на Python цветным?",
+        "rewritten_intent": "Выведи строку `s` цветом `color` в терминал",
+        "snippet": "colors = {\\n\n\"красный\": '\\u001b[31m',\\n\n\"зеленый\": '\\u001b[32m',\\n\n\"синий\": '\\u001b[34m',\\n\n\"белый\": '\\u001b[37m',\\n\n\"черный\": '\\u001b[30m',\\n\n\"желтый\": '\\u001b[33m',\\n\n'reset': '\\033[0m'\\n\n}\\n\nprint('{ colors[color] }{ s }{ colors['reset'] }')",
+        "question_id": 294557
+    },
+    {
+        "intent": "Могу ли я сделать вывод программы на Python цветным?",
+        "rewritten_intent": "Выведи строку `s` цветом `color` в терминал",
+        "snippet": "#import colorama\n#from colorama import Fore\n#from colorama import Style\n\ncolors = {\\n\n\"красный\": 'RED'\\n,\n\"зеленый\": 'GREEN',\\n\n\"синий\": 'BLUE',\\n\n\"белый\": 'WHITE',\\n\n\"черный\": 'BLACK',\\n\n\"желтый\": 'YELLOW'\\n\n}\\n\nprint(getattr(Fore, colors[color]) + Style.BRIGHT + s + Style.RESET_ALL)",
+        "question_id": 294557
+    },
+    {
+        "intent": "Функция reversed() в Питоне",
+        "rewritten_intent": "Перевернуть список `my_list`",
+        "snippet": "my_list.reverse()",
+        "question_id": 427051
+    },
+    {
+        "intent": "Функция reversed() в Питоне",
+        "rewritten_intent": "Перевернуть список `my_list`",
+        "snippet": "my_list = my_list[::-1]",
+        "question_id": 427051
+    },
+    {
+        "intent": "Функция reversed() в Питоне",
+        "rewritten_intent": "Перевернуть список `my_list`",
+        "snippet": "my_list = list(reversed(my_list))",
+        "question_id": 427051
+    },
+    {
+        "intent": "Как сделать словарь из двух списков?",
+        "rewritten_intent": "Объединить список ключей `list_key` и список значений `list_value` в словарь `my_dict`",
+        "snippet": "my_dict = dict(zip(list_key, list_value))",
+        "question_id": 789625
+    },
+    {
+        "intent": "Как сделать словарь из двух списков?",
+        "rewritten_intent": "Объединить список ключей `list_key` и список значений `list_value` в словарь `my_dict`",
+        "snippet": "my_dict = {list_key[i]: list_value[i] for i in range(len(list_key))}",
+        "question_id": 789625
+    },
+    {
+        "intent": "Как из скрипта на Питоне послать письмо с вложением?",
+        "rewritten_intent": "Отправить письмо с  файлом `file_path`  на адрес `receiver_email` с smtp-сервера `smtp_server` с логином `sender_email` и паролем `password`",
+        "snippet": "basename = os.path.basename(file_path)\\n\n\n# Compose attachment\\n\npart = MIMEBase('application', \"octet-stream\")\\n\npart.set_payload(open(file_path ,\"rb\").read() )\\n\nencoders.encode_base64(part)\\n\npart.add_header('Content-Disposition', 'attachment; filename=\"%s\"' % basename)\\n\n\n# Compose message\\n\nmsg = MIMEMultipart()\\n\nmsg['From'] = sender_email\\n\nmsg['To'] = receiver_email\\n\nmsg.attach(part)\\n\n\n# Send mail\\n\nsmtp = SMTP_SSL(smtp_server)\\n\nsmtp.connect(smtp_server, 465)\\n\nsmtp.login(sender_email, password)\\n\nsmtp.sendmail(sender_email, receiver_email, msg.as_string())\\n\nsmtp.quit()\\n",
+        "question_id": 1
+    },
+    {
+        "intent": "вывести часть последовательности 1 2 2 3 3 3 4 4 4 4 5 5 5 5 5 на python 3",
+        "rewritten_intent": "Вывести строку `s` `n` раз через разделитель `sep`",
+        "snippet": "print(sep.join([s] * n))",
+        "question_id": 477678
+    },
+    {
+        "intent": "Как выбрать нужные столбцы?",
+        "rewritten_intent": "Выбрать столбцы `cols` с индекасами `list_indexes` pandas датафрейма `df`",
+        "snippet": "cols = df.iloc[:, indexes]",
+        "question_id": 635319
+    },
+    {
+        "intent": "как посчитать сумму элементов в списке используя FOR IN",
+        "rewritten_intent": "Найти сумму чисел `total` списка `my_list`",
+        "snippet": "total = sum(my_list)",
+        "question_id": 1085344
+    },
+    {
+        "intent": "как посчитать сумму элементов в списке используя FOR IN",
+        "rewritten_intent": "Найти сумму чисел `total` списка `my_list`",
+        "snippet": "total = 0\\n\nfor i in my_list:\\n\n\\ttotal += i\\n",
+        "question_id": 1085344
+    },
+    {
+        "intent": "найти максимальное значение словаря python",
+        "rewritten_intent": "Найти максимальное знаечние `max_value` в словаре `my_list`",
+        "snippet": "max_val = {x: y for x, y in filter(lambda x: my_list[x[0]] == max(my_list.values()), my_list.items())}\n",
+        "question_id": 759476
+    },
+    {
+        "intent": "найти максимальное значение словаря python",
+        "rewritten_intent": "Найти максимальное знаечние `max_value` в словаре `my_list`",
+        "snippet": "max_val = max(my_list.values())",
+        "question_id": 759476
+    },
+    {
+        "intent": "Вывод списка слов в случайном порядке без повторений",
+        "rewritten_intent": "Вывести `n` слов из списка `my_list` в случайном порядке без повторений",
+        "snippet": "print(*random.sample(set(my_list),n))",
+        "question_id": 407127
+    },
+    {
+        "intent": "Ошибка в регекспе с русскими символами Python: SyntaxError: (unicode error) 'utf-8' codec can't decode byte 0xd1",
+        "rewritten_intent": "Установить кодировку utf-8 для файла",
+        "snippet": "## -*- coding: utf-8 -*-",
+        "question_id": 526785
+    },
+    {
+        "intent": "Оператор присваивания += для списков (добавление по месту)",
+        "rewritten_intent": "Добавить кортеж `my_tuple` к списку `my_list`",
+        "snippet": "my_list.extend(my_tuple)",
+        "question_id": 446920
+    },
+    {
+        "intent": "Работа функции replace",
+        "rewritten_intent": "Заменить в строке `s` символ на позиции `i` на символ `symbol`",
+        "snippet": "s[:i] + symbol + s[i + 1:]",
+        "question_id": 103581
+    },
+    {
+        "intent": "Сортировка списка",
+        "rewritten_intent": "Отсортировать список `my_list`",
+        "snippet": "my_list = sorted(my_list)",
+        "question_id": 28096
+    },
+    {
+        "intent": "Сортировка списка",
+        "rewritten_intent": "Отсортировать список `my_list`",
+        "snippet": "my_list.sort()",
+        "question_id": 28096
+    },
+    {
+        "intent": "Нужно узнать ip адрес своего компьютера в интернете в Python",
+        "rewritten_intent": "Получить ip-адрес `my_ip` компьютера в Интернете ",
+        "snippet": "conn = http.client.HTTPConnection(\"ifconfig.me\")\\n\nconn.request(\"GET\", \"/ip\")\\n\nmy_ip = conn.getresponse().read()\\n",
+        "question_id": 133137
+    },
+    {
+        "intent": "Разница между двума датами в секундах в Django",
+        "rewritten_intent": "Найти сколько времени прошло между датами в формате datetime `first_date` и `second_date` ",
+        "snippet": "second_date - first_date",
+        "question_id": 134564
+    },
+    {
+        "intent": "Графика (рисунок по точкам) на Python",
+        "rewritten_intent": "Сгенерировать изображение по точкам со списком координат `points`",
+        "snippet": "img = Image.new('RGB', (256, 256 * 3), 'white')\\n\nfor point in points:\\n\n\\tdraw.point(point + img.size,color=\"red\")\\n\n\nimg.show()\\n\n",
+        "question_id": 14349
+    },
+    {
+        "intent": "Как в скрипт python принять параметры",
+        "rewritten_intent": "Получить список параметров `params` из командной строки",
+        "snippet": "sys.argv",
+        "question_id": 236635
+    },
+    {
+        "intent": "Таймер на Python",
+        "rewritten_intent": "Измерить время выполнения `time_work` функции `func`",
+        "snippet": "t = time.time()\\n\nfunc()\\n\ntime_work = time.time()-t",
+        "question_id": 230436
+    },
+    {
+        "intent": "Удалить выборочные строки из файла",
+        "rewritten_intent": "Удалить из файла `file_path` строки, которые начинаются со строки `prefix`",
+        "snippet": "\ntext = \"\"\nwith open(file_path, 'r') as f:\n    for line in f:\n        if not re.search(r\"^({})\".format(prefix), line):\n            text += line\n\nwith open(file_path, 'w') as f:\n    f.write(text)",
+        "question_id": 273613
+    },
+    {
+        "intent": "Частота слов в тексте",
+        "rewritten_intent": "Посчитать слова в строке `s`",
+        "snippet": "Counter(s.split())",
+        "question_id": 9096
+    },
+    {
+        "intent": "Python как написать функцию перевода из k-ичной системы в десятичную?",
+        "rewritten_intent": "Преобразовать число `num` в системе счисления с основанием `base` в число `new_num` в десятичной системе счисления ",
+        "snippet": "new_num = int(str(num), base) ",
+        "question_id": 157783
+    },
+    {
+        "intent": "Как в Python программно создать новую базу данных и выполнить в ней скрипт?",
+        "rewritten_intent": "Создать базу данных sqlite3 `file_path`",
+        "snippet": "con = sqlite3.connect(db_path)\\n\ncur = con.cursor()\\n",
+        "question_id": 224243
+    },
+    {
+        "intent": "Запуск bash из скрипта Python 2.7.3.",
+        "rewritten_intent": "Получить поток вывода данных консольной команды `cmd` в файловый объект `result`",
+        "snippet": "result = os.popen(cmd, 'r', 1)",
+        "question_id": 225896
+    },
+    {
+        "intent": "\"ValueError: dictionary update sequence element #0 has length\" при использовании dict",
+        "rewritten_intent": "Преобразовать строку `s` в словарь `my_dict`",
+        "snippet": "my_dict = json.loads(s)",
+        "question_id": 319317
+    },
+    {
+        "intent": "\"ValueError: dictionary update sequence element #0 has length\" при использовании dict",
+        "rewritten_intent": "Преобразовать строку `s` в словарь `my_dict`",
+        "snippet": "my_dict = dict(ast.literal_eval(s))",
+        "question_id": 319317
+    },
+    {
+        "intent": "Считывать файли в переменную пока не конец",
+        "rewritten_intent": "Прочитать построчно данные из файла `file_path` в список `my_list`",
+        "snippet": "with open(file_path) as file:\\n\n\\tmy_list = [row.strip() for row in file]",
+        "question_id": 235923
+    },
+    {
+        "intent": "Считывать файли в переменную пока не конец",
+        "rewritten_intent": "Прочитать построчно данные из файла `file_path` в список `my_list`",
+        "snippet": "with open(file_path, 'r') as f:\\n\n\\tmy_list = f.read().splitlines()\\n",
+        "question_id": 235923
+    },
+    {
+        "intent": "Считывать файли в переменную пока не конец",
+        "rewritten_intent": "Прочитать построчно данные из файла `file_path` в список `my_list`",
+        "snippet": "with io.open((file_path, encoding='utf-8') as f:\\n\n\\tmy_list = f.read().splitlines()\\n",
+        "question_id": 235923
+    },
+    {
+        "intent": "Считывание из текстового файла чисел",
+        "rewritten_intent": "Получить список чисел `num` из строки `s`",
+        "snippet": "regexp = re.compile( \"\\s*(-?(?:0|[1-9]\\d*)(?:\\.\\d+)?)\\s*;\", re.M )\\n\nnums = regexp.findall(s)\\n",
+        "question_id": 44503
+    },
+    {
+        "intent": "Как разбить текст на отдельные предложения?",
+        "rewritten_intent": "Разбить строку `s` на список предложений `sentences`",
+        "snippet": "split_regex = re.compile(r'[.|!|?|…]')\\n\nsentences = list(filter(lambda t: t, [t.strip() for t in split_regex.split(s)]))",
+        "question_id": 197142
+    },
+    {
+        "intent": "python 2.7, вывод в той же строке",
+        "rewritten_intent": "Вывести на экран строку `s` без перевода строки",
+        "snippet": "print(s, end=\" \")",
+        "question_id": 166814
+    },
+    {
+        "intent": "Вызов других python скриптов",
+        "rewritten_intent": "Вызвать функцию `f` из файла `file_path`",
+        "snippet": "exec(open(\"./file_path\").read())\\n\nf()\\n",
+        "question_id": 69121
+    },
+    {
+        "intent": "Воспроизведение mp3 в Python",
+        "rewritten_intent": "Воспроизвести аудио файл `file_path`",
+        "snippet": "mixer.init()\\n\nmixer.music.load(file_path)\\n\nmixer.music.play()\\n",
+        "question_id": 75962
+    },
+    {
+        "intent": "Как удалить значение из словаря во время цикла for",
+        "rewritten_intent": "Удалить элемент словаря `my_dict` с ключем `my_key` внутри цикла for ",
+        "snippet": "keys = list(my_dict.keys()).copy()\\n\nfor i in keys:\\n\n    if my_key in my_dict:\n        del my_dict[my_key]\n",
+        "question_id": 91763
+    },
+    {
+        "intent": "Битовые операции",
+        "rewritten_intent": "Перевести число `num` в байт строку",
+        "snippet": "str(num).encode()",
+        "question_id": 297129
+    },
+    {
+        "intent": "Взаимодействие с БД в Python",
+        "rewritten_intent": "Подключиться к mysql базе данных `db_name` на хосте `my_host` под пользователем `user` и паролем `password`",
+        "snippet": "con = pymysql.connect(my_host, user, password, db_name)\\n \nwith con:\\n    \n\\tcur = con.cursor()\\n",
+        "question_id": 19994
+    },
+    {
+        "intent": "Заменить элементы строки на значения словаря",
+        "rewritten_intent": "Заменить символы в строке `s` по словарю `my_dict`",
+        "snippet": "frm = ''.join([str(i) for i in my_dict.keys()])\\n\nto = ''.join([str(i) for i in my_dict.values()])\\n\ntrantab = str.maketrans(frm, to)\\n\ns = s.translate(trantab)\\n",
+        "question_id": 55256
+    },
+    {
+        "intent": "Заменить элементы строки на значения словаря",
+        "rewritten_intent": "Заменить символы в строке `s` по словарю `my_dict`",
+        "snippet": "for i, symbol in enumerate(s):\\n\n\\tif symbol in my_dict:\\n\n\\t\\ts = s[:i] + str(my_dict[symbol]) + s[i+1:]\\n",
+        "question_id": 55256
+    },
+    {
+        "intent": "Динамический путь для upload_to в модели django (models.FileField)",
+        "rewritten_intent": "Сгененрировать динамический путь для хранения файлов в Django upload_to",
+        "snippet": "def get_upload_path(instance, filename):\\n\n    return os.path.join(\n      \"user_%d\" % instance.owner.id, \"car_%s\" % instance.slug, filename)",
+        "question_id": 105134
+    },
+    {
+        "intent": "Удаление элементов из списка",
+        "rewritten_intent": "Из строки `s` удалить слова с суфиксом `suff`",
+        "snippet": "\" \".join(list(filter( lambda x : not x.endswith(suff), list(s.split()))))",
+        "question_id": 185524
+    },
+    {
+        "intent": "Проверить существование переменной",
+        "rewritten_intent": "Проверить существование глобальной переменной `my_var`",
+        "snippet": "globs = globals().copy()\\n\nvar_name = list(filter(lambda x: id(globs[x]) == id(my_var), globs))[0]\\n\nif var_name in globals():\\n\n\\tprint('y')\\n\nelse:\\n\n\\tprint('n')\\n",
+        "question_id": 294170
+    },
+    {
+        "intent": "Получить все значения словаря.",
+        "rewritten_intent": "Получить список значений `values_by_key` из списка словарей `dict_list` по ключу `my_key`",
+        "snippet": "values_by_key  = [x[my_key] for x in dict_list if my_key in x] \n",
+        "question_id": 205516
+    },
+    {
+        "intent": "Простой пример парсера htmp страницы",
+        "rewritten_intent": "Спарсить HTML-код страницы `code` по ссылке `url`",
+        "snippet": "with urllib.request.urlopen(url) as res:\n    code = res.read()",
+        "question_id": 45499
+    },
+    {
+        "intent": "Как с помощью модуля commands выполнить команду с sudo в linux?",
+        "rewritten_intent": "Выполнить команду `cmd` от имени администратора в Linux",
+        "snippet": "os.popen(\"sudo -S %s\"%(command), 'w').write(cmd)",
+        "question_id": 292305
+    },
+    {
+        "intent": "django redirect",
+        "rewritten_intent": "Сделать перенаправлние на адрес `url`в Django",
+        "snippet": "redirect(url)",
+        "question_id": 58045
+    },
+    {
+        "intent": "Расположение окна по центру Tkinter",
+        "rewritten_intent": "Расположить окно Tkinter `window` по центру",
+        "snippet": "`x = (window.winfo_screenwidth() - window.winfo_reqwidth()) / 2\\n\ny = (window.winfo_screenheight() - window.winfo_reqheight()) / 2\\n\nwindow.wm_geometry(\"+%d+%d\" % (x, y))\\n\nwindow.mainloop()\\n",
+        "question_id": 19319
+    },
+    {
+        "intent": "Python вывод в Excel",
+        "rewritten_intent": "Сохранить список значений `values` в excel файл `filename`",
+        "snippet": "book = xlwt.Workbook()\\n\nsheet1 = book.add_sheet(\"sheet1\")\\n\n\nfor row_index, row_values in enumerate(values):\\n\n\\trow = sheet1.row(row_index)\\n\n\\tfor col_index, col in enumerate(row_values):\\n\n\\t\\tvalue = row_values[col_index]\\n\n\\t\\trow.write(col_index, value)\\n\n\nbook.save(filename)",
+        "question_id": 211668
+    },
+    {
+        "intent": "Массив и цикл for в Python",
+        "rewritten_intent": "Объединить попарно элементы списка `my_list` в строки",
+        "snippet": "list(map(lambda x: x[0]+x[1], zip(my_list[0::2], my_list[1::2])))",
+        "question_id": 163083
+    },
+    {
+        "intent": "Как перевести строку в bytes в Python 3.2?",
+        "rewritten_intent": "Перевети строка `s` в байт-строку",
+        "snippet": "s.encode()\n",
+        "question_id": 62533
+    },
+    {
+        "intent": "JSON python",
+        "rewritten_intent": "Преобразовать строку `s` в JSON объект `my_json`",
+        "snippet": "my_json = json.loads(s)\n",
+        "question_id": 215531
+    },
+    {
+        "intent": "Выгрузка файла на сервер POST способом",
+        "rewritten_intent": "Отправить POST-запрос с файлом `file_path` на `url`",
+        "snippet": "files = {\\n\n    'file': open(file_path, 'rb')\n}\n\nr = requests.post(url, files=files)",
+        "question_id": 86126
+    },
+    {
+        "intent": "Как запустить функцию заново, если выпадает исключение?",
+        "rewritten_intent": "Вызывать функцию `my_f` в случае ошибки заново",
+        "snippet": "def stable_running():\\n\n\\ttry:\\n\n\\t\\tmy_f()\\n\n\\texcept ValueError:\\n\n\\t\\tstable_running()\\n",
+        "question_id": 301251
+    },
+    {
+        "intent": "Шифрование на Питоне",
+        "rewritten_intent": "Захешировать строку `s` с использованием алгоритма MD5",
+        "snippet": "hashlib.md5(s.unicode())",
+        "question_id": 1666
+    },
+    {
+        "intent": "Получение данных из файла: UnicodeEncodeError: 'charmap' codec can't encode character",
+        "rewritten_intent": "Открыть файл `file_path` с кодировкой UTF-8",
+        "snippet": "with open(file_path, 'r') as f:\\n\n\\tpass",
+        "question_id": 151750
+    },
+    {
+        "intent": "Сортировка по алфавиту и длине сразу",
+        "rewritten_intent": "Отсортировать список строк `strings` по алфавиту и длине",
+        "snippet": "strings.sort()",
+        "question_id": 271764
+    },
+    {
+        "intent": "Как быстро посчитать расстояния от одной точки до всех остальных точек?",
+        "rewritten_intent": "Найти расстояния между точкой со координатами `point` и точками с координатами `points`",
+        "snippet": "[math.dist(point, cur_point) for cur_point in points]",
+        "question_id": 103067
+    },
+    {
+        "intent": "Сравнение файлов",
+        "rewritten_intent": "Сравнить файлы `file_path1` и `file_path2` построчно",
+        "snippet": "l1 = map(lambda x: x.strip(), list(open('test1.txt')))\\n\nl2 = map(lambda x: x.strip(), list(open('test2.txt')))\\n\ndiff_list = list(zip(l1, l2))\\n\n\nfor i, line in enumerate(diff_list):\\n\n\\tif line[0] == line[1]:\\n\n\\t\\tprint('Строки { i} совпадают')\\n\n\\telse:\\n\n\\tprint('Строки { i} не совпадают')\\n",
+        "question_id": 306224
+    },
+    {
+        "intent": "Сравнение файлов",
+        "rewritten_intent": "Сравнить файлы `file_path1` и `file_path2` построчно",
+        "snippet": "from difflib import ndiff\n\nt1 = open('test1.txt').read().splitlines(1)\nt2 = open('test2.txt').read().splitlines(1)\n\nprint ''.join(ndiff(t1, t2))",
+        "question_id": 306224
+    },
+    {
+        "intent": "Замена текста python",
+        "rewritten_intent": "Заменить подстроку `old_sub` на подстоку `new_sub` в строке `s` `count` раз",
+        "snippet": "s.replace(old_sub, new_sub, count)",
+        "question_id": 157647
+    },
+    {
+        "intent": "Как преобразовать строки в словарь?",
+        "rewritten_intent": "Распарсить строку ключ-значение `s` по разделителю `sep` в словарь `my_dict`",
+        "snippet": "my_dict = dict([[x[1:-1] for x in s.split(sep)], ])",
+        "question_id": 303166
+    },
+    {
+        "intent": "Как организовать работу с буфером обмена python?",
+        "rewritten_intent": "Получить данные из буфера обмена `data`",
+        "snippet": "win32clipboard.OpenClipboard()\\n\ndata = win32clipboard.GetClipboardData()\\n\nwin32clipboard.CloseClipboard()\\n",
+        "question_id": 80334
+    },
+    {
+        "intent": "Как отбросить нули справа?",
+        "rewritten_intent": "Отбросить незначащие нули справа",
+        "snippet": "num = str(num)\\n\n\nif \".\" in num:\\n\n\\tinteger, tail = num.split(\".\")\\n\n\\ttail = re.sub(r'[0]*$', '', tail)\\n\n\\tif not tail:\\n\n\\t\\tnum = integer\\n\n\\telse:\\n\n\\t\\tnum = float(integer + \".\" + tail)",
+        "question_id": 101677
+    },
+    {
+        "intent": "Как получить часовой пояс на Python",
+        "rewritten_intent": "Получить часовой пояс",
+        "snippet": "time.timezone // 3600",
+        "question_id": 135134
+    },
+    {
+        "intent": "Как удалить пунктуацию из строки Юникода?",
+        "rewritten_intent": "Удалить знаки препинания из строки `s`",
+        "snippet": "re.sub(r'[^\\w\\s]', '', s)",
+        "question_id": 74955
+    },
+    {
+        "intent": "Как удалить пунктуацию из строки Юникода?",
+        "rewritten_intent": "Удалить знаки препинания из строки `s`",
+        "snippet": "for p in string.punctuation:\\n\n\\tif p in s:\\n\n\\t\\ts = s.replace(p, '')\\n",
+        "question_id": 74955
+    },
+    {
+        "intent": "Загрузка файла через python на сервер",
+        "rewritten_intent": "Отправить POST-запрос с файлом `file_path` на `url`",
+        "snippet": "files = {\\n\n    'file': open(file_path, 'rb')\n}\n\nr = requests.post(url, files=files)",
+        "question_id": 91006
+    },
+    {
+        "intent": "Перехват вывода консоли python",
+        "rewritten_intent": "Получить поток вывода данных консольной команды `cmd` в файловый объект `result`",
+        "snippet": "result = os.popen(cmd, 'r', 1)",
+        "question_id": 202621
+    },
+    {
+        "intent": "Как разбить список на элементы?",
+        "rewritten_intent": "Преобразовать многомерный список `my_list` в одномерный",
+        "snippet": "def get_length_items_list(a):\\n\n\\treturn list(map(lambda x: 1 if isinstance(x, list) else 0, a))\\n\n\nlength_my_list = get_length_items_list(my_list)\\n\n\nwhile max(length_my_list) > 0:\\n\n\\tnew_list = []\\n\n\\tfor item in my_list:\\n\n\\t\\tif isinstance(item, list):\n\\t\\t\\tif len(item) > 0:\n\\t\\t\\t\\tnew_list += item\n\\t\\t\\telse:\n\\t\\t\\t\\tnew_list.append(item)\n\n\\tmy_list = new_list\n\\tlength_my_list = get_length_items_list(my_list)",
+        "question_id": 253869
+    },
+    {
+        "intent": "Как преобразовать список в строку?",
+        "rewritten_intent": "Преобразовать список `my_list` в строку `s` c разделителем `sep` ",
+        "snippet": "s = sep.join(my_list)",
+        "question_id": 300050
+    },
+    {
+        "intent": "Как преобразовать список в строку?",
+        "rewritten_intent": "Преобразовать список `my_list` в строку `s` c разделителем `sep` ",
+        "snippet": "s = \" \".join(map(str, my_list))",
+        "question_id": 300050
+    },
+    {
+        "intent": "Завершение программы в Python",
+        "rewritten_intent": "Завершить программу c кодом `code`",
+        "snippet": "sys.exit(code)",
+        "question_id": 459170
+    },
+    {
+        "intent": "Завершение программы в Python",
+        "rewritten_intent": "Завершить программу c кодом `code`",
+        "snippet": "raise SystemExit(code)",
+        "question_id": 459170
+    },
+    {
+        "intent": "Как разбить строку на отдельные символы?",
+        "rewritten_intent": "Разбить строку `s` на список символов `chars`",
+        "snippet": "chars = list(s)",
+        "question_id": 52873
+    },
+    {
+        "intent": "Как разбить строку на отдельные символы?",
+        "rewritten_intent": "Разбить строку `s` на список символов `chars`",
+        "snippet": "chars = [c for c in s]",
+        "question_id": 52873
+    },
+    {
+        "intent": "Фиксированное количество знаков после запятой в Python",
+        "rewritten_intent": "Округлить `num` до `n` знаков после запятой ",
+        "snippet": "round(num, n)",
+        "question_id": 648454
+    },
+    {
+        "intent": "Как удалить все пробелы из строки в Python?",
+        "rewritten_intent": "Удалить все пробелы из строки `s`",
+        "snippet": "s = s.replace(' ', '')",
+        "question_id": 359110
+    },
+    {
+        "intent": "Как удалить все пробелы из строки в Python?",
+        "rewritten_intent": "Удалить все пробелы из строки `s`",
+        "snippet": "s = ''.join(s.split())",
+        "question_id": 359110
+    },
+    {
+        "intent": "Количество повторяющихся элементов в списке",
+        "rewritten_intent": "Посчитать элементы в списке `my_list` в `list_value_counts`",
+        "snippet": "Counter(my_list)",
+        "question_id": 418982
+    },
+    {
+        "intent": "Количество повторяющихся элементов в списке",
+        "rewritten_intent": "Посчитать элементы в списке `my_list` в `list_value_counts`",
+        "snippet": "{i: array.count(i) for i in my_list}",
+        "question_id": 418982
+    },
+    {
+        "intent": "Удаление одинаковых элементов в отсортированном листе (списке)",
+        "rewritten_intent": "Удалить повторяющиеся элементы в отсортированным списке `my_list`",
+        "snippet": "my_list = [el for el, _ in groupby(my_list)]",
+        "question_id": 575604
+    },
+    {
+        "intent": "Удаление одинаковых элементов в отсортированном листе (списке)",
+        "rewritten_intent": "Удалить повторяющиеся элементы в отсортированным списке `my_list`",
+        "snippet": "my_list = list(set(my_list))",
+        "question_id": 575604
+    },
+    {
+        "intent": "Как найти корень квадратный в Python?",
+        "rewritten_intent": "Найти кваратный корень из `num`",
+        "snippet": "math.sqrt(x)",
+        "question_id": 397222
+    },
+    {
+        "intent": "Перевод списка строк в список чисел",
+        "rewritten_intent": "Преобразовать список строк `my_number_strs` в список чисел `my_numbers`",
+        "snippet": "my_numbers = [int(item) for item in my_number_strs]",
+        "question_id": 459401
+    },
+    {
+        "intent": "Поиск подстроки в строке",
+        "rewritten_intent": "Проверить есть ли подстрока `my_subs` в строке `s`",
+        "snippet": "re.search(sub_s, s)",
+        "question_id": 235938
+    },
+    {
+        "intent": "Поиск подстроки в строке",
+        "rewritten_intent": "Проверить есть ли подстрока `my_subs` в строке `s`",
+        "snippet": "sub_s in s",
+        "question_id": 235938
+    },
+    {
+        "intent": "Поиск подстроки в строке",
+        "rewritten_intent": "Проверить есть ли подстрока `my_subs` в строке `s`",
+        "snippet": " s.find(sub_s) != -1 ",
+        "question_id": 235938
+    },
+    {
+        "intent": "Сравнение 2-ух списков в python",
+        "rewritten_intent": "Найти общие элементы `common_items` списка `my_list1` и списка `my_list2` ",
+        "snippet": "count_values_l1 = Counter(my_list1)\\n\ncount_values_l2 = Counter(my_list2)\\n\nkeys1 = count_values_l1.keys()\\n\nkeys2 = count_values_l2.keys()\\n\ncommon_items = []\\n\nfor key in keys1:\\n\n\\tif key in keys2:\\n\n\\t\\tcommon_items += [key] * min(count_values_l1[key], count_values_l2[key])\n",
+        "question_id": 427942
+    },
+    {
+        "intent": "Сравнение 2-ух списков в python",
+        "rewritten_intent": "Найти общие элементы `common_items` списка `my_list1` и списка `my_list2` ",
+        "snippet": "list(set(my_list1) & set(my_list2))",
+        "question_id": 427942
+    },
+    {
+        "intent": "Текущая директория в Python",
+        "rewritten_intent": "Получить текущую директорию ",
+        "snippet": "os.getcwd()",
+        "question_id": 535318
+    },
+    {
+        "intent": "Текущая директория в Python",
+        "rewritten_intent": "Получить текущую директорию ",
+        "snippet": "os.path.abspath(os.curdir)",
+        "question_id": 535318
+    },
+    {
+        "intent": "Текущая директория в Python",
+        "rewritten_intent": "Получить текущую директорию ",
+        "snippet": "os.path.abspath(__file__)\n\n",
+        "question_id": 535318
+    },
+    {
+        "intent": "Как проверить существование файла?",
+        "rewritten_intent": "Проверить существует ли файл `file_path`",
+        "snippet": "os.path.exists(file_path)",
+        "question_id": 414593
+    },
+    {
+        "intent": "Запись списка в txt файл в питоне",
+        "rewritten_intent": "Записать данные `data` в файл `file_path`",
+        "snippet": "with open(path, \"w\") as file:\\n\n\\tprint(data, file=file)",
+        "question_id": 50064
+    },
+    {
+        "intent": "Запись списка в txt файл в питоне",
+        "rewritten_intent": "Записать данные `data` в файл `file_path`",
+        "snippet": "with open(file_path, mode='a', encoding='utf-8') as f:\\n\n\\tprint(data, file=file)",
+        "question_id": 50064
+    },
+    {
+        "intent": "Получить ключ по значению",
+        "rewritten_intent": "Получить ключ `my_key` из словаря `my_dict` по значению `val` ",
+        "snippet": "my_key = None\\n\nfor k, v in my_dict.items():\\n\n\\tif v == val:\\n\n\\t\\tmy_key = k\\n\n\\t\\tbreak",
+        "question_id": 507330
+    },
+    {
+        "intent": "Получить ключ по значению",
+        "rewritten_intent": "Получить ключ `my_key` из словаря `my_dict` по значению `val` ",
+        "snippet": "reversed_dict = dict(zip(my_dict.values(), my_dict.keys()))\\n\nmy_key = reversed_dict[val]",
+        "question_id": 507330
+    },
+    {
+        "intent": "Как проверить число на четность?",
+        "rewritten_intent": "Проверить число 'num' на четность",
+        "snippet": "num % 2 == 0",
+        "question_id": 30653
+    },
+    {
+        "intent": "Перевернуть список",
+        "rewritten_intent": "Перевернуть список `my_list`",
+        "snippet": "my_list.reverse()",
+        "question_id": 299026
+    },
+    {
+        "intent": "Перевернуть список",
+        "rewritten_intent": "Перевернуть список `my_list`",
+        "snippet": "my_list = my_list[::-1]",
+        "question_id": 299026
+    },
+    {
+        "intent": "Перевернуть список",
+        "rewritten_intent": "Перевернуть список `my_list`",
+        "snippet": "my_list = list(reversed(my_list))",
+        "question_id": 299026
+    },
+    {
+        "intent": "Как удалить элемент массива в питоне?",
+        "rewritten_intent": "Удалить элемент `item` из списка `my_list`",
+        "snippet": "my_list.remove(item)",
+        "question_id": 81572
+    },
+    {
+        "intent": "Как удалить элемент массива в питоне?",
+        "rewritten_intent": "Удалить элемент `item` из списка `my_list`",
+        "snippet": "del my_list[my_list.index(item)]",
+        "question_id": 81572
+    },
+    {
+        "intent": "Почему скрипт на Питоне не понимает юникод?",
+        "rewritten_intent": "Установить кодировку utf-8 для файла",
+        "snippet": "## -*- coding: utf-8 -*-",
+        "question_id": 293
+    },
+    {
+        "intent": "Как разделить строку на список слов разделённых пробелами?",
+        "rewritten_intent": "Разделить строку `s` на список подстрок `s_list` по разделителю `sep` ",
+        "snippet": "s_list = s.strip().split(sep)",
+        "question_id": 592812
+    },
+    {
+        "intent": "Разбить число на составляющие",
+        "rewritten_intent": "Разбить число `num` на список чисел `digits`",
+        "snippet": "digits = [int(i) for i in str(num)]",
+        "question_id": 506457
+    },
+    {
+        "intent": "Как убрать символ новой строки (\\n) при чтении строк из файла",
+        "rewritten_intent": "Прочитать строки из файла `file_path` в `lines` без переноса строки",
+        "snippet": "with open(file_path) as file:\\n\n\\tlines = [line.rstrip() for line in file.readlines()]",
+        "question_id": 597892
+    },
+    {
+        "intent": "Как построчно вывести весь список Python?",
+        "rewritten_intent": "Вывести список `my_list` построчно",
+        "snippet": "for x in my_list:\\n \n\\tprint(x)",
+        "question_id": 251048
+    },
+    {
+        "intent": "Как построчно вывести весь список Python?",
+        "rewritten_intent": "Вывести список `my_list` построчно",
+        "snippet": "print('\\n'.join(my_list))",
+        "question_id": 251048
+    },
+    {
+        "intent": "Как построчно вывести весь список Python?",
+        "rewritten_intent": "Вывести список `my_list` построчно",
+        "snippet": "print('\\n'.join(list(map(str, my_list))))",
+        "question_id": 251048
+    },
+    {
+        "intent": "Ошибка кодировки в Python: readline() при чтении utf-8 файла ругается: 'charmap' codec can't decode byte",
+        "rewritten_intent": "Прочитать файл `file_path` с кодировкой utf-8 в `data`",
+        "snippet": "f = codecs.open(file_path, \"r\", \"utf_8_sig\" )\ndata = f.read()\nf.close()",
+        "question_id": 33868
+    },
+    {
+        "intent": "Ошибка кодировки в Python: readline() при чтении utf-8 файла ругается: 'charmap' codec can't decode byte",
+        "rewritten_intent": "Прочитать файл `file_path` с кодировкой utf-8 в `data`",
+        "snippet": "with io.open((file_path, encoding='utf-8') as f:\\n\n\\tdata = f.read()",
+        "question_id": 33868
+    },
+    {
+        "intent": "Удалить лишние пробелы из строки",
+        "rewritten_intent": "Удалить лишние пробелы из строки `s`",
+        "snippet": "s = ' '.join(s.split())",
+        "question_id": 248267
+    },
+    {
+        "intent": "Перевод из любой системы счисления в любую",
+        "rewritten_intent": "Перевести число `num` из системы числения `from_base` в систему счисления `to_base` ",
+        "snippet": "n = int(str(num), from_base)\\n\nalphabet = \"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ\"\\n\nnew_num = \"\"\\n\nwhile n > 0:\\n\n\\tn, m = divmod(n, to_base)\\n\n\\tnew_num += alphabet[m]\\n\nnum = new_num[::-1]",
+        "question_id": 607802
+    },
+    {
+        "intent": "Проверка на целое число—условие на проверку данных, введенных пользователем",
+        "rewritten_intent": "Проверить что число `num` целочисленное",
+        "snippet": "isinstance(num, int)",
+        "question_id": 585259
+    },
+    {
+        "intent": "Необходимо очистить строку от посторонних символов",
+        "rewritten_intent": "Очистить строку `s` от лишних символов",
+        "snippet": "reg = re.compile('[^a-zA-Z ]')\\n\ns = reg.sub('', s))",
+        "question_id": 446226
+    },
+    {
+        "intent": "Необходимо очистить строку от посторонних символов",
+        "rewritten_intent": "Очистить строку `s` от лишних символов",
+        "snippet": "good_chars = (ascii_letters + whitespace).encode()\\n\njunk_chars = bytearray(set(range(0x100)) - set(good_chars))\\n\ns = s.encode('ascii', 'ignore').translate(None, junk_chars).decode()",
+        "question_id": 446226
+    },
+    {
+        "intent": "Чтение из файла построчно и запись в массив",
+        "rewritten_intent": "Прочитать построчно данные из файла `file_path` в список `my_list`",
+        "snippet": "with open(file_path) as file:\\n\n\\tmy_list = [row.strip() for row in file]",
+        "question_id": 542210
+    },
+    {
+        "intent": "Чтение из файла построчно и запись в массив",
+        "rewritten_intent": "Прочитать построчно данные из файла `file_path` в список `my_list`",
+        "snippet": "with open(file_path, 'r') as f:\\n\n\\tmy_list = f.read().splitlines()\\n",
+        "question_id": 542210
+    },
+    {
+        "intent": "Чтение из файла построчно и запись в массив",
+        "rewritten_intent": "Прочитать построчно данные из файла `file_path` в список `my_list`",
+        "snippet": "with io.open((file_path, encoding='utf-8') as f:\\n\n\\tmy_list = f.read().splitlines()\\n",
+        "question_id": 542210
+    },
+    {
+        "intent": "Скачивание файла через urllib",
+        "rewritten_intent": "Скачать файл по ссылке `link` в `file_path`",
+        "snippet": "with urllib.request.urlopen(link) as url:\\n\n\\tdownloaded_file = url.read()\\n\n\\twith open(file_path, \"wb\") as f:\\n\n\\t\\tf.write(downloaded_file)",
+        "question_id": 60925
+    },
+    {
+        "intent": "Поиск слова в файле",
+        "rewritten_intent": "Найти слово `word` в файле `file_path`",
+        "snippet": "with open(file_path,'r') as f:\\n\n\\ttext = f.read()\\n\n\nif word in text:\\n\n\\tprint('Слово { word } есть в файле')\\n\nelse:\\n\n\\tprint('Слова {word} нет в файле')\\n",
+        "question_id": 274131
+    },
+    {
+        "intent": "Преобразование строки в список с сортировкой в лексикографическом порядке",
+        "rewritten_intent": "Преобразовать строку `s` в список слов `words` и отсортировать",
+        "snippet": "words = s.split()\nwords.sort()",
+        "question_id": 505115
+    },
+    {
+        "intent": "Проход по алфавиту Python",
+        "rewritten_intent": "Получить символ `my_symbol` по его коду `char_code` ",
+        "snippet": "my_symbol = chr(char_code)",
+        "question_id": 565252
+    },
+    {
+        "intent": "Проблема с кодировкой при записи в файл: UnicodeEncodeError: 'charmap' codec can't encode character '\\u039a'",
+        "rewritten_intent": "Открыть файл `file_path` для записи с кодировкой utf-8 в переменную f",
+        "snippet": "with open(file_path, mode='a', encoding='utf-8') as f:\\n\n\\tpass",
+        "question_id": 509576
+    },
+    {
+        "intent": "Проблема с кодировкой при записи в файл: UnicodeEncodeError: 'charmap' codec can't encode character '\\u039a'",
+        "rewritten_intent": "Открыть файл `file_path` для записи с кодировкой utf-8 в переменную f",
+        "snippet": "f = open(file_path,'a', encoding='utf-8')",
+        "question_id": 509576
+    },
+    {
+        "intent": "Как sys.path добавлять относительные пути для поиска модулей?",
+        "rewritten_intent": "Добавить путь `my_path` для поиска модулей",
+        "snippet": "sys.path.append(my_path)\n",
+        "question_id": 42621
+    },
+    {
+        "intent": "Поиск слова в строке Python",
+        "rewritten_intent": "Проверить есть ли слово `word` в строке `s`",
+        "snippet": "re.search(r\"\\b{}\\b\".format(word), s)",
+        "question_id": 615741
+    },
+    {
+        "intent": "Поиск слова в строке Python",
+        "rewritten_intent": "Проверить есть ли слово `word` в строке `s`",
+        "snippet": "word in s.split()",
+        "question_id": 615741
+    },
+    {
+        "intent": "Транспонирование матрицы (numpy массива) в python",
+        "rewritten_intent": "Транспонировать матрицу `matrix` в матрицу `new_matrix`",
+        "snippet": "new_matrix = matrix.transpose()",
+        "question_id": 500957
+    },
+    {
+        "intent": "Транспонирование матрицы (numpy массива) в python",
+        "rewritten_intent": "Транспонировать матрицу `matrix` в матрицу `new_matrix`",
+        "snippet": "new_matrix = matrix.T",
+        "question_id": 500957
+    },
+    {
+        "intent": "Транспонирование матрицы (numpy массива) в python",
+        "rewritten_intent": "Транспонировать матрицу `matrix` в матрицу `new_matrix`",
+        "snippet": "new_matrix = []\\n\nfor i in range(len(matrix[0])):\\n\n\\tnew_matrix.append(list())\\n\n\\tfor j in range(len(matrix)):\\n\n\\t\\tnew_matrix[i].append(matrix[j][i])\\n",
+        "question_id": 500957
+    },
+    {
+        "intent": "Ввод и вывод двумерного массива(ВВОД)",
+        "rewritten_intent": "Заполнить двумерный массив `my_list` из `rows` строк и `cols` колонок с клавиатуры",
+        "snippet": "my_list = [[input() for _ in range(cols)] for i in range(rows)]",
+        "question_id": 116074
+    },
+    {
+        "intent": "Ввод и вывод двумерного массива(ВВОД)",
+        "rewritten_intent": "Заполнить двумерный массив `my_list` из `rows` строк и `cols` колонок с клавиатуры",
+        "snippet": "my_list = [[input().strip().split() for _ in range(cols)] for i in range(rows)]",
+        "question_id": 116074
+    },
+    {
+        "intent": "Ввод и вывод двумерного массива(ВВОД)",
+        "rewritten_intent": "Заполнить двумерный массив `my_list` из `rows` строк и `cols` колонок с клавиатуры",
+        "snippet": "my_list = []\\n\nfor r in range(rows):\\n\n]tcur_row = []\\n\n\\tfor c  in range(cols):\\n\n\\t\\tval = input()\\n\n\\t\\tcur_row.append(val)\\n\n\\tmy_list.append(cur_row)\\n",
+        "question_id": 116074
+    },
+    {
+        "intent": "Удалить строки в DataFrame удовлетворяющие условию",
+        "rewritten_intent": "Удалить из датафрейма `df` строки по условию `cond`",
+        "snippet": "df = df.loc[cond]",
+        "question_id": 786730
+    },
+    {
+        "intent": "Сортировка ключей словаря по возрастанию",
+        "rewritten_intent": "Отсортировать словарь `my_dict` по ключам по возростанию",
+        "snippet": "OrderedDict(sorted(my_dict.items(), key=lambda t: t[0]))",
+        "question_id": 528474
+    },
+    {
+        "intent": "Проблемы с кодировкой Python 2.7",
+        "rewritten_intent": "Установить кодировку utf-8 для файла",
+        "snippet": "## -*- coding: utf-8 -*-",
+        "question_id": 229015
+    },
+    {
+        "intent": "Python: 'charmap' codec can't decode byte 0x98",
+        "rewritten_intent": "Открыть файл `file_path` для записи с кодировкой utf-8 в переменную f",
+        "snippet": "with open(file_path, mode='a', encoding='utf-8') as f:\\n\n\\tpass",
+        "question_id": 517085
+    },
+    {
+        "intent": "Python: 'charmap' codec can't decode byte 0x98",
+        "rewritten_intent": "Открыть файл `file_path` для записи с кодировкой utf-8 в переменную f",
+        "snippet": "f = open(file_path,'a', encoding='utf-8')",
+        "question_id": 517085
+    },
+    {
+        "intent": "POST-запрос в python",
+        "rewritten_intent": "Отправить POST-запрос c JSON данными `data` на `url`",
+        "snippet": "res = requests.post(url, json=data) \\n\nprint(res.text)\n",
+        "question_id": 690089
+    },
+    {
+        "intent": "Вывести количество строк в файле",
+        "rewritten_intent": "Вывести количество строк `count_lines` в файле `file_path`",
+        "snippet": "count_lines = sum(1 for line in open(file_path, 'r'))",
+        "question_id": 550742
+    },
+    {
+        "intent": "Чтение файла построчно в Python",
+        "rewritten_intent": "Прочитать построчно данные из файла `file_path` в список `my_list`",
+        "snippet": "with open(file_path) as file:\\n\n\\tmy_list = [row.strip() for row in file]",
+        "question_id": 928295
+    },
+    {
+        "intent": "Чтение файла построчно в Python",
+        "rewritten_intent": "Прочитать построчно данные из файла `file_path` в список `my_list`",
+        "snippet": "with open(file_path, 'r') as f:\\n\n\\tmy_list = f.read().splitlines()\\n",
+        "question_id": 928295
+    },
+    {
+        "intent": "Чтение файла построчно в Python",
+        "rewritten_intent": "Прочитать построчно данные из файла `file_path` в список `my_list`",
+        "snippet": "with io.open((file_path, encoding='utf-8') as f:\\n\n\\tmy_list = f.read().splitlines()\\n",
+        "question_id": 928295
+    },
+    {
+        "intent": "Python - проблемы с кодировкой utf-8",
+        "rewritten_intent": "Установить кодировку utf-8 для файла",
+        "snippet": "## -*- coding: utf-8 -*-",
+        "question_id": 255207
+    },
+    {
+        "intent": "Как убрать определенный символ из строки?",
+        "rewritten_intent": "Удалить подстроку `sub_s`  из строки `s`",
+        "snippet": "s.replace(sub_s, \"\")\n",
+        "question_id": 777723
+    },
+    {
+        "intent": "Ошибка при подключении сокета к серверу: a bytes-like object is required, not 'str'",
+        "rewritten_intent": "Отправить сообщение `mess` в сокет `sock`",
+        "snippet": "sock.send(mess.encode())",
+        "question_id": 466658
+    },
+    {
+        "intent": "Удаление пустых элементов списка python",
+        "rewritten_intent": "Удалить пустые элементы из списка `my_list`",
+        "snippet": "my_list = [value for value in my_list if value]\n",
+        "question_id": 422461
+    },
+    {
+        "intent": "Удаление пустых элементов списка python",
+        "rewritten_intent": "Удалить пустые элементы из списка `my_list`",
+        "snippet": "my_list = [value for value in my_list if value != [None]]\n",
+        "question_id": 422461
+    },
+    {
+        "intent": "Как найти все дублирующиеся элементы в списке и количество их повторов?",
+        "rewritten_intent": "Посчитать элементы в списке `my_list` в `list_value_counts`",
+        "snippet": "Counter(my_list)",
+        "question_id": 533108
+    },
+    {
+        "intent": "Как найти все дублирующиеся элементы в списке и количество их повторов?",
+        "rewritten_intent": "Посчитать элементы в списке `my_list` в `list_value_counts`",
+        "snippet": "{i: array.count(i) for i in my_list}",
+        "question_id": 533108
+    },
+    {
+        "intent": "Шифр Цезаря Python",
+        "rewritten_intent": "Зашифровать строку `s` в строку `new_s` шифром Цезаря со сдвигом `shift`",
+        "snippet": "alpha = ' abcdefghijklmnopqrstuvwxyz'\\n\nnew_s = ''\\n\nfor c in s:\\n\n\\tnew_s += alpha[(alpha.index(c) + shift) % len(alpha)]\n",
+        "question_id": 594690
+    },
+    {
+        "intent": "Задача \"Палиндром\". Python",
+        "rewritten_intent": "Проверить является ли строка `s` палиндромом",
+        "snippet": "s == s[::-1]",
+        "question_id": 424441
+    },
+    {
+        "intent": "Задача \"Палиндром\". Python",
+        "rewritten_intent": "Проверить является ли строка `s` палиндромом",
+        "snippet": "s == reversed(s)",
+        "question_id": 424441
+    },
+    {
+        "intent": "Нахождение производной на Python",
+        "rewritten_intent": "Найти производную `d` функции `my_f`в точке `x`",
+        "snippet": "derivative(my_f, x)",
+        "question_id": 630116
+    },
+    {
+        "intent": "Замена символа по индексу строки: TypeError: 'str' object does not support item assignment",
+        "rewritten_intent": "Заменить символ с индексом `n` в строке `s` на `new_char`",
+        "snippet": "s = s[:n] + new_char + s[n+1:]",
+        "question_id": 577060
+    },
+    {
+        "intent": "Как открыть картинку через Python?",
+        "rewritten_intent": "Открыть изображение `img_path` в проводнике",
+        "snippet": "os.system(img_path)\n",
+        "question_id": 406558
+    },
+    {
+        "intent": "Как открыть картинку через Python?",
+        "rewritten_intent": "Открыть изображение `img_path` в проводнике",
+        "snippet": "os.startfile(img_path)\n",
+        "question_id": 406558
+    },
+    {
+        "intent": "Разделить в Python 3 слово на символы",
+        "rewritten_intent": "Разбить строку `s` на список символов `chars`",
+        "snippet": "list(s)",
+        "question_id": 458373
+    },
+    {
+        "intent": "Разделить в Python 3 слово на символы",
+        "rewritten_intent": "Разбить строку `s` на список символов `chars`",
+        "snippet": "[c for c in s]",
+        "question_id": 458373
+    },
+    {
+        "intent": "Как удалить символ из строки по индексу",
+        "rewritten_intent": "Удалить символ с индексом `i` из строки `s`",
+        "snippet": "s = s[:i] + s[i+1:]",
+        "question_id": 879670
+    },
+    {
+        "intent": "Формирование словаря с одинаковыми ключами",
+        "rewritten_intent": "Объединить список словарей `dicts` с одинаковыми ключами в общий словарь `common_dict`",
+        "snippet": "common_dict = {}\\n\nfor cur_dict in dicts:\\n\n\\tfor key in cur_dict:\\n\n\\t\\tif key not in common_dict:\\n\n\\t\\t\\tcommon_dict[key] = cur_dict[key]\\n\n\\t\\t\\tcontinue\\n\n\n\\t\\tif not isinstance(common_dict[key], list):\\n\n\\t\\\\ttcommon_dict[key] = [common_dict[key]] + [cur_dict[key]]\\n\n\\t\\t\\tcontinue\\n\n\n\\t\\tcommon_dict[key] += [cur_dict[key]]\\n",
+        "question_id": 119418
+    },
+    {
+        "intent": "Можно ли подключить DLL в python?",
+        "rewritten_intent": "Подключить dll файл `filepath` в переменную `lib`",
+        "snippet": "lib = CDLL('some.dll')",
+        "question_id": 60790
+    },
+    {
+        "intent": "Авторизация на сайте",
+        "rewritten_intent": "Получить cookie `cookies` с сайта `url`",
+        "snippet": "session = requests.Session()\nresponse = session.get('http://google.com')\ncookies = session.cookies.get_dict()",
+        "question_id": 299217
+    },
+    {
+        "intent": "Как узнать количество аргументов, передающихся функции?",
+        "rewritten_intent": "Получить спецификацию аргументов функции `f`",
+        "snippet": " inspect.getargspec(f)",
+        "question_id": 65166
+    },
+    {
+        "intent": "Запуск команд ОС Windows из Python: как вывод systeminfo команды запихнуть в переменную",
+        "rewritten_intent": "Получить поток вывода данных консольной команды `cmd` в файловый объект `result`",
+        "snippet": "result = os.popen(cmd, 'r', 1)",
+        "question_id": 206151
+    },
+    {
+        "intent": "Как скопировать кортеж в список",
+        "rewritten_intent": "Преобразовать кортеж `my_tuple` в список",
+        "snippet": "list(my_tuple)",
+        "question_id": 118927
+    },
+    {
+        "intent": "Пропинговать диапазон сетей",
+        "rewritten_intent": "Пропинговать сайт `host`",
+        "snippet": "param = '-n' if platform.system().lower()=='windows' else '-c'\\n\ncommand = ['ping', param, '1', host]\\n\nprint(subprocess.call(command) == 0)\\n",
+        "question_id": 50821
+    },
+    {
+        "intent": "Индекс выделенного элемента в Listbox",
+        "rewritten_intent": "Получить индекс `i` выделенного элемента tkinter листбокса `l` ",
+        "snippet": "def Get(event):\\n\n\\ti = event.widget.curselection()\\n\n\nl.bind(\"<<ListboxSelect>>\", Get)\\n",
+        "question_id": 78160
+    },
+    {
+        "intent": "Кодировка переменных окружения",
+        "rewritten_intent": "Установить кодировку `my_encode` для переменных окружения пользователя `username`",
+        "snippet": "os.environ('username').decode(my_encode)",
+        "question_id": 175425
+    },
+    {
+        "intent": "Автоматическое заполнение формы в Django Template",
+        "rewritten_intent": "Заполнить форму в Django `MyForm` данным пользователя `user`",
+        "snippet": "MyForm(instance=user)\n",
+        "question_id": 70512
+    },
+    {
+        "intent": "Присваивание переменной результата функции",
+        "rewritten_intent": "Присвоить переменной `my_var` результат работы функции `my_func`",
+        "snippet": "my_var = my_func()",
+        "question_id": 141157
+    },
+    {
+        "intent": "Регулярка для замены пробелов на запятую",
+        "rewritten_intent": "Заменить пробелы в строке `my_string` на символ `my_symbol`",
+        "snippet": "re.sub(' +', my_symbol, my_string_string)",
+        "question_id": 209059
+    },
+    {
+        "intent": "Замена в файле списка слов",
+        "rewritten_intent": "Заменить список слов `old_words` на список слов `new_words` в строке `s`",
+        "snippet": "words=dict(zip(old_data, new_data))\\n\nfor word in words:\\n\n\\ts = re.sub(r\"\\b{}\\b\".format(word), words[word], s)\\n",
+        "question_id": 256777
+    },
+    {
+        "intent": "Поиск элемента в бинарном дереве",
+        "rewritten_intent": "Найти узел равный значению `val` в бинарном дереве `tree`",
+        "snippet": "def search(root,key):\\n\n     \n\\tif root is None or root.val == key:\\n\n\\t\\treturn root\n \n\\tif root.val < key:\\n\n\\t\\treturn search(root.right,key)\\n\n   \n\\treturn search(root.left,key)\n\nsearch(root,val)",
+        "question_id": 112581
+    },
+    {
+        "intent": "Python сортировка элементов матрицы",
+        "rewritten_intent": "Отсортировать элементы на главной диагонали квадратной матрицы `a` по убыванию",
+        "snippet": "l = len(a)\\n\nfor k in range(l-1): \\n\n\\tfor i in range(l-1):\\n\n\\t\\tif a[i][i] < a[i+1][i+1]:\\n\n\\t\\t\\ta[i][i],a[i+1][i+1] = a[i+1][i+1],a[i][i]\\n",
+        "question_id": 186169
+    },
+    {
+        "intent": "Python сортировка элементов матрицы",
+        "rewritten_intent": "Отсортировать элементы на главной диагонали квадратной матрицы `a` по убыванию",
+        "snippet": "l = len(a)\\n\nitems = [a[i][i] for i in range(l)]\\n\nitems.sort(reverse=True)\\n\nfor i in range(l):\\n\n\\ta[i][i] = items[i]\\n",
+        "question_id": 186169
+    },
+    {
+        "intent": "Python запуск консольной программы",
+        "rewritten_intent": "Выполнить консольную команду `cmd`",
+        "snippet": "os.popen(cmd, 'r', 1)",
+        "question_id": 189166
+    },
+    {
+        "intent": "Python запуск консольной программы",
+        "rewritten_intent": "Выполнить консольную команду `cmd`",
+        "snippet": "PIPE = subprocess.PIPE\nsubprocess.Popen(cmd, shell = True)",
+        "question_id": 189166
+    },
+    {
+        "intent": "Треугольники Python",
+        "rewritten_intent": "Нарисовать `n` фрактальных треугольников со стороной  `l` ",
+        "snippet": "from turtle import *\\n\nspeed(\"fastest\")\\n\n\ndef sierpinski(l,n):\\n\n\\tif n==0:\\n\n\\t\\tfor i in range(0,3):\\n\n\\t\\t\\tfd(l)\\n\n\\t\\t\\tleft(120)\\n\n\\telse:\\n\n\\t\\tsierpinski(l/2,n-1)\\n\n\\t\\tfd(l/2)\\n\n\\t\\tsierpinski(l/2,n-1)\\n\n\\t\\tbk(l/2)\\n\n\\t\\tleft(60)\\n\n\\t\\tfd(l/2)\\n\n\\t\\tright(60)\\n\n\\t\\tsierpinski(l/2,n-1)\\n\n\\t\\tleft(60)\\n\n\\t\\tbk(l/2)\\n\n\\t\\tright(60)\\n\n\nsierpinski(l, n)\\n",
+        "question_id": 168100
+    },
+    {
+        "intent": "Закрыть модальное окно по событию",
+        "rewritten_intent": "Закрыть модальное окно `win` по нажатию на кнопку `btn` в Tkinter",
+        "snippet": "btn.bind(\"<Button-1>\", lambda event: win.destroy())",
+        "question_id": 291044
+    },
+    {
+        "intent": "Tkinter: как создать дочернее окно и скрыть родительское?",
+        "rewritten_intent": "Скрыть окно Tkinter `win`",
+        "snippet": "win.withdraw()",
+        "question_id": 215979
+    },
+    {
+        "intent": "Копирование всех записей из одной таблицы в другую",
+        "rewritten_intent": "Скопировать данные из таблицы `table1` в таблицу `table2` из базы данных с курсором `cursor`",
+        "snippet": "cursor.execute('insert into {table1} select * from {table2}')",
+        "question_id": 160158
+    },
+    {
+        "intent": "Как экранировать спецсимволы при создании каталога?",
+        "rewritten_intent": "Экранировать спецсимволы в строке `s`",
+        "snippet": "s.encode('unicode_escape')",
+        "question_id": 298270
+    },
+    {
+        "intent": "Как убрать программу в трей без отображения в панели задач",
+        "rewritten_intent": "Убрать окно PyQt  `win` в трей по нажатию на крестик",
+        "snippet": "\\tdef closeEvent(self, event):\\n\n\\t\\tif self.check_box.isChecked():\\n\n\\t\\t\\tevent.ignore()\\n\n\\t\\t\\tself.hide()\\n\n\\t\\t\\tself.tray_icon.showMessage(\n                \"Tray Program\",\n                \"Application was minimized to Tray\",\n                QSystemTrayIcon.Information,\n                2000\n            )\\n\n",
+        "question_id": 189042
+    },
+    {
+        "intent": "Построчная печать в Tkinter.Text()",
+        "rewritten_intent": "Напечатать строку `s` в Tkinter в окне `root`",
+        "snippet": "t = Text(root)\nt.pack()\nt.insert(END, s)",
+        "question_id": 108618
+    },
+    {
+        "intent": "Python, удаление элемента из массива",
+        "rewritten_intent": "Получить элементы списка `my_list` удовлетворяющие функции `f`",
+        "snippet": "list(filter(f, my_list))",
+        "question_id": 72284
+    },
+    {
+        "intent": "Сортировка объектов",
+        "rewritten_intent": "Отсортировать список словарей `dicts` по ключу `key`",
+        "snippet": "dicts.sort(key=lambda x: x[key])",
+        "question_id": 83341
+    },
+    {
+        "intent": "Разбор dbf-файлов при помощи Python",
+        "rewritten_intent": "Распарсить dbf файл `filepath`",
+        "snippet": "data = open(filepath, 'rb').read(24)\nprint(struct.unpack('<I', data[4:8]))",
+        "question_id": 280734
+    },
+    {
+        "intent": "Как вытащить из файла нечётные строки?",
+        "rewritten_intent": "Получить список нечетных строк `lines` файла `filepath` ",
+        "snippet": "with open(filepath) as f:\\n\n\\tlines = f.readlines()[1::2]",
+        "question_id": 30683
+    },
+    {
+        "intent": "Как вытащить из файла нечётные строки?",
+        "rewritten_intent": "Получить список нечетных строк `lines` файла `filepath` ",
+        "snippet": "with open(filepath) as file:\\n\n\\tlines = [i.rstrip() for i in itertools.islice(file, 0, None, 2)]",
+        "question_id": 30683
+    },
+    {
+        "intent": "Как обработать кириллические символы в urllib.request.urlopen()?",
+        "rewritten_intent": "Преобразовать кириллическую строку `s` в строку спецсимволов для http запроса ",
+        "snippet": "urllib.parse.quote(s)",
+        "question_id": 241337
+    },
+    {
+        "intent": "Как обработать кириллические символы в urllib.request.urlopen()?",
+        "rewritten_intent": "Преобразовать кириллическую строку `s` в строку спецсимволов для http запроса ",
+        "snippet": "urllib.parse.quote_plus(s)",
+        "question_id": 241337
+    },
+    {
+        "intent": "Шифрование с открытым ключом",
+        "rewritten_intent": "Сгенерировать открытый ключ `pub` и закрытый ключ `priv` для RSA шифрования",
+        "snippet": "(pub, priv) = rsa.newkeys(512)",
+        "question_id": 64496
+    },
+    {
+        "intent": "Как проверить прокси на работоспособность?",
+        "rewritten_intent": "Проверить работает ли прокси `proxy`",
+        "snippet": "proxyDict = {\\n\n\\t'http': proxy # \"212.254.22.52:80\"\\n\n}\\n\n\nr = requests.get('http://icanhazip.com/', proxies=proxyDict)\\n\n\nif r.status_code == 200:\\n\n\\tif r.text != \"restricted to vpn\":\\n\n\\t\\tprint(\"Прокси работает\")\\n\n\\telse:\\n\n\\t\\tprint(\"Прокси не работает\")\\n\nelse:\\n\n\\tprint(\"Прокси не работает\")\\n",
+        "question_id": 124756
+    },
+    {
+        "intent": "Как сравнить значения словаря с переменной.",
+        "rewritten_intent": "Проверить равно ли значение элемента словаря `my_dict` с ключом `key` значению в переменной `my_var`",
+        "snippet": "my_dict[key]  ==  my_var",
+        "question_id": 121512
+    },
+    {
+        "intent": "Установка обоев из python",
+        "rewritten_intent": "Установить изображение `wallpaper_path` в качестве обоев рабочего стола",
+        "snippet": "wallpaper = bytes(wallpaper_path, 'utf-8')\\n\nctypes.windll.user32.SystemParametersInfoA(20, 0, wallpaper, 3)\\n",
+        "question_id": 119187
+    },
+    {
+        "intent": "Проблема python и poplib с получением писем",
+        "rewritten_intent": "Получить письма с сервера gmail с логином `username` и паролем `password`",
+        "snippet": "\npop3server = poplib.POP3_SSL('pop.gmail.com')  # open connection\\n\nprint(pop3server.getwelcome())  # show welcome message\\n\npop3server.user(username)\\n\npop3server.pass_(password)\\n\npop3info = pop3server.stat()  # access mailbox status\\n\nmailcount = pop3info[0]  # toral email\\n\nmessages = []\\n\nfor i in range(mailcount):\\n\n\\tfor message in pop3server.retr(i + 1)[1]:\\n\n\\t\\tmessages.append(message)\\n\npop3server.quit()\\n",
+        "question_id": 13119
+    },
+    {
+        "intent": "Как загрузить файл на сайт через Python?",
+        "rewritten_intent": "Загрузить файл `file_path` на сервер `url`",
+        "snippet": "files = {\\n\n    'file': open(file_path, 'rb')\n}\n\nr = requests.post(url, files=files)",
+        "question_id": 78491
+    },
+    {
+        "intent": "Как можно передать значение переменной \"x\" arduino?",
+        "rewritten_intent": "Подключиться к последовательному порту `com`  со скоростью `speed`",
+        "snippet": "my_com_port = serial.Serial(com, speed, dsrdtr = 1, timeout = 0)",
+        "question_id": 196630
+    },
+    {
+        "intent": "Как симулировать нажатие клавиш и передвижение мыши?",
+        "rewritten_intent": "Переместить курсор мыши в точку с координатами `coord`",
+        "snippet": "win32api.SetCursorPos(coord)",
+        "question_id": 71961
+    },
+    {
+        "intent": "Как проверить, что переменная != (степень двойки - 1)",
+        "rewritten_intent": "Проверить является ли число `n` степенью 2",
+        "snippet": "(n & (n-1) == 0) and n != 0",
+        "question_id": 316065
+    },
+    {
+        "intent": "Сокрытие ввода в консоли Python 3",
+        "rewritten_intent": "Ввести пароль `pass` с клавиатуры",
+        "snippet": "pass = getpass.getpass(prompt='Password: ', stream=None)",
+        "question_id": 280539
+    },
+    {
+        "intent": "Как определить выбранный элемент из списка в Tkinter.ListBox?",
+        "rewritten_intent": "Получить индекс `i` выделенного элемента tkinter листбокса `l` ",
+        "snippet": "def Get(event):\\n\n\\ti = event.widget.curselection()\\n\n\nl.bind(\"<<ListboxSelect>>\", Get)\\n",
+        "question_id": 73158
+    },
+    {
+        "intent": "Как распарсить html стандартными средствами Python?",
+        "rewritten_intent": "Спарсить HTML-код страницы `code` по ссылке `url`",
+        "snippet": "with urllib.request.urlopen(url) as res:\n    code = res.read()",
+        "question_id": 205664
+    },
+    {
+        "intent": "Преобразовать массив строк в словарь",
+        "rewritten_intent": "Преобразовать массив строк `strings` в словарь `strings_dict` по разделителю `sep`",
+        "snippet": "strings_dict = dict([x[0].strip().split(sep) for x in strings])",
+        "question_id": 300767
+    },
+    {
+        "intent": "Python regexp: парсинг ini-файла",
+        "rewritten_intent": "Распарсить ini-файл `filepath` в словарь `res`",
+        "snippet": "with open(filepath, 'r') as f:\\n\n\\tlines = [i for i in f.readlines() if not i.startswith('[')]\\n\n\\tp = re.compile('(?P<key>\\S*(?==))\\S*(?P<znah>(?<==)\\S*)')\\n\n\\tres = {}\\n\n\\tfor line in lines:\\n\n\\t\\tparsed = re.findall(p, line)[0]\\n\n\\t\\tres[parsed[0]] = parsed[1]\\n",
+        "question_id": 127208
+    },
+    {
+        "intent": "Python: как преобразовать строки при импорте из файла?",
+        "rewritten_intent": "Прочитать список чисел `nums` из файла `filepath`",
+        "snippet": "with open(filepath) as f:\\n\n\\tnums = list(map(int, f.read().split()))\\n",
+        "question_id": 316488
+    },
+    {
+        "intent": "Работа с веб-формой методом post",
+        "rewritten_intent": "Отправить POST-запрос `res` c JSON данными `data` на `url`",
+        "snippet": "res = requests.post(url, json=data)",
+        "question_id": 77855
+    },
+    {
+        "intent": "Вывод значений с двумерного массива",
+        "rewritten_intent": "Вывести двумерный массив `arrs` на экран",
+        "snippet": "for a in arrs:\\n\n\\tprint(a)\\n",
+        "question_id": 25811
+    },
+    {
+        "intent": "Вывод значений с двумерного массива",
+        "rewritten_intent": "Вывести двумерный массив `arrs` на экран",
+        "snippet": "for a in arrs:\\n\n\\tfor i in a:\\n\n\\t\\tprint(i, end=\" \")\\n\n\\tprint()\\n",
+        "question_id": 25811
+    },
+    {
+        "intent": "Как получить случайное число в интервале?",
+        "rewritten_intent": "Получить случайное числа `num` в интервале от числа `num_start` до числа `num_end`",
+        "snippet": "num = random.randint(num_start, num_end)",
+        "question_id": 54032
+    },
+    {
+        "intent": "Как сделать имитацию нажатия клавиши?",
+        "rewritten_intent": "Нажать клавишу `key`",
+        "snippet": "win32api.keybd_event(ord(key), 0, 0,0)",
+        "question_id": 124837
+    },
+    {
+        "intent": "Как сделать имитацию нажатия клавиши?",
+        "rewritten_intent": "Нажать клавишу `key`",
+        "snippet": "pyautogui.press('s')",
+        "question_id": 124837
+    },
+    {
+        "intent": "Как перемешать список, сохранив индексы?",
+        "rewritten_intent": "Перемешать список `l` сохранив исходные индексы `indices`",
+        "snippet": "x = list(enumerate(l))\\n\nrandom.shuffle(x)\\n\nindices, l = zip(*x)\\n",
+        "question_id": 71878
+    },
+    {
+        "intent": "Замена элементов массива массивом",
+        "rewritten_intent": "Заменить вложенных списков списка `a` по словарю `my_dict`",
+        "snippet": "for out_i, item in enumerate(a):\\n\n\\tfor inner_i, sub_item in enumerate(item):\\n\n\\t\\tif sub_item in my_dict:\\n\n\\t\\t\\ta[out_i][inner_i] = my_dict[sub_item]\\n",
+        "question_id": 87835
+    },
+    {
+        "intent": "Валидация email в Python",
+        "rewritten_intent": "Проверить является ли строка `email` электронной почтой",
+        "snippet": "pattern = r\"^[-\\w\\.]+@([-\\w]+\\.)+[-\\w]{2,4}$\"\n\nif re.match(pattern, email) is not None:\n    print(\"Проверка пройдена\")\nelse:\n    print(\"Провера не пройдена\"",
+        "question_id": 306126
+    },
+    {
+        "intent": "Валидация email в Python",
+        "rewritten_intent": "Проверить является ли строка `email` электронной почтой",
+        "snippet": "pattern = r\"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$)\"\n\nif re.match(pattern, email) is not None:\n    print(\"Проверка пройдена\")\nelse:\n    print(\"Провера не пройдена\"",
+        "question_id": 306126
+    },
+    {
+        "intent": "Шрифты в Python",
+        "rewritten_intent": "Получить список шрифтов `fonts` доступных в системе",
+        "snippet": "root = Tkinter.Tk()\nfonts = list(tkFont.families())",
+        "question_id": 82882
+    },
+    {
+        "intent": "Построение графиков в Matplotlib с помощью linspace",
+        "rewritten_intent": "Сгенерировать список чисел `nums` в диапазоне от числа `n1` до `n2` с таким же шагом в списке числе `base_nums`",
+        "snippet": "nums = np.arange(n1, n2, base_nums[1] - base_nums[0])",
+        "question_id": 93534
+    },
+    {
+        "intent": "Генерация случайных цифр",
+        "rewritten_intent": "Сгененировать `n` случайных чисел `nums`, сумма которых равна `total`",
+        "snippet": "my_total = -1\\n\nwhile my_total != total:\\n\n\\tnums = [random.randint(0,total) for _ in range(n)]\\n\n\\tmy_total = sum(nums)\\n",
+        "question_id": 197093
+    },
+    {
+        "intent": "Создание объекта из строки имени класса",
+        "rewritten_intent": "Создать объект класса `my_obj` по названию в строке `class_name`",
+        "snippet": "my_obj = globals()[class_name]",
+        "question_id": 295537
+    },
+    {
+        "intent": "Словарь из кортежа кортежей в Python",
+        "rewritten_intent": "Преобразовать кортеж кортежей пар ключ-значение `tupels` в словарь `my_dict`",
+        "snippet": "my_dict = dict(tupels)",
+        "question_id": 240287
+    },
+    {
+        "intent": "Как на Python определить фон ячейки в Excel?",
+        "rewritten_intent": "Получить цвет `color_in_hex` ячейки `cell_index` xlsx-файла `bookpath` таблицы `sheet`",
+        "snippet": "\nwb = openpyxl.load_workbook(bookpath, data_only = True)\\n\nsh = wb[sheet]\\n\ncolor_in_hex = sh[cell_index].fill.start_color.index\\n ",
+        "question_id": 3726
+    },
+    {
+        "intent": "Как записать строку жирным в файл word?",
+        "rewritten_intent": "Записать строку `s` в docx файл `file_path` жирным",
+        "snippet": "doc = docx.Document()\\n\np = doc.add_paragraph()\\n\n\nrunner = p.add_run(s)\\n\nrunner.bold = True\\n\n\ndoc.save(filepath)",
+        "question_id": 172669
+    },
+    {
+        "intent": "Tkinter и команда print в консоль",
+        "rewritten_intent": "По нажатию на кнопку tkinter `btn` выводить текст `s` в поле `lbl`",
+        "snippet": "def say(self):\\n\n\\tself.lbl[\"text\"] = s\\n\n\nself.btn[\"command\"] = self.say",
+        "question_id": 53872
+    },
+    {
+        "intent": "Регулярное выражение для получения BBCode URL",
+        "rewritten_intent": "Получить ссылку `url` из BBCode строки `s`",
+        "snippet": "url = re.findall(r\"\\[url=(.*)\\]\", s)[0]",
+        "question_id": 26594
+    },
+    {
+        "intent": "Вставка пустой строки после выбранных регулярным выражением слов",
+        "rewritten_intent": "Вставить строку `s` после подстроки выделенной регулрным выражением `pattern` в строке `text`",
+        "snippet": "`re.sub(pattern, r\"\\1{}\".format(s), text) ",
+        "question_id": 262974
+    },
+    {
+        "intent": "Прогресс загрузки файла на ftp",
+        "rewritten_intent": "Загрузить файл `file` по ftp с прогресс баром",
+        "snippet": "def progress():\\n\n\\tdef callback(block):\\n\n\\t\\tcallback.uploaded += len(block)\\n\n\\t\\tprint('Uploaded %d bytes' % callback.uploaded)\\n\n\\tcallback.uploaded = 0\\n\n\\treturn callback\\n\n\nftp.storbinary(\"STOR \" + file, open(file, \"rb\"), 1024, progress())",
+        "question_id": 83802
+    },
+    {
+        "intent": "Автоматический парсинг с сайтов",
+        "rewritten_intent": "Спарсить HTML-код страницы `code` по ссылке `url`",
+        "snippet": "with urllib.request.urlopen(url) as res:\n    code = res.read()",
+        "question_id": 178993
+    },
+    {
+        "intent": "Точность чисел",
+        "rewritten_intent": "Вывести число `num` с точностю до `f` знаков",
+        "snippet": "print(\"{:.{}f}\".format(num, f)\")",
+        "question_id": 50259
+    },
+    {
+        "intent": "Загрузка объекта из xml",
+        "rewritten_intent": "Распарсить xml файл `filepath` в объект `tree`",
+        "snippet": "tree = lxml.etree.parse(filepath)",
+        "question_id": 121752
+    },
+    {
+        "intent": "Вывод результата двумя столбцами",
+        "rewritten_intent": "Вывести элементы списков `a1`и `a2` попарно",
+        "snippet": "for a in zip(a1, a2):\\n\n\\tprint(*a)\\n",
+        "question_id": 27963
+    },
+    {
+        "intent": "Выравнивание виджета в Tkinter",
+        "rewritten_intent": "Выравнить виджет Tkinter `frame` слева сверху",
+        "snippet": "frame.grid(column=0, row=0, sticky=(N, W))",
+        "question_id": 54149
+    },
+    {
+        "intent": "Поиск ближайших объектов в списке",
+        "rewritten_intent": "Найти самое близкое число `n` к числу `target_num` в списке `nums`",
+        "snippet": "delta_nums = [abs(target_num - i) for i in nums]\nnum = nums[delta_nums.index(min(delta_nums))]",
+        "question_id": 61709
+    },
+    {
+        "intent": "Получение количества и списка полей таблицы",
+        "rewritten_intent": "Получить список полей таблицы `sheet` sql базы данных с курсором `cursor`",
+        "snippet": "cursor.columns(table=sheet)\n",
+        "question_id": 160598
+    },
+    {
+        "intent": "Как узнать права на папку, файл?",
+        "rewritten_intent": "Провериь права на чтение файла `filepath`",
+        "snippet": "if os.access(filepath, os.R_OK):\\n\n\\tprint(\"Доступно для чтения\")\\n\nelse:\\n\n\\tprint(\"Не доступно для чтения\")\\n",
+        "question_id": 111347
+    },
+    {
+        "intent": "Как выбрать из строки?",
+        "rewritten_intent": "Распарсить html строку `html` в дерево `root`",
+        "snippet": "root = etree.HTML(html)",
+        "question_id": 37423
+    },
+    {
+        "intent": "Progressbar + скачивание файла с url",
+        "rewritten_intent": "Скачать файл с сайта `url` показывая прогрессбар",
+        "snippet": "with urllib.request.urlopen(utl) as Response:\\n\n\\tLength = Response.getheader('content-length')\\n\n\\tBlockSize = 1000000  # default value\\n\n\n\\tif Length:\\t\n\\t\\tLength = int(Length)\\n\n\\t\\tBlockSize = max(4096, Length // 20)\\n\n\n\\tprint(\"UrlLib len, blocksize: \", Length, BlockSize)\\n\n\n\\tBufferAll = io.BytesIO()\\n\n\\tSize = 0\\n\n        while True:\n            BufferNow = Response.read(BlockSize)\n            if not BufferNow:\n                break\n            BufferAll.write(BufferNow)\n            Size += len(BufferNow)\n            if Length:\n                Percent = int((Size / Length)*100)\n                print('download: {Percent}% {Url}')\n\n        print(\"Buffer All len:\", len(BufferAll.getvalue()))",
+        "question_id": 93346
+    },
+    {
+        "intent": "Итерация списка словарей, удаление одинаковых значений",
+        "rewritten_intent": "Удалить одинаковые словари из списка словарей `dicts`",
+        "snippet": "dicts = [json.dumps(i) for i in dicts]\\n\ndicts = [json.loads(i) for i in set(dicts)]\\n",
+        "question_id": 319702
+    },
+    {
+        "intent": "Python: помещение программы в трей (Linux)",
+        "rewritten_intent": "Убрать окно PyQt  `win` в трей по нажатию на крестик",
+        "snippet": "\\tdef closeEvent(self, event):\\n\n\\t\\tif self.check_box.isChecked():\\n\n\\t\\t\\tevent.ignore()\\n\n\\t\\t\\tself.hide()\\n\n\\t\\t\\tself.tray_icon.showMessage(\n                \"Tray Program\",\n                \"Application was minimized to Tray\",\n                QSystemTrayIcon.Information,\n                2000\n            )\\n\n",
+        "question_id": 78494
+    },
+    {
+        "intent": "Получение координат окна",
+        "rewritten_intent": "Получить координаты `coords` окна с заголовком `title`",
+        "snippet": "hwnd = win32gui.FindWindow(None, title)\\n\n\\tcoord = win32gui.GetWindowRect(hwnd)[0:2]\\n\n\\tprint(coord)\\n",
+        "question_id": 167202
+    },
+    {
+        "intent": "Python и парсинг URL",
+        "rewritten_intent": "Распарсить параметры get запроса url `url` в словарь `query`",
+        "snippet": "parsed_url = urlparse(url)\\n\nquery = parsed_url(parsed_url.query)\\n",
+        "question_id": 151936
+    },
+    {
+        "intent": "Не получается переименовать файл",
+        "rewritten_intent": "Переименовать файл `filepath` в файл `newfilepath`",
+        "snippet": "os.replace(filepath, newfilepath)",
+        "question_id": 306957
+    },
+    {
+        "intent": "Алгоритм свободного числа",
+        "rewritten_intent": "Найти пропущенные числа `nums`  в списке `a`",
+        "snippet": "r = range(min(a), max(a) + 1)\\\nnums = sorted(list(set(r) - set(a)))\\n",
+        "question_id": 249773
+    },
+    {
+        "intent": "Фильтр в Джанго",
+        "rewritten_intent": "Выбрать объекты django без потомков",
+        "snippet": "objects.filter(children__isnull=True)",
+        "question_id": 2653
+    },
+    {
+        "intent": "Системные вызовы в python",
+        "rewritten_intent": "Скомпилировать c++ файл `filepath`",
+        "snippet": "subprocess.check_output(['g++', filepath])",
+        "question_id": 122711
+    },
+    {
+        "intent": "Как узнать содержит ли одна строка слова из другой?",
+        "rewritten_intent": "Проверить содержит ли строка `s` слова из строки `base_s`",
+        "snippet": "list_s = s.split()\\n\nlist_base = base_s.split()\\n\nif set(list_s) & set(list_base):\\n\n\\tprint(\"Содержит\")\\n\nelse:\\n\n\\tprint(\"Не содерджит\"\\n",
+        "question_id": 249444
+    },
+    {
+        "intent": "Как по Ctrl+C выйти из одной функции и продолжить выполнение в другой?",
+        "rewritten_intent": "Завершить выполнение функции `f` при нажатии клавиш CTRL+C",
+        "snippet": "try:\\n\n\\tf()\\n\nexcept KeyboardInterrupt:\\n\n\\tprint(\"Catched KeyboardInterrupt exception\")\\n",
+        "question_id": 30398
+    },
+    {
+        "intent": "Как имитировать волну с помощью QPainter() в PySide/PyQt4",
+        "rewritten_intent": "Нарисовать волну при помощи PyQt4",
+        "snippet": "def paintEvent(self, event):\\n\n\\tpainter = QPainter(self)\\n\n\\tpts = self.pts\\n\n\\tpainter.setPen(QPen(QColor(Qt.darkGreen), 3))\\n\n\\tpainter.drawPolyline(self.poly(pts))\\n\n\\tpainter.setBrush(QBrush(QColor(255, 0, 0)))\\n\n\\tpainter.setPen(QPen(QColor(Qt.black), 1))\\n\n\\tfor x, y in pts:\\n\n\\t\\tpainter.drawEllipse(QRectF(x - 4, y - 4, 8, 8))\\n",
+        "question_id": 89883
+    },
+    {
+        "intent": "Как в Python перехватить системное событие MouseClick?",
+        "rewritten_intent": "Получить координаты нажатия мыши `coords`",
+        "snippet": "def on_click(x, y, button, pressed):\\n\n\\tcoords = (x, y)\\n\n\nwith pynput.mouse.Listener(on_click=on_click) as listener:\\n\n\\tlistener.join()\\n",
+        "question_id": 9273
+    },
+    {
+        "intent": "Selenium: получить загруженное изображение",
+        "rewritten_intent": "Сделать скриншот сайта `url` как изображение `filepath` с использованием selenium driver `driver`",
+        "snippet": "driver.get(url)\nscreenshot = driver.save_screenshot(filepath)",
+        "question_id": 234414
+    },
+    {
+        "intent": "Подсчет и вывод самых повторяющихся строк",
+        "rewritten_intent": "Посчитать строки в файле `filepath` в словарь line_counts",
+        "snippet": "with open(filepath) as f:\\n\n\\tlines = f.readlines()\\n\n\\tline_values = collections.Counter(lines)\\n",
+        "question_id": 210480
+    },
+    {
+        "intent": "Подсчет несобственного интеграла с помощью SymPy",
+        "rewritten_intent": "Посчитать несобственный интеграл заданный функцией `f` от числа `n` до бесконечности",
+        "snippet": "\nx = sympy.symbols('x')\\n\nprint(sympy.integrate(f, (x, n, sympy.oo)))\\n",
+        "question_id": 51160
+    },
+    {
+        "intent": "Два словаря, Python",
+        "rewritten_intent": "Удалить из словаря `dict1` ключи которые есть в словаре `dict2`",
+        "snippet": "for key in dict2:\\n\n\\tif key in dict1:\\n\n\\t\\tdel dict1[key]\\n",
+        "question_id": 560
+    },
+    {
+        "intent": "Задание кодировки при создании файла",
+        "rewritten_intent": "Создать файл `filepath` с кодировкой utf-8",
+        "snippet": "with open(filepath,\"r\", encoding=\"utf-8\") as f:\\n\n\\tpass",
+        "question_id": 18892
+    },
+    {
+        "intent": "Как запустить функцию внутри класса?",
+        "rewritten_intent": "Запустить метод c именем `name` объекта `obj`",
+        "snippet": "getattr(obj, name)()",
+        "question_id": 242841
+    },
+    {
+        "intent": "Как убрать админку на сторонний app (Django admin)",
+        "rewritten_intent": "Убрать из панели администратора Django модели User и Group",
+        "snippet": "from django.contrib.auth.models import User, Group\\n\nadmin.site.unregister(User)\\n\nadmin.site.unregister(Group)\\n",
+        "question_id": 21336
+    },
+    {
+        "intent": "Как заставить программу нажимать клавиши?",
+        "rewritten_intent": "Нажать клавишу `key`",
+        "snippet": "win32api.keybd_event(ord(key), 0, 0,0)",
+        "question_id": 57046
+    },
+    {
+        "intent": "Как заставить программу нажимать клавиши?",
+        "rewritten_intent": "Нажать клавишу `key`",
+        "snippet": "pyautogui.press('s')",
+        "question_id": 57046
+    },
+    {
+        "intent": "Замена списка слов в тексте",
+        "rewritten_intent": "Заменить в строке `s` слова из списка `old_words` на слова в списке `new_words` ",
+        "snippet": "word_dict = dict(zip(old_data, new_data))\\n\nfor word in word_dict:\\n\n\\ts = re.sub(r\"\\b{}\\b\".format(word), word_dict[word], s)\\n",
+        "question_id": 265219
+    },
+    {
+        "intent": "Как преобразовать строку в изображение?",
+        "rewritten_intent": "Преобразовать 64-ричное строковое представление изображения `img_as_s` в изображение `imgpath`",
+        "snippet": "with open(imgpath, 'wb') as img :\n  img_obj = base64.b64decode(img_as_s,'!-')\n  img.write(img_obj)",
+        "question_id": 106280
+    },
+    {
+        "intent": "Python urllib заголовки",
+        "rewritten_intent": "Получить словарь заголовков `headers` с сайта `url`",
+        "snippet": "\nresponse = urllib.request.urlopen(url)\\n\nheaders = response.headers\\n",
+        "question_id": 14314
+    },
+    {
+        "intent": "Подскажите функцию для экранирования",
+        "rewritten_intent": "Экранировать спецсимволы в строке `s`",
+        "snippet": "s.encode('unicode_escape')",
+        "question_id": 25915
+    },
+    {
+        "intent": "Python форматирование строки",
+        "rewritten_intent": "Перебрать все возможные способы расположения знака `sign` в строке `s` как в битовом числе",
+        "snippet": "p = 1 << (len(s)-1)\nl = []\nfor i in range(1, p):\n\\tdef rf(first, sec):\n\\t\\tc = first[0]\n\\t\\ts1 = sec\n\\t\\tif c & i > 0 :\n\\t\\t\\ts1 = sign+s1\n\\t\\treturn (c >> 1, first[1]+s1)\n\\tl.append(functools.reduce(rf, s[1:], (p >> 1, s[0]))[1])",
+        "question_id": 76183
+    }
+]
