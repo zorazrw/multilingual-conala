@@ -1,11 +1,14 @@
-# Multilingual CoNaLa 
+# MCoNaLa 
 
-This repository contains the Multilingual CoNaLa dataset resources, as well as the code implementation of baseline models. 
+This repository contains the MCoNaLa dataset and the code implementation of baseline models in the following paper: 
+
+[MCoNaLa: A Benchmark for Code Generation
+from Multiple Natural Languages]()
 
 
-## 1. Benchmark Dataset 
+## Benchmark Dataset 
 
-### 1.1 Multilingual Samples: Spanish, Japanese, Russian 
+### 1. Multilingual Samples: Spanish, Japanese, Russian 
 The **Multilingual CoNaLa** dataset contains intent-snippet pairs collected from three different language versions of StackOverflow forums. 
 
 These samples are located in the `dataset/test` directory, where `es_test.json`/`ja_test.json`/`ru_test.json` are original annotated samples. 
@@ -15,14 +18,16 @@ For the **trans-test** setting in baseline experiments, we also provide the tran
 To study the influence of translation quality, we also experiment with two other widely used Machine Translation (MT) systems: [MarianMT](https://huggingface.co/docs/transformers/model_doc/marian) and [M2M](https://github.com/pytorch/fairseq/tree/main/examples/m2m_100). The intents in Spanish/Japanese/Russian samples are translated into English using the respective MT systems and put into the `marianmt` and `m2m` directories. 
 
 
-### 1.2 English Samples for Training 
+### 2. English Samples for Training 
 Due to the limited sample of multiple languages, we use English [CoNaLa](https://conala-corpus.github.io/) samples for training, where the intents are originally written in English. 
 In the `dataset/train` directory contains the annotated `train.json`, the automatically mined samples from the StackOverflow webpages (`mined.jsonl`) and the API documents (`api.jsonl`). 
+
+However, due to the uploading file size limitation of GitHub, we alternatively provide the training data via [zenodo]().
 
 In the **trans-train** experiment setting, we also translate the English intents into the three target languages of interest using [FLORES-101](https://github.com/facebookresearch/flores), under the `to-es` / `to-ja` / `to-ru` directories.  
 
 
-### 1.3 Data Usage
+### 3. Data Usage
 
 Spanish, Japanese, and Russian are of the Target Language (TL), whose samples are always (only) used for testing purpose due to the limited amount. 
 
@@ -82,7 +87,7 @@ The **zero-shot** setting trains the model using English samples (`train/train.j
 Intuitively, this require the model being able to encode natural langauge intents in multiple language without intentional training. 
 
 
-## 2. Baseline Model
+## Baseline Model
 To present the baseline performance on the Multilingual CoNaLa dataset, we use three state-of-the-art models that are proficient at multilingual learning or code generation. 
 
 Set the root directory using the following command, as this would be required by most experimental bash scripts. 
@@ -91,7 +96,7 @@ export ROOT_DIR=`pwd`
 ```
 
 
-### 2.1 mBART
+### 1. mBART
 [mBART](https://github.com/pytorch/fairseq/blob/main/examples/mbart/README.md) is a multilingual denoising auto-encoder trained for machine translation tasks. 
 
 To reproduce the baseline result of mBART, following: 
@@ -166,7 +171,7 @@ bash run_test.sh
 You can change the `SETTING` (trans_train, trans_test) and `LANG` (es, ja, ru) in both scripts to run different experiments. 
 
 
-### 2.2 TranX 
+### 2. TranX 
 [TranX](https://arxiv.org/abs/2004.09015) is a pre-trained natural language to code generation model by leveraging external knowledge. 
 Our experiments uses its [code](https://github.com/neulab/external-knowledge-codegen) implementation to perform training and testing on the Multilingual CoNaLa dataset.  
 
@@ -220,7 +225,7 @@ bash scripts/test_mconala.sh
 
 
 
-### 2.3 TAE 
+### 3. TAE 
 [TAE](https://aclanthology.org/2021.acl-short.98/) is a seq2seq model, augmented with a target auto-encoding objective, for code generation from English intents.
 
 The `tae` code implementation is built upon its original [repository]((https://github.com/BorealisAI/code-gen-TAE)). To reproduce the baseline performance of TAE, following: 
@@ -266,6 +271,3 @@ python3 train.py \
   --monolingual_ratio 0.5 --epochs 80 \
   --just_evaluate
 ```
-
-model name for reference: "conala_model_combined_training=False_seed=4_trns_back=False_use_backtr=False_lmd=1_cp_bt=True_add_no=False_no_en_upd=True_ratio=0.5_ext_li=True_ext_cp_li=True_cp_att=True_EMA=T_rnd_enc=F_de_lr=7.5e-05_mmp=0.1_saug=F_dums=F_dumQ=F_rsr=F_fc=F_ccr=F.pth"
-
