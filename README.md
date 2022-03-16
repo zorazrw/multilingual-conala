@@ -5,6 +5,16 @@ This repository contains the MCoNaLa dataset and the code implementation of base
 [MCoNaLa: A Benchmark for Code Generation
 from Multiple Natural Languages](http://zorazrw.github.io/files/multilingual_conala.pdf)
 
+## Reference 
+
+```
+@article{wang2022mconala,
+  title={MCoNaLa: A Benchmark for Code Generation from Multiple Natural Languages},
+  author={Zhiruo Wang, Grace Cuenca, Shuyan Zhou, Frank F. Xu, Graham Neubig},
+  journal={},
+  year={2022}
+}
+```
 
 ## Benchmark Dataset 
 
@@ -87,7 +97,7 @@ The **zero-shot** setting trains the model using English samples (`train/train.j
 Intuitively, this require the model being able to encode natural langauge intents in multiple language without intentional training. 
 
 
-## Baseline Model
+## Baseline Models
 To present the baseline performance on the Multilingual CoNaLa dataset, we use three state-of-the-art models that are proficient at multilingual learning or code generation. 
 
 Set the root directory using the following command, as this would be required by most experimental bash scripts. 
