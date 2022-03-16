@@ -3,7 +3,7 @@
 This repository contains the MCoNaLa dataset and the code implementation of baseline models in the following paper: 
 
 [MCoNaLa: A Benchmark for Code Generation
-from Multiple Natural Languages]()
+from Multiple Natural Languages](http://zorazrw.github.io/files/multilingual_conala.pdf)
 
 
 ## Benchmark Dataset 
@@ -22,7 +22,7 @@ To study the influence of translation quality, we also experiment with two other
 Due to the limited sample of multiple languages, we use English [CoNaLa](https://conala-corpus.github.io/) samples for training, where the intents are originally written in English. 
 In the `dataset/train` directory contains the annotated `train.json`, the automatically mined samples from the StackOverflow webpages (`mined.jsonl`) and the API documents (`api.jsonl`). 
 
-However, due to the uploading file size limitation of GitHub, we alternatively provide the training data via [zenodo]().
+However, due to the uploading file size limitation of GitHub, we alternatively provide the training data via [zenodo](https://zenodo.org/record/6359692#.YjFN9BDMJFM).
 
 In the **trans-train** experiment setting, we also translate the English intents into the three target languages of interest using [FLORES-101](https://github.com/facebookresearch/flores), under the `to-es` / `to-ja` / `to-ru` directories.  
 
