@@ -3,7 +3,7 @@
 This repository contains the MCoNaLa dataset and the code implementation of baseline models in the following paper: 
 
 [MCoNaLa: A Benchmark for Code Generation
-from Multiple Natural Languages](http://zorazrw.github.io/files/multilingual_conala.pdf)
+from Multiple Natural Languages](https://arxiv.org/pdf/2203.08388.pdf)
 
 ## Reference 
 
@@ -11,7 +11,7 @@ from Multiple Natural Languages](http://zorazrw.github.io/files/multilingual_con
 @article{wang2022mconala,
   title={MCoNaLa: A Benchmark for Code Generation from Multiple Natural Languages},
   author={Zhiruo Wang, Grace Cuenca, Shuyan Zhou, Frank F. Xu, Graham Neubig},
-  journal={},
+  journal={arXiv preprint arXiv:2203.08388},
   year={2022}
 }
 ```
