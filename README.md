@@ -16,6 +16,42 @@ from Multiple Natural Languages](https://arxiv.org/pdf/2203.08388.pdf)
 }
 ```
 
+## Evaluating Functional Correctness 
+We provide a subset of 50 samples for each (natural) language that allows evluation of the execution correctness of code predictions. 
+As the [HumanEval](https://github.com/openai/human-eval) dataset, we strongly encourage **NOT** to run untrusted model-generated code outside of a robust security sandbox. 
+
+To additionally evaluate the functional correctness of a sample in (M)CoNaLa, given its original annotation:
+```
+{
+  'question_id': 36217,
+  'intent': "列データから正規表現で取り出したデータを、新しい列に書き込むには",
+  'rewritten_intent': "データフレーム`df`の列`a`を正規表現`reg'で抽出する",
+  'snippet': "df['a'].str.extract(reg, expand=True)",
+}
+```
+We: 1) identify the variables as function arguments, then wrap the `snippet` with `prompt` and (sometimes) `suffix` as an executable function, 2) provide hand-written unit tests to examine if the `snippet` can successfully execute, and 3) also provide `canonical_solution` for ground truth reference. For the above sample, these yields: 
+```
+{
+  'task_id': "ja-36217", 
+  'prompt': "def func_ja(df, reg):\n    return ",
+  'canonical_solution': "df['a'].str.extract(reg, expand=True)",
+  'test': "\nimport pandas as pd\ndef check(candidate):\n    df = pd.DataFrame([['abc def'],['123 567'], ['qqq eee']], columns=['a'])\n    reg = r'(.{3})$'\n    assert candidate(df, reg).equals(df['a'].str.extract(reg, expand=True))\n",
+  'entry_point': 'func_ja', 
+}
+```
+
+Refer to the `func_eval.py` script for more details about dataset usage. 
+```bash
+# take Japanese as an example
+! python func_eval.py \
+  --prediction-file ${your-prediction-file.txt/jsonl/json} \
+  --annotation-file "dataset/func_eval/ja_func.jsonl" \
+  --num-samples 1 2 5 \
+  --do-func-eval \
+  --do-bleu-eval
+```
+
+
 ## Benchmark Dataset 
 
 ### 1. Multilingual Samples: Spanish, Japanese, Russian 
