@@ -8,19 +8,6 @@ from Multiple Natural Languages](https://arxiv.org/pdf/2203.08388.pdf)
 ## 🍻 Updates
 MCoNaLa has its leaderboard now! Powered by [ExplainaBoard](https://explainaboard.inspiredco.ai/leaderboards?dataset=mconala), where you can upload and analyze your own system results with just a few simple clicks. Follow the detailed instructions below to submit your results to the leaderboard. 
 
-## Submitting Results to the Leaderboard
-
-Go to the submission site [here](https://explainaboard.inspiredco.ai/leaderboards?dataset=mconala) and click the __New__ button on the top-right to start a new submission, then fill out a few blanks in the pop-up window: 
-- *System Name*: give an informative name for your system
-- *Task*: select 'machine-translation' from the drop-down list
-- *Dataset*: select 'mconala' with the target language (es/ja/ru) from the drop-down list, and for *Split* select 'test' 
-- *System Output*: click on 'Text' and submit your results in TXT format. Please make sure that your results file has the same number of lines as the corresponding testset. If a predicted code snippet contains `\n` that could spread one prediction into multiple lines. One trick to fix this is doing `a_multi_line_string.replace('\n', '\\n')` before writing into the file. 
-- *Metrics*: select 'bleu', which computes the code-specific BLEU (-4) score.
-- check that the *Input Lang* is automatically filled with your target NL (es/ja/ru) and the *Output Lang* is python. 
-
-Click the __Submit__ button on the bottom, then your results are ready in a few seconds! 
-
-You can also click the __Analysis__ button on the right to view more fine-grained analyses with cool figures 📊
 
 
 ## Benchmark Dataset 
@@ -102,6 +89,23 @@ The **trans-test** setting evaluates samples in three target languages using the
 
 The **zero-shot** setting trains the model using English samples (`train/train.json`, `train/mined.jsonl`, `train/api.jsonl`) and directly tests on multilingual samples (`test/es_test.json`, `test/ja_test.json`, `test/ru_test.json`). 
 Intuitively, this require the model being able to encode natural langauge intents in multiple language without intentional training. 
+
+
+
+## Submitting Results to the Leaderboard
+
+Go to the submission site [here](https://explainaboard.inspiredco.ai/leaderboards?dataset=mconala) and click the __New__ button on the top-right to start a new submission, then fill out a few blanks in the pop-up window: 
+- *System Name*: give an informative name for your system
+- *Task*: select 'machine-translation' from the drop-down list
+- *Dataset*: select 'mconala' with the target language (es/ja/ru) from the drop-down list, and for *Split* select 'test' 
+- *System Output*: click on 'Text' and submit your results in TXT format. Please make sure that your results file has the same number of lines as the corresponding testset. If a predicted code snippet contains `\n` that could spread one prediction into multiple lines. One trick to fix this is doing `a_multi_line_string.replace('\n', '\\n')` before writing into the file. 
+- *Metrics*: select 'bleu', which computes the code-specific BLEU (-4) score.
+- check that the *Input Lang* is automatically filled with your target NL (es/ja/ru) and the *Output Lang* is python. 
+
+Click the __Submit__ button on the bottom, then your results are ready in a few seconds! 
+
+You can also click the __Analysis__ button on the right to view more fine-grained analyses with cool figures 📊
+
 
 
 ## Baseline Models
