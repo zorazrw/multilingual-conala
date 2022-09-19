@@ -1,5 +1,12 @@
 # MCoNaLa 
 
+<p align="left">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img alt="CC BY-SA 4.0" src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg">
+    </a>
+    <br/>
+</p>
+
 This repository contains the MCoNaLa dataset and the code implementation of baseline models in the following paper: 
 
 [MCoNaLa: A Benchmark for Code Generation
