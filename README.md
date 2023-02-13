@@ -12,8 +12,11 @@ This repository contains the MCoNaLa dataset and the code implementation of base
 [MCoNaLa: A Benchmark for Code Generation
 from Multiple Natural Languages](https://arxiv.org/pdf/2203.08388.pdf)
 
-## 🍻 Updates
-MCoNaLa has its leaderboard now! Powered by [ExplainaBoard](https://explainaboard.inspiredco.ai/leaderboards?dataset=mconala), where you can upload and analyze your own system results with just a few simple clicks. Follow the detailed instructions below to submit your results to the leaderboard. 
+### 🤗 Huggingface Hub 
+MCoNaLa is available on Huggingface Hub [here](https://huggingface.co/datasets/neulab/mconala) 
+
+### 📊 ExplainaBoard Leaderboard
+MCoNaLa has its leaderboard powered by [ExplainaBoard](https://explainaboard.inspiredco.ai/leaderboards?dataset=mconala), where you can upload and analyze your own system results with just a few simple clicks. Follow the detailed instructions below to submit your results to the leaderboard. 
 
 
 
